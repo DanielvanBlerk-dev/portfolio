@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ── PRIMARY SEO ── -->
+<title>DVB.dev — Android App & Web Developer | Australia</title>
+<meta name="description" content="Dan Van Blerk is a freelance Android and web developer based in Australia. Specialising in Kotlin, Firebase, React, and full-stack development. Available for freelance projects.">
+<meta name="keywords" content="Android developer, web developer, freelance developer, Kotlin, Firebase, React, Next.js, Australia, app development, mobile app developer, full-stack developer">
+<meta name="author" content="Dan Van Blerk">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#00e5a0">
+<link rel="canonical" href="https://dvb.dev/">
+
+<!-- ── OPEN GRAPH (Facebook, LinkedIn, WhatsApp previews) ── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dvb.dev/">
+<meta property="og:title" content="DVB.dev — Android App & Web Developer">
+<meta property="og:description" content="Freelance Android and web developer based in Australia. Building polished apps and high-performance websites with Kotlin, Firebase, React and more.">
+<meta property="og:image" content="https://dvb.dev/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_AU">
+<meta property="og:site_name" content="DVB.dev">
+
+<!-- ── TWITTER / X CARD ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://dvb.dev/">
+<meta name="twitter:title" content="DVB.dev — Android App & Web Developer">
+<meta name="twitter:description" content="Freelance Android and web developer based in Australia. Kotlin, Firebase, React, full-stack.">
+<meta name="twitter:image" content="https://dvb.dev/og-preview.png">
+
+<!-- ── GEO / LOCAL SEO ── -->
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Australia">
+
+<!-- ── STRUCTURED DATA: Person + LocalBusiness ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://dvb.dev/#dan",
+      "name": "Dan Van Blerk",
+      "alternateName": "DVB.dev",
+      "url": "https://dvb.dev",
+      "email": "vanblerkdaniel@gmail.com",
+      "jobTitle": "Freelance Android & Web Developer",
+      "description": "Freelance developer specialising in Android apps (Kotlin, Jetpack Compose, Firebase) and modern web development (React, Next.js, Node.js).",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AU"
+      },
+      "knowsAbout": [
+        "Android Development", "Kotlin", "Jetpack Compose", "Firebase",
+        "Web Development", "React", "Next.js", "Node.js", "TypeScript",
+        "UI/UX Design", "Figma", "REST APIs", "GraphQL"
+      ],
+      "sameAs": [
+        "https://github.com/dvbdev",
+        "https://linkedin.com/in/dvbdev"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://dvb.dev/#business",
+      "name": "DVB.dev",
+      "url": "https://dvb.dev",
+      "email": "vanblerkdaniel@gmail.com",
+      "description": "Freelance Android app and web development services based in Australia.",
+      "founder": { "@id": "https://dvb.dev/#dan" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AU"
+      },
+      "areaServed": ["AU", "Worldwide"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Development Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Android App Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full-Stack Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Store Launch & ASO" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance & Support" } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dvb.dev/#website",
+      "url": "https://dvb.dev",
+      "name": "DVB.dev",
+      "description": "Portfolio and contact site for Dan Van Blerk, freelance Android and web developer.",
+      "publisher": { "@id": "https://dvb.dev/#dan" }
+    }
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --card: #16161f;
+    --border: #2a2a3a;
+    --accent: #00e5a0;
+    --accent2: #7b5ea7;
+    --accent3: #ff6b35;
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --heading: 'Syne', sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── SKIP LINK (accessibility + SEO) ── */
+  .skip-link {
+    position: absolute; top: -100px; left: 1rem;
+    background: var(--accent); color: #0a0a0f;
+    padding: 0.5rem 1rem; border-radius: 0 0 6px 6px;
+    font-size: 0.8rem; text-decoration: none; z-index: 999;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 0; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: var(--heading);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--text); }
+  nav ul { display: flex; gap: 2.5rem; list-style: none; }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 8rem 3rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.06;
+    background-image:
+      linear-gradient(var(--accent) 1px, transparent 1px),
+      linear-gradient(90deg, var(--accent) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridDrift 20s linear infinite;
+  }
+  @keyframes gridDrift {
+    from { background-position: 0 0; }
+    to   { background-position: 60px 60px; }
+  }
+  .hero-glow {
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,229,160,0.12) 0%, transparent 70%);
+    top: -200px; right: -200px;
+    animation: pulse 6s ease-in-out infinite;
+  }
+  .hero-glow2 {
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(123,94,167,0.1) 0%, transparent 70%);
+    bottom: -100px; left: 10%;
+    animation: pulse 8s ease-in-out infinite reverse;
+  }
+  @keyframes pulse {
+    0%,100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.7; }
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(0,229,160,0.08);
+    border: 1px solid rgba(0,229,160,0.25);
+    border-radius: 100px;
+    padding: 0.4rem 1rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    width: fit-content;
+    animation: fadeUp 0.6s ease both;
+  }
+  .badge-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    animation: blink 1.5s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+  h1 {
+    font-family: var(--heading);
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+  h1 .line { display: block; }
+  h1 .accent { color: var(--accent); }
+  h1 .dim { color: var(--muted); }
+
+  .hero-sub {
+    max-width: 540px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+  .hero-ctas {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+  .btn {
+    padding: 0.9rem 2rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none; cursor: pointer;
+    transition: all 0.25s;
+    display: inline-block;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #0a0a0f;
+    font-weight: 400;
+  }
+  .btn-primary:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,229,160,0.3);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 5rem;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+  .stat-num {
+    font-family: var(--heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 7rem 3rem; }
+  .section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-family: var(--heading);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .section-divider {
+    width: 40px; height: 2px;
+    background: var(--accent);
+    margin-bottom: 3rem;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--surface); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5px;
+    margin-top: 3rem;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .service-card {
+    background: var(--card);
+    padding: 2.5rem;
+    position: relative;
+    transition: background 0.3s;
+    cursor: default;
+  }
+  .service-card:hover { background: #1c1c28; }
+  .service-card:hover .service-icon { transform: scale(1.15) rotate(-5deg); }
+  .service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: transform 0.3s;
+  }
+  .service-title {
+    font-family: var(--heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--text);
+  }
+  .service-desc { color: var(--muted); font-size: 0.85rem; line-height: 1.7; }
+  .service-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-top: 1.2rem;
+  }
+  .tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    background: rgba(0,229,160,0.08);
+    color: var(--accent);
+    border: 1px solid rgba(0,229,160,0.2);
+  }
+
+  /* ── PORTFOLIO ── */
+  #portfolio { background: var(--bg); }
+  .portfolio-filters {
+    display: flex; gap: 0.8rem; flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  .filter-btn {
+    padding: 0.45rem 1.1rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--accent);
+    color: #0a0a0f;
+    border-color: var(--accent);
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  .project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+    cursor: pointer;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,229,160,0.2);
+  }
+  .project-card.hidden {
+    display: none;
+  }
+  .project-img {
+    width: 100%; aspect-ratio: 16/9;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .project-overlay {
+    position: absolute; inset: 0;
+    background: rgba(10,10,15,0.7);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    gap: 0.5rem;
+  }
+  .project-card:hover .project-overlay { opacity: 1; }
+  .project-body { padding: 1.5rem; }
+  .project-type {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .project-name {
+    font-family: var(--heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  .project-desc { color: var(--muted); font-size: 0.82rem; line-height: 1.7; }
+  .project-meta {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .project-tech { display: flex; gap: 0.4rem; }
+  .tech-dot {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem;
+    color: var(--text);
+    font-weight: bold;
+  }
+
+  /* Modal */
+  .modal-bg {
+    display: none;
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    align-items: center; justify-content: center;
+    padding: 2rem;
+  }
+  .modal-bg.open { display: flex; }
+  .modal {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    max-width: 560px; width: 100%;
+    padding: 2.5rem;
+    position: relative;
+    animation: modalIn 0.3s ease;
+  }
+  @keyframes modalIn {
+    from { transform: scale(0.92) translateY(20px); opacity: 0; }
+    to   { transform: scale(1) translateY(0); opacity: 1; }
+  }
+  .modal-close {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    background: var(--border);
+    border: none; color: var(--muted);
+    width: 32px; height: 32px; border-radius: 50%;
+    cursor: pointer; font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .modal-close:hover { background: var(--accent); color: #0a0a0f; }
+  .modal-emoji { font-size: 3rem; margin-bottom: 1rem; }
+  .modal-title {
+    font-family: var(--heading);
+    font-size: 1.5rem; font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .modal-type { color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+  .modal-desc { color: var(--muted); line-height: 1.8; font-size: 0.88rem; }
+  .modal-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .modal-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,229,160,0.3);
+    padding-bottom: 2px;
+    transition: border-color 0.2s;
+  }
+  .modal-link:hover { border-color: var(--accent); }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--surface); }
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3rem;
+  }
+  .contact-info h3 {
+    font-family: var(--heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .contact-info p { color: var(--muted); font-size: 0.85rem; line-height: 1.8; margin-bottom: 2rem; }
+  .contact-detail {
+    display: flex; align-items: center; gap: 0.8rem;
+    padding: 0.9rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .contact-detail-icon { color: var(--accent); font-size: 1rem; }
+
+  form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+  input, textarea, select {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    width: 100%;
+  }
+  input:focus, textarea:focus, select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0,229,160,0.1);
+  }
+  textarea { resize: vertical; min-height: 130px; }
+  select option { background: var(--card); }
+
+  .form-submit {
+    display: flex; align-items: center; gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  .btn-submit {
+    background: var(--accent);
+    color: #0a0a0f;
+    padding: 0.95rem 2.2rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .btn-submit:hover {
+    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,229,160,0.3);
+  }
+  .form-note { font-size: 0.72rem; color: var(--muted); }
+  .form-success {
+    display: none;
+    padding: 1rem 1.5rem;
+    background: rgba(0,229,160,0.08);
+    border: 1px solid rgba(0,229,160,0.3);
+    border-radius: 8px;
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+  .form-success.visible { display: block; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-logo {
+    font-family: var(--heading);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--accent);
+  }
+  .footer-logo span { color: var(--text); }
+  footer p { color: var(--muted); font-size: 0.78rem; }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.78rem;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ── FEATURED CARD ── */
+  .featured-card {
+    grid-column: span 2;
+    border-color: rgba(0,229,160,0.25);
+    background: linear-gradient(135deg, #16161f 0%, #12121c 100%);
+  }
+  .featured-card .project-img {
+    aspect-ratio: 21/7;
+    font-size: 5rem;
+  }
+  .featured-card .project-name {
+    font-size: 1.4rem;
+  }
+  @media (max-width: 768px) {
+    .featured-card { grid-column: span 1; }
+    .featured-card .project-img { aspect-ratio: 16/9; }
+  }
+
+  /* ── FEATURE LIST in modal ── */
+  .modal-features {
+    margin-top: 1.2rem;
+    display: flex; flex-direction: column; gap: 0.4rem;
+  }
+  .modal-feature-item {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    font-size: 0.8rem; color: var(--muted); line-height: 1.6;
+  }
+  .modal-feature-item::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+
+  /* scroll-reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    nav ul { gap: 1.2rem; }
+    #hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    h1 { font-size: 3rem; }
+    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+    .hero-stats { gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAV -->
+<header role="banner">
+<nav aria-label="Main navigation">
+  <div class="nav-logo">DVB<span>.dev</span></div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section id="hero" aria-label="Introduction">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    Available for freelance work
+  </div>
+
+  <h1>
+    <span class="line dim">Building</span>
+    <span class="line">Apps &amp;</span>
+    <span class="line accent">Experiences.</span>
+  </h1>
+
+  <p class="hero-sub">
+    Full-stack developer crafting polished Android applications and high-performance websites. From concept to deployment — I build digital products that users love.
+  </p>
+
+  <div class="hero-ctas">
+    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+  </div>
+
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">40+</div>
+      <div class="stat-label">Projects Shipped</div>
+    </div>
+    <div>
+      <div class="stat-num">6yr</div>
+      <div class="stat-label">Experience</div>
+    </div>
+    <div>
+      <div class="stat-num">98%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-label="Services">
+  <div class="reveal">
+    <div class="section-label">// What I do</div>
+    <h2>Services &amp;<br>Specialisations</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="services-grid reveal">
+    <div class="service-card">
+      <span class="service-icon">📱</span>
+      <div class="service-title">Android Development</div>
+      <p class="service-desc">Native Android apps built with Kotlin and Jetpack Compose. Smooth, responsive, and crafted for every screen size.</p>
+      <div class="service-tags">
+        <span class="tag">Kotlin</span>
+        <span class="tag">Jetpack Compose</span>
+        <span class="tag">Room DB</span>
+        <span class="tag">Retrofit</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🌐</span>
+      <div class="service-title">Web Development</div>
+      <p class="service-desc">Modern, fast websites and web apps. From landing pages to full-stack platforms — built to perform and convert.</p>
+      <div class="service-tags">
+        <span class="tag">React</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">TypeScript</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔌</span>
+      <div class="service-title">API &amp; Backend</div>
+      <p class="service-desc">Scalable REST and GraphQL APIs, database design, and cloud infrastructure to power your product reliably.</p>
+      <div class="service-tags">
+        <span class="tag">Firebase</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">AWS</span>
+        <span class="tag">GraphQL</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🎨</span>
+      <div class="service-title">UI/UX Design</div>
+      <p class="service-desc">Pixel-perfect interfaces that balance aesthetics with usability. I design as I build — no handoff needed.</p>
+      <div class="service-tags">
+        <span class="tag">Figma</span>
+        <span class="tag">Material You</span>
+        <span class="tag">Prototyping</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚀</span>
+      <div class="service-title">App Store Launch</div>
+      <p class="service-desc">End-to-end deployment: Play Store listing, screenshots, ASO optimisation, and post-launch monitoring.</p>
+      <div class="service-tags">
+        <span class="tag">Play Store</span>
+        <span class="tag">ASO</span>
+        <span class="tag">CI/CD</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔧</span>
+      <div class="service-title">Maintenance &amp; Support</div>
+      <p class="service-desc">Ongoing support, performance audits, dependency updates, and feature iterations — I stick around after launch.</p>
+      <div class="service-tags">
+        <span class="tag">Bug Fixes</span>
+        <span class="tag">Performance</span>
+        <span class="tag">Updates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" aria-label="Portfolio">
+  <div class="reveal">
+    <div class="section-label">// Selected work</div>
+    <h2>Portfolio</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="portfolio-filters reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="android">Android</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+  </div>
+
+  <div class="portfolio-grid reveal" id="portfolioGrid">
+
+    <div class="project-card featured-card" data-cat="android" data-title="Skills United" data-type="Android App — In Active Development" data-emoji="🤝" data-desc="Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development." data-tech="Kotlin · Firebase Auth · Firestore · Firebase Storage · Glide · Coroutines · Material 3">
+      <div class="project-img" style="background: linear-gradient(135deg,#001433,#001F5B,#003080); position:relative;">
+        🤝
+        <div style="position:absolute;top:12px;left:12px;background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);border-radius:100px;padding:3px 10px;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:#00e5a0;">● In Development</div>
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Android App — Active Development</div>
+        <div class="project-name">Skills United</div>
+        <p class="project-desc">Peer skill-exchange app with real-time chat, custom theme engine &amp; live search.</p>
+        <div class="project-meta">
+          <span>2025</span>
+          <div class="project-tech">
+            <div class="tech-dot">K</div>
+            <div class="tech-dot">FB</div>
+            <div class="tech-dot">FS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="android" data-title="FitTrack Pro" data-type="Android App" data-emoji="💪" data-desc="A comprehensive fitness tracking app with workout logging, progress charts, and AI-generated coaching suggestions. Integrates with Google Fit and supports offline-first data sync. Featured on the Play Store's 'Editors Choice' list." data-tech="Kotlin · Room DB · ML Kit · Firebase">
+      <div class="project-img" style="background: linear-gradient(135deg,#1a1a2e,#16213e);">
+        💪
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Android App</div>
+        <div class="project-name">FitTrack Pro</div>
+        <p class="project-desc">AI-assisted fitness tracker with 50 000+ downloads on Play Store.</p>
+        <div class="project-meta">
+          <span>2024</span>
+          <div class="project-tech">
+            <div class="tech-dot">K</div>
+            <div class="tech-dot">F</div>
+            <div class="tech-dot">ML</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="web" data-title="Luminary Studio" data-type="Web App" data-emoji="✨" data-desc="A SaaS creative studio platform for independent designers. Features real-time collaboration, asset management, client review portals, and invoicing. Built with Next.js and a PostgreSQL backend on Vercel." data-tech="Next.js · PostgreSQL · Stripe · Vercel">
+      <div class="project-img" style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);">
+        ✨
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Web App</div>
+        <div class="project-name">Luminary Studio</div>
+        <p class="project-desc">SaaS platform for creative studios — collaboration &amp; billing in one.</p>
+        <div class="project-meta">
+          <span>2024</span>
+          <div class="project-tech">
+            <div class="tech-dot">N</div>
+            <div class="tech-dot">PG</div>
+            <div class="tech-dot">$</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="fullstack" data-title="MarketPulse" data-type="Full-Stack" data-emoji="📈" data-desc="Real-time stock and crypto market dashboard with custom alert engine, portfolio tracker, and news aggregation. Android app + React web dashboard backed by a Node.js WebSocket server ingesting live market feeds." data-tech="Android · React · Node.js · WebSockets">
+      <div class="project-img" style="background: linear-gradient(135deg,#1a0533,#2d0057);">
+        📈
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Full-Stack</div>
+        <div class="project-name">MarketPulse</div>
+        <p class="project-desc">Real-time market dashboard — Android + web with live data feeds.</p>
+        <div class="project-meta">
+          <span>2023</span>
+          <div class="project-tech">
+            <div class="tech-dot">A</div>
+            <div class="tech-dot">R</div>
+            <div class="tech-dot">WS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="android" data-title="Grocr" data-type="Android App" data-emoji="🛒" data-desc="Smart grocery list app with barcode scanning, shared lists via family groups, price tracking across local stores, and meal planning integration. Uses Jetpack Compose with a Material You adaptive theme." data-tech="Kotlin · Jetpack Compose · MLKit · Firebase RTDB">
+      <div class="project-img" style="background: linear-gradient(135deg,#134e01,#1a5c0a);">
+        🛒
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Android App</div>
+        <div class="project-name">Grocr</div>
+        <p class="project-desc">Smart grocery &amp; meal planning app with barcode scanning.</p>
+        <div class="project-meta">
+          <span>2023</span>
+          <div class="project-tech">
+            <div class="tech-dot">K</div>
+            <div class="tech-dot">JC</div>
+            <div class="tech-dot">F</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="web" data-title="Headspace AU" data-type="Web / Landing" data-emoji="🧘" data-desc="Marketing website and booking system for a boutique mindfulness studio. Features animated scroll storytelling, an interactive class scheduler, member portal, and Stripe payment integration." data-tech="React · Framer Motion · Stripe · Sanity CMS">
+      <div class="project-img" style="background: linear-gradient(135deg,#1a1a1a,#2e1a47);">
+        🧘
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Web / Landing</div>
+        <div class="project-name">Headspace AU</div>
+        <p class="project-desc">Booking site &amp; member portal for a mindfulness studio.</p>
+        <div class="project-meta">
+          <span>2022</span>
+          <div class="project-tech">
+            <div class="tech-dot">R</div>
+            <div class="tech-dot">FM</div>
+            <div class="tech-dot">$</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="fullstack" data-title="Rove" data-type="Full-Stack" data-emoji="🗺️" data-desc="Community travel app where users log trips, share route maps, and discover hidden spots recommended by locals. Android app with a geo-based feed, custom map overlays, and a Next.js web companion." data-tech="Kotlin · Google Maps SDK · Next.js · Supabase">
+      <div class="project-img" style="background: linear-gradient(135deg,#0a2e3d,#0e4f63);">
+        🗺️
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Full-Stack</div>
+        <div class="project-name">Rove</div>
+        <p class="project-desc">Community travel &amp; route-sharing app for explorers.</p>
+        <div class="project-meta">
+          <span>2022</span>
+          <div class="project-tech">
+            <div class="tech-dot">K</div>
+            <div class="tech-dot">GM</div>
+            <div class="tech-dot">SB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
+  <div class="reveal">
+    <div class="section-label">// Let's build something</div>
+    <h2>Get In Touch</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="contact-layout reveal">
+    <div class="contact-info">
+      <h3>Have a project in mind?</h3>
+      <p>Whether it's a brand-new Android app, a website refresh, or a complex full-stack platform — I'd love to hear about it. Drop me a message and I'll get back to you within 24 hours.</p>
+
+      <div class="contact-detail">
+        <span class="contact-detail-icon">📧</span>
+        vanblerkdaniel@gmail.com
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-icon">📍</span>
+        Australia — Remote-friendly
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-icon">⏱</span>
+        Response time: under 24 hours
+      </div>
+    </div>
+
+    <div>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="first_name" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option value="">— Select a service —</option>
+            <option>Android App Development</option>
+            <option>Web Development</option>
+            <option>Full-Stack Project</option>
+            <option>UI/UX Design</option>
+            <option>App Store Launch</option>
+            <option>Maintenance &amp; Support</option>
+            <option>Other / Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="budget">Approximate Budget</label>
+          <select id="budget" name="budget">
+            <option value="">— Select a range —</option>
+            <option>Under $2 000</option>
+            <option>$2 000 – $5 000</option>
+            <option>$5 000 – $15 000</option>
+            <option>$15 000+</option>
+            <option>Prefer to discuss</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project, timeline, and any specific requirements…" required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-submit">Send Message →</button>
+          <span class="form-note">No spam, ever.</span>
+        </div>
+        <div class="form-success" id="formSuccess">
+          ✅ Message sent! I'll be in touch within 24 hours.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="footer-logo">DVB<span>.dev</span></div>
+  <p>© 2025 DVB.dev. Built with ☕ and Kotlin.</p>
+  <div class="footer-links">
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-emoji" id="modalEmoji"></div>
+    <div class="modal-type" id="modalType"></div>
+    <div class="modal-title" id="modalTitle"></div>
+    <p class="modal-desc" id="modalDesc"></p>
+    <div class="modal-tags" id="modalTags"></div>
+    <a href="#" class="modal-link" id="modalLink">View live project ↗</a>
+  </div>
+</div>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+reveals.forEach(r => observer.observe(r));
+
+// Portfolio filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    cards.forEach(c => {
+      c.classList.toggle('hidden', f !== 'all' && c.dataset.cat !== f);
+    });
+  });
+});
+
+// Portfolio modal
+const skillsUnitedFeatures = [
+  "Custom theme engine — 4 presets + 8-colour wheel picker, applied tree-wide on every resume via BaseActivity",
+  "Real-time chat with persistent Firestore listeners, in-app slide-down banners, and unread badge tracking",
+  "Live multi-tag search, generated initials avatars, and atomic username reservation on registration",
+  "Careful keyboard & inset handling per screen: adjustResize + modern insets for Chat; adjustNothing + manual padding for Profile",
+];
+
+const modal = document.getElementById('modalBg');
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    document.getElementById('modalEmoji').textContent = card.dataset.emoji;
+    document.getElementById('modalType').textContent = card.dataset.type;
+    document.getElementById('modalTitle').textContent = card.dataset.title;
+    document.getElementById('modalDesc').textContent = card.dataset.desc;
+    const tags = card.dataset.tech.split('·').map(t => t.trim());
+    const tagsEl = document.getElementById('modalTags');
+    tagsEl.innerHTML = tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+    // Feature list (only for Skills United)
+    let featuresEl = document.getElementById('modalFeatures');
+    if (!featuresEl) {
+      featuresEl = document.createElement('div');
+      featuresEl.id = 'modalFeatures';
+      featuresEl.className = 'modal-features';
+      tagsEl.after(featuresEl);
+    }
+    if (card.dataset.title === 'Skills United') {
+      featuresEl.innerHTML = skillsUnitedFeatures.map(f => `<div class="modal-feature-item">${f}</div>`).join('');
+      featuresEl.style.display = 'flex';
+    } else {
+      featuresEl.style.display = 'none';
+    }
+
+    modal.classList.add('open');
+  });
+});
+document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.btn-submit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/mkoyqapk', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(this)
+    });
+    if (res.ok) {
+      document.getElementById('formSuccess').classList.add('visible');
+      this.reset();
+    } else {
+      alert('Something went wrong. Please email me directly at vanblerkdaniel@gmail.com');
+    }
+  } catch (err) {
+    alert('Something went wrong. Please email me directly at vanblerkdaniel@gmail.com');
+  }
+  btn.textContent = 'Send Message →';
+  btn.disabled = false;
+});
+</script>
+</body>
+</html>
