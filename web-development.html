@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Front-End Web Development — dkvb.dev</title>
+<meta name="description" content="Front-end web development by Dan Van Blerk. React, Next.js, HTML/CSS — fast, responsive websites and web apps. Based in Australia, available worldwide.">
+<meta name="keywords" content="front-end developer, web developer, React, Next.js, HTML CSS, TypeScript, freelance web developer, Australia">
+<meta name="author" content="Dan Van Blerk">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#FF6B35">
+<link rel="canonical" href="https://danielvanblerk-dev.github.io/portfolio/web-development.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://danielvanblerk-dev.github.io/portfolio/web-development.html">
+<meta property="og:title" content="Front-End Web Development — dkvb.dev">
+<meta property="og:description" content="Fast, responsive websites and web apps built with React and Next.js. Based in Australia, available worldwide.">
+<meta property="og:site_name" content="dkvb.dev">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Front-End Web Development — dkvb.dev">
+<meta name="twitter:description" content="Front-end web development with React, Next.js, and TypeScript. Based in Australia, available worldwide.">
+<meta name="google-site-verification" content="lRfXqEsO768V_a0W93cNCboDo1KRAW9qE23GHBty0Og" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Front-End Web Development",
+  "provider": {
+    "@type": "Person",
+    "name": "Dan Van Blerk",
+    "url": "https://danielvanblerk-dev.github.io/portfolio"
+  },
+  "description": "Front-end web development using React, Next.js, HTML/CSS, and TypeScript.",
+  "areaServed": "AU",
+  "serviceType": "Front-End Web Development"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --card: #16161f;
+    --border: #2a2a3a;
+    --accent: #FF6B35;
+    --accent-glow: rgba(255,107,53,0.15);
+    --text: #e8e8f0;
+    --muted: #6b6b80;
+    --heading: 'Syne', sans-serif;
+    --mono: 'DM Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--mono); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
+
+  .back-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1.1rem 3rem;
+    background: rgba(10,10,15,0.9); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .back-btn { display: flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; transition: opacity 0.2s; }
+  .back-btn:hover { opacity: 0.7; }
+  .back-bar-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); margin-left: auto; }
+  .back-bar-logo span { color: var(--text); }
+
+  .page-hero {
+    min-height: 52vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 9rem 3rem 5rem; position: relative; overflow: hidden;
+  }
+  .hero-glow {
+    position: absolute; width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    top: -150px; right: -150px; animation: pulse 6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+  .page-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.25);
+    border-radius: 100px; padding: 0.4rem 1rem;
+    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.5rem; width: fit-content;
+  }
+  h1 { font-family: var(--heading); font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  h1 span { color: var(--accent); }
+  .page-sub { max-width: 560px; color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2.5rem; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn { padding: 0.9rem 2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: none; cursor: pointer; transition: all 0.25s; display: inline-block; }
+  .btn-primary { background: var(--accent); color: #0a0a0f; }
+  .btn-primary:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,53,0.3); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+  section { padding: 5rem 3rem; }
+  section:nth-child(even) { background: var(--surface); }
+  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 1rem; }
+  h2 { font-family: var(--heading); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; }
+  .section-divider { width: 40px; height: 2px; background: var(--accent); margin-bottom: 2.5rem; }
+  p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .skill-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem 1.5rem; transition: border-color 0.2s, transform 0.2s; }
+  .skill-item:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .skill-icon { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
+  .skill-name { font-family: var(--heading); font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
+  .skill-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
+
+  .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+  .project-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,107,53,0.2); }
+  .project-img { width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+  .project-body { padding: 1.5rem; }
+  .project-type { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.5rem; }
+  .project-name { font-family: var(--heading); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .project-desc { color: var(--muted); font-size: 0.82rem; line-height: 1.7; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+  .tag { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; background: rgba(255,107,53,0.08); color: var(--accent); border: 1px solid rgba(255,107,53,0.2); }
+  .empty-portfolio { background: var(--card); border: 1px dashed var(--border); border-radius: 10px; padding: 3rem; text-align: center; color: var(--muted); font-size: 0.85rem; line-height: 1.8; }
+  .empty-portfolio .icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+  .pricing-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; position: relative; transition: border-color 0.2s; }
+  .pricing-card.featured { border-color: var(--accent); }
+  .pricing-card.featured::before { content: 'Most Popular'; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #0a0a0f; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.8rem; border-radius: 0 0 6px 6px; }
+  .pricing-tier { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.8rem; }
+  .pricing-price { font-family: var(--heading); font-size: 2.2rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 0.3rem; }
+  .pricing-price span { font-size: 1rem; color: var(--muted); font-family: var(--mono); }
+  .pricing-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; }
+  .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pricing-features li { font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: flex-start; }
+  .pricing-features li::before { content: '✓'; color: var(--accent); flex-shrink: 0; }
+  .pricing-note { font-size: 0.72rem; color: var(--muted); margin-top: 2rem; text-align: center; }
+
+  .contact-wrap { max-width: 600px; }
+  form { display: flex; flex-direction: column; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+  input, textarea, select { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem 1rem; color: var(--text); font-family: var(--mono); font-size: 0.85rem; transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%; }
+  input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,107,53,0.1); }
+  textarea { resize: vertical; min-height: 130px; }
+  select option { background: var(--card); }
+  .btn-submit { background: var(--accent); color: #0a0a0f; padding: 0.95rem 2.2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; transition: all 0.25s; width: fit-content; }
+  .btn-submit:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,53,0.3); }
+  .form-success { display: none; padding: 1rem 1.5rem; background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; color: var(--accent); font-size: 0.85rem; margin-top: 1rem; }
+  .form-success.visible { display: block; }
+
+  footer { background: var(--bg); border-top: 1px solid var(--border); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); }
+  .footer-logo span { color: var(--text); }
+  footer p { color: var(--muted); font-size: 0.78rem; }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    .back-bar { padding: 1rem 1.5rem; }
+    .page-hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
+    h1 { font-size: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header role="banner">
+  <div class="back-bar">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    <div class="back-bar-logo">dkvb<span>.dev</span></div>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero" aria-label="Front-End Development Introduction">
+  <div class="hero-glow"></div>
+  <div class="page-badge">🌐 Front-End Development</div>
+  <h1>Websites That<br><span>Perform.</span></h1>
+  <p class="page-sub">Clean, fast, responsive websites and web apps. From landing pages to interactive experiences — built with modern tools and an eye for detail.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn btn-primary">Start a Project</a>
+    <a href="#portfolio" class="btn btn-ghost">See My Work</a>
+  </div>
+</section>
+
+<section id="skills" aria-label="Skills and Tools">
+  <div class="reveal">
+    <div class="section-label">// Tech Stack</div>
+    <h2>Skills &amp; Tools</h2>
+    <div class="section-divider"></div>
+    <p>A modern front-end stack focused on performance, accessibility, and maintainability.</p>
+  </div>
+  <div class="skills-grid reveal">
+    <div class="skill-item">
+      <span class="skill-icon">⚛️</span>
+      <div class="skill-name">React</div>
+      <div class="skill-desc">Component-based UI development for dynamic, interactive web experiences.</div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-icon">▲</span>
+      <div class="skill-name">Next.js</div>
+      <div class="skill-desc">React framework with routing, SSR, and performance optimisations built in.</div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-icon">🔷</span>
+      <div class="skill-name">TypeScript</div>
+      <div class="skill-desc">Type-safe JavaScript for catching errors early and writing confident code.</div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-icon">🎨</span>
+      <div class="skill-name">HTML & CSS</div>
+      <div class="skill-desc">Semantic markup and hand-crafted styles — no unnecessary abstractions.</div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-icon">📱</span>
+      <div class="skill-name">Responsive Design</div>
+      <div class="skill-desc">Layouts that look great on every device, from mobile to ultrawide.</div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-icon">⚡</span>
+      <div class="skill-name">Performance</div>
+      <div class="skill-desc">Fast load times, optimised assets, and high Lighthouse scores as standard.</div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-icon">♿</span>
+      <div class="skill-name">Accessibility</div>
+      <div class="skill-desc">WCAG-compliant, semantic HTML and ARIA — usable by everyone.</div>
+    </div>
+    <div class="skill-item">
+      <span class="skill-icon">🔍</span>
+      <div class="skill-name">SEO</div>
+      <div class="skill-desc">Meta tags, structured data, canonical URLs, and Search Console setup.</div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" aria-label="Portfolio">
+  <div class="reveal">
+    <div class="section-label">// Work</div>
+    <h2>Web Projects</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="reveal">
+    <div class="empty-portfolio">
+      <span class="icon">🚧</span>
+      Web projects coming soon. Check back as my portfolio grows — or <a href="#contact" style="color:var(--accent);">get in touch</a> to be one of the first.
+    </div>
+  </div>
+</section>
+
+<section id="pricing" aria-label="Pricing">
+  <div class="reveal">
+    <div class="section-label">// Investment</div>
+    <h2>Pricing</h2>
+    <div class="section-divider"></div>
+    <p>Transparent pricing with no surprises. Final quotes are scoped per project.</p>
+  </div>
+  <div class="pricing-grid reveal">
+    <div class="pricing-card">
+      <div class="pricing-tier">Landing Page</div>
+      <div class="pricing-price">$300 <span>/ project</span></div>
+      <p class="pricing-desc">A single, polished page to showcase your product, service, or brand.</p>
+      <ul class="pricing-features">
+        <li>Single page design</li>
+        <li>Fully responsive</li>
+        <li>Contact form</li>
+        <li>Basic SEO setup</li>
+        <li>1 round of revisions</li>
+      </ul>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-tier">Website</div>
+      <div class="pricing-price">$800 <span>/ project</span></div>
+      <p class="pricing-desc">A multi-page website with navigation, content sections, and full SEO.</p>
+      <ul class="pricing-features">
+        <li>Up to 5 pages</li>
+        <li>Fully responsive</li>
+        <li>Contact form with email</li>
+        <li>Full SEO implementation</li>
+        <li>Performance optimised</li>
+        <li>3 rounds of revisions</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-tier">Web App</div>
+      <div class="pricing-price">Let's <span>talk</span></div>
+      <p class="pricing-desc">Interactive web applications with dynamic data, auth, and custom features.</p>
+      <ul class="pricing-features">
+        <li>Custom scope</li>
+        <li>React / Next.js build</li>
+        <li>Authentication</li>
+        <li>API integration</li>
+        <li>Flexible revisions</li>
+      </ul>
+    </div>
+  </div>
+  <p class="pricing-note reveal">All prices in AUD. Final quote provided after project scoping.</p>
+</section>
+
+<section id="contact" aria-label="Contact">
+  <div class="reveal">
+    <div class="section-label">// Get Started</div>
+    <h2>Start Your Web Project</h2>
+    <div class="section-divider"></div>
+    <p>Tell me about your website or web app and I'll get back to you within 24 hours.</p>
+  </div>
+  <div class="contact-wrap reveal">
+    <form id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="first_name" placeholder="Jane" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="last_name" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+      </div>
+      <div class="form-group">
+        <label for="budget">Approximate Budget</label>
+        <select id="budget" name="budget">
+          <option value="">— Select a range —</option>
+          <option>Under $300</option>
+          <option>$300 – $800</option>
+          <option>$800 – $3,000</option>
+          <option>$3,000+</option>
+          <option>Prefer to discuss</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Me About Your Project</label>
+        <textarea id="message" name="message" placeholder="Describe your website or web app, what pages you need, and any specific requirements…" required></textarea>
+      </div>
+      <input type="hidden" name="service" value="Front-End Web Development">
+      <button type="submit" class="btn-submit">Send Message →</button>
+      <div class="form-success" id="formSuccess">✅ Message sent! I'll be in touch within 24 hours.</div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-logo">dkvb<span>.dev</span></div>
+  <p>© 2025 dkvb.dev. Built with ☕ and Kotlin.</p>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(r => observer.observe(r));
+
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.btn-submit');
+  btn.textContent = 'Sending…'; btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/mkoyqapk', {
+      method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(this)
+    });
+    if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
+    else { alert('Something went wrong. Please email me directly at vanblerkdaniel@gmail.com'); }
+  } catch { alert('Something went wrong. Please email me directly at vanblerkdaniel@gmail.com'); }
+  btn.textContent = 'Send Message →'; btn.disabled = false;
+});
+</script>
+</body>
+</html>
