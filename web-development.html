@@ -14,10 +14,18 @@
 <meta property="og:url" content="https://danielvanblerk-dev.github.io/portfolio/web-development.html">
 <meta property="og:title" content="Front-End Web Development — dkvb.dev">
 <meta property="og:description" content="Fast, responsive websites and web apps built with React and Next.js. Based in Australia, available worldwide.">
+<meta property="og:image" content="https://danielvanblerk-dev.github.io/portfolio/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_AU">
 <meta property="og:site_name" content="dkvb.dev">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://danielvanblerk-dev.github.io/portfolio/web-development.html">
+<meta name="twitter:image" content="https://danielvanblerk-dev.github.io/portfolio/og-preview.png">
 <meta name="twitter:title" content="Front-End Web Development — dkvb.dev">
 <meta name="twitter:description" content="Front-end web development with React, Next.js, and TypeScript. Based in Australia, available worldwide.">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.placename" content="Australia">
 <meta name="google-site-verification" content="lRfXqEsO768V_a0W93cNCboDo1KRAW9qE23GHBty0Og" />
 <script type="application/ld+json">
 {
@@ -152,6 +160,16 @@
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+  /* ── SKIP LINK ── */
+  .skip-link {
+    position: absolute; top: -100px; left: 1rem;
+    background: var(--accent); color: #0a0a0f;
+    padding: 0.5rem 1rem; border-radius: 0 0 6px 6px;
+    font-size: 0.8rem; text-decoration: none; z-index: 999;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 0; }
+
   @media (max-width: 768px) {
     .back-bar { padding: 1rem 1.5rem; }
     .page-hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -163,6 +181,7 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <header role="banner">
   <div class="back-bar">
     <a href="index.html" class="back-btn">← Back to Home</a>
@@ -170,7 +189,7 @@
   </div>
 </header>
 
-<main>
+<main id="main-content">
 
 <section class="page-hero" aria-label="Front-End Development Introduction">
   <div class="hero-glow"></div>
