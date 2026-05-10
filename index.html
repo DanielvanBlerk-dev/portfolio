@@ -129,6 +129,47 @@
     overflow-x: hidden;
   }
 
+  /* ── MODAL SCREENSHOTS ── */
+  .modal-screenshots {
+    display: none;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+  }
+  .modal-screenshots.visible { display: flex; }
+  .modal-screenshot-track {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.4rem;
+  }
+  .modal-screenshot-track::-webkit-scrollbar { display: none; }
+  .modal-screenshot {
+    flex: 0 0 42%;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    aspect-ratio: 9/19;
+    background: var(--bg);
+  }
+  .modal-screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .modal-screenshot-hint {
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
   /* ── SKIP LINK (accessibility + SEO) ── */
   .skip-link {
     position: absolute; top: -100px; left: 1rem;
@@ -949,6 +990,17 @@
   <div class="modal">
     <button class="modal-close" id="modalClose">✕</button>
     <div class="modal-emoji" id="modalEmoji"></div>
+    <div class="modal-screenshots" id="modalScreenshots">
+      <div class="modal-screenshot-track">
+        <div class="modal-screenshot">
+          <img src="https://danielvanblerk-dev.github.io/portfolio/assets/skills-united/screenshot1.jpg" alt="Skills United screenshot 1">
+        </div>
+        <div class="modal-screenshot">
+          <img src="https://danielvanblerk-dev.github.io/portfolio/assets/skills-united/screenshot2.jpg" alt="Skills United screenshot 2">
+        </div>
+      </div>
+      <div class="modal-screenshot-hint">← scroll to view →</div>
+    </div>
     <div class="modal-type" id="modalType"></div>
     <div class="modal-title" id="modalTitle"></div>
     <p class="modal-desc" id="modalDesc"></p>
@@ -992,7 +1044,13 @@ const skillsUnitedFeatures = [
 const modal = document.getElementById('modalBg');
 cards.forEach(card => {
   card.addEventListener('click', () => {
+    const isSkillsUnited = card.dataset.title === 'Skills United';
+
+    // Toggle emoji vs screenshots
     document.getElementById('modalEmoji').textContent = card.dataset.emoji;
+    document.getElementById('modalEmoji').style.display = isSkillsUnited ? 'none' : 'block';
+    document.getElementById('modalScreenshots').classList.toggle('visible', isSkillsUnited);
+
     document.getElementById('modalType').textContent = card.dataset.type;
     document.getElementById('modalTitle').textContent = card.dataset.title;
     document.getElementById('modalDesc').textContent = card.dataset.desc;
@@ -1008,7 +1066,7 @@ cards.forEach(card => {
       featuresEl.className = 'modal-features';
       tagsEl.after(featuresEl);
     }
-    if (card.dataset.title === 'Skills United') {
+    if (isSkillsUnited) {
       featuresEl.innerHTML = skillsUnitedFeatures.map(f => `<div class="modal-feature-item">${f}</div>`).join('');
       featuresEl.style.display = 'flex';
     } else {
