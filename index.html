@@ -944,7 +944,7 @@
       </div>
     </div>
 
-    <div class="project-card" data-cat="web" data-title="Airlie Beach Art" data-type="Full-Stack Website" data-emoji="🎨" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg">
+    <div class="project-card" data-cat="web" data-title="Airlie Beach Art" data-type="Full-Stack Website" data-emoji="🎨" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-url="https://airliebeachart.com">
       <div class="project-img" style="background: linear-gradient(135deg,#1a0a00,#3d1f00,#5c3000);">
         🖼️
         <div class="project-overlay">↗ View Project</div>
@@ -1138,6 +1138,17 @@ cards.forEach(card => {
     const tags = card.dataset.tech.split('·').map(t => t.trim());
     const tagsEl = document.getElementById('modalTags');
     tagsEl.innerHTML = tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+    // Live project link
+    const linkEl = document.getElementById('modalLink');
+    if (card.dataset.url) {
+      linkEl.href = card.dataset.url;
+      linkEl.target = '_blank';
+      linkEl.rel = 'noopener noreferrer';
+      linkEl.style.display = 'inline-flex';
+    } else {
+      linkEl.style.display = 'none';
+    }
 
     // Feature list (only for Skills United)
     let featuresEl = document.getElementById('modalFeatures');
