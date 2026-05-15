@@ -888,6 +888,18 @@
       </div>
       <div style="margin-top:1.5rem;font-size:0.75rem;color:#9B6BFF;letter-spacing:0.08em;">Learn more →</div>
     </div>
+    <div class="service-card" onclick="window.location='backend-development.html'" style="cursor:pointer;">
+      <span class="service-icon">🔌</span>
+      <div class="service-title">Back-End Development</div>
+      <p class="service-desc">Scalable APIs, real-time databases, and cloud infrastructure. The engine that powers your app — reliable, fast, and built to grow.</p>
+      <div class="service-tags">
+        <span class="tag">Firebase</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">Firestore</span>
+      </div>
+      <div style="margin-top:1.5rem;font-size:0.75rem;color:#00BFFF;letter-spacing:0.08em;">Learn more →</div>
+    </div>
   </div>
 </section>
 
@@ -901,7 +913,7 @@
 
   <div class="portfolio-grid reveal" id="portfolioGrid">
 
-    <div class="project-card featured-card" data-cat="android" data-title="Skills United" data-type="Android App — In Active Development" data-emoji="🤝" data-desc="Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development." data-tech="Kotlin · Firebase Auth · Firestore · Firebase Storage · Glide · Coroutines · Material 3">
+    <div class="project-card featured-card" data-cat="android" data-title="Skills United" data-type="Android App — In Active Development" data-emoji="🤝" data-desc="Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development." data-tech="Kotlin · Firebase Auth · Firestore · Firebase Storage · Glide · Coroutines · Material 3" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg">
       <div class="project-img" style="background: linear-gradient(135deg,#001433,#001F5B,#003080); position:relative;">
         🤝
         <div style="position:absolute;top:12px;left:12px;background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);border-radius:100px;padding:3px 10px;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:#00e5a0;">● In Development</div>
@@ -917,6 +929,26 @@
             <div class="tech-dot">K</div>
             <div class="tech-dot">FB</div>
             <div class="tech-dot">FS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="web" data-title="Airlie Beach Art" data-type="Full-Stack Website" data-emoji="🎨" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg">
+      <div class="project-img" style="background: linear-gradient(135deg,#1a0a00,#3d1f00,#5c3000);">
+        🖼️
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">Full-Stack Website</div>
+        <div class="project-name">Airlie Beach Art</div>
+        <p class="project-desc">Original art shop with Square payments, Australia Post shipping &amp; admin panel.</p>
+        <div class="project-meta">
+          <span>2025</span>
+          <div class="project-tech">
+            <div class="tech-dot">V</div>
+            <div class="tech-dot">SQ</div>
+            <div class="tech-dot">AP</div>
           </div>
         </div>
       </div>
@@ -1024,14 +1056,7 @@
     <button class="modal-close" id="modalClose">✕</button>
     <div class="modal-emoji" id="modalEmoji"></div>
     <div class="modal-screenshots" id="modalScreenshots">
-      <div class="modal-screenshot-track">
-        <div class="modal-screenshot">
-          <img src="https://danielvanblerk-dev.github.io/portfolio/assets/skills-united/screenshot1.jpg" alt="Skills United screenshot 1">
-        </div>
-        <div class="modal-screenshot">
-          <img src="https://danielvanblerk-dev.github.io/portfolio/assets/skills-united/screenshot2.jpg" alt="Skills United screenshot 2">
-        </div>
-      </div>
+      <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
       <div class="modal-screenshot-hint">← scroll to view →</div>
     </div>
     <div class="modal-type" id="modalType"></div>
@@ -1074,15 +1099,28 @@ const skillsUnitedFeatures = [
   "Careful keyboard & inset handling per screen: adjustResize + modern insets for Chat; adjustNothing + manual padding for Profile",
 ];
 
+const baseUrl = 'https://danielvanblerk-dev.github.io/portfolio/assets/';
 const modal = document.getElementById('modalBg');
+
 cards.forEach(card => {
   card.addEventListener('click', () => {
-    const isSkillsUnited = card.dataset.title === 'Skills United';
+    const screenshots = card.dataset.screenshots ? card.dataset.screenshots.split('|') : [];
+    const hasScreenshots = screenshots.length > 0;
 
     // Toggle emoji vs screenshots
     document.getElementById('modalEmoji').textContent = card.dataset.emoji;
-    document.getElementById('modalEmoji').style.display = isSkillsUnited ? 'none' : 'block';
-    document.getElementById('modalScreenshots').classList.toggle('visible', isSkillsUnited);
+    document.getElementById('modalEmoji').style.display = hasScreenshots ? 'none' : 'block';
+
+    const screenshotsEl = document.getElementById('modalScreenshots');
+    const trackEl = document.getElementById('modalScreenshotTrack');
+    if (hasScreenshots) {
+      trackEl.innerHTML = screenshots.map((src, i) =>
+        `<div class="modal-screenshot"><img src="${baseUrl}${src}" alt="${card.dataset.title} screenshot ${i+1}"></div>`
+      ).join('');
+      screenshotsEl.classList.add('visible');
+    } else {
+      screenshotsEl.classList.remove('visible');
+    }
 
     document.getElementById('modalType').textContent = card.dataset.type;
     document.getElementById('modalTitle').textContent = card.dataset.title;
@@ -1099,7 +1137,7 @@ cards.forEach(card => {
       featuresEl.className = 'modal-features';
       tagsEl.after(featuresEl);
     }
-    if (isSkillsUnited) {
+    if (card.dataset.title === 'Skills United') {
       featuresEl.innerHTML = skillsUnitedFeatures.map(f => `<div class="modal-feature-item">${f}</div>`).join('');
       featuresEl.style.display = 'flex';
     } else {
