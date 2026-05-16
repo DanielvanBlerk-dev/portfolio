@@ -27,6 +27,21 @@
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.placename" content="Australia">
 <meta name="google-site-verification" content="lRfXqEsO768V_a0W93cNCboDo1KRAW9qE23GHBty0Og" />
+
+<!-- ── SECURITY ── -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
+  img-src 'self' https://danielvanblerk-dev.github.io data:;
+  connect-src 'self' https://formspree.io;
+  frame-ancestors 'none';
+  base-uri 'self';
+  form-action 'self' https://formspree.io;
+">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -42,8 +57,66 @@
   "serviceType": "UI/UX Design"
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
+
+  /* ── SELF-HOSTED FONTS ── */
+  @font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/syne-v24-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/syne-v24-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/syne-v24-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/syne-v24-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('assets/fonts/dm-mono-v16-latin-300.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('assets/fonts/dm-mono-v16-latin-300italic.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/dm-mono-v16-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'DM Mono';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/dm-mono-v16-latin-500italic.woff2') format('woff2');
+  }
+
   :root {
     --bg: #0a0a0f;
     --surface: #111118;
@@ -336,16 +409,16 @@
       <div class="form-row">
         <div class="form-group">
           <label for="fname">First Name</label>
-          <input type="text" id="fname" name="first_name" placeholder="Jane" required>
+          <input type="text" id="fname" name="first_name" placeholder="Jane" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
         </div>
         <div class="form-group">
           <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="last_name" placeholder="Smith" required>
+          <input type="text" id="lname" name="last_name" placeholder="Smith" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
         </div>
       </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" required>
       </div>
       <div class="form-group">
         <label for="type">Project Type</label>
@@ -370,9 +443,14 @@
       </div>
       <div class="form-group">
         <label for="message">Tell Me About Your Project</label>
-        <textarea id="message" name="message" placeholder="Describe what you're building, who it's for, and what kind of design help you need…" required></textarea>
+        <textarea id="message" name="message" placeholder="Describe what you're building, who it's for, and what kind of design help you need…" maxlength="2000" required></textarea>
       </div>
       <input type="hidden" name="service" value="UI/UX Design">
+      <!-- Honeypot — hidden from real users, bots will fill it -->
+      <div style="display:none;" aria-hidden="true">
+        <label for="website">Website</label>
+        <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
       <button type="submit" class="btn-submit">Send Message →</button>
       <div class="form-success" id="formSuccess">✅ Message sent! I'll be in touch within 24 hours.</div>
     </form>
