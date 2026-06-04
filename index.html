@@ -217,32 +217,64 @@
     margin-top: 1.2rem;
   }
   .modal-screenshots.visible { display: flex; }
+  .modal-screenshot-viewport {
+    position: relative;
+  }
   .modal-screenshot-track {
     display: flex;
     gap: 0.8rem;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.8rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--border);
+    scroll-behavior: smooth;
   }
-  .modal-screenshot-track::-webkit-scrollbar { display: none; }
+  .modal-screenshot-track::-webkit-scrollbar { height: 8px; }
+  .modal-screenshot-track::-webkit-scrollbar-track {
+    background: var(--border);
+    border-radius: 4px;
+  }
+  .modal-screenshot-track::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+  }
   .modal-screenshot {
-    flex: 0 0 42%;
-    scroll-snap-align: start;
+    flex: 0 0 auto;
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--border);
-    aspect-ratio: 9/19;
-    max-height: 260px;
+    max-height: 320px;
     background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
   }
   .modal-screenshot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 320px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     display: block;
   }
+  .modal-scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(10,10,15,0.85);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 5;
+    transition: background 0.2s, opacity 0.2s;
+    opacity: 0.9;
+  }
+  .modal-scroll-arrow:hover { background: var(--accent); color: #0a0a0f; }
+  .modal-scroll-arrow.left { left: 4px; }
+  .modal-scroll-arrow.right { right: 4px; }
   .modal-screenshot-hint {
     font-size: 0.65rem;
     color: var(--muted);
@@ -1003,7 +1035,7 @@
 
   <div class="portfolio-grid reveal" id="portfolioGrid">
 
-    <div class="project-card featured-card" data-cat="android" data-title="Skills United" data-type="Android App — In Active Development" data-emoji="🤝" data-desc="Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development." data-tech="Kotlin · Firebase Auth · Firestore · Firebase Storage · Glide · Coroutines · Material 3" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg">
+    <div class="project-card featured-card" data-cat="android" data-title="Skills United" data-type="Android App — In Active Development" data-emoji="🤝" data-desc="Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development." data-tech="Kotlin · Firebase Auth · Firestore · Firebase Storage · Glide · Coroutines · Material 3" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg">
       <div class="project-img" style="background: linear-gradient(135deg,#001433,#001F5B,#003080); position:relative;">
         🤝
         <div style="position:absolute;top:12px;left:12px;background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);border-radius:100px;padding:3px 10px;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:#00e5a0;">● In Development</div>
@@ -1044,11 +1076,84 @@
       </div>
     </div>
 
+    <div class="project-card" data-cat="design" data-title="Flo" data-type="UI/UX Design — Android App" data-emoji="🌊" data-desc="UI/UX design for Flo, a personal productivity app for tasks, focus sessions, and daily habits. Designed in Figma for Android using Material You dynamic colour — a deep navy/indigo base with a cyan accent. Includes a minimal splash screen and a five-screen onboarding and sign-in flow, built with Auto Layout throughout for production-ready developer handoff." data-tech="Figma · Material You · Android · Auto Layout · Dark Mode" data-screenshots="flo/screenshot1.png" data-url="https://www.figma.com/proto/CA3IUyaUV0NhyqJQHo5maj/Untitled?node-id=5-255&p=f&t=dlvQJ9h7kdNtHYO1-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A22&show-proto-sidebar=1">
+      <div class="project-img" style="background: linear-gradient(135deg,#0a0e2e,#1a1f5c,#2a2f8c);">
+        🌊
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">UI/UX Design — Android</div>
+        <div class="project-name">Flo</div>
+        <p class="project-desc">Productivity app UI — splash &amp; onboarding, Material You, dark mode.</p>
+        <div class="project-meta">
+          <span>2025</span>
+          <div class="project-tech">
+            <div class="tech-dot">F</div>
+            <div class="tech-dot">MY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="design" data-title="Pulse" data-type="UI/UX Design — Web App" data-emoji="📊" data-desc="UI/UX design for Pulse, a SaaS project management and sprint analytics tool. Light mode, Notion-influenced — soft grey surfaces, generous whitespace, the Inter typeface, and a data-forward layout. Includes a dashboard overview, stats and chart views, and a data table/list view, all designed in Figma." data-tech="Figma · Web · Data Visualisation · Light Mode · SaaS" data-screenshots="pulse/screenshot1.jpg|pulse/screenshot2.jpg" data-url="https://www.figma.com/proto/zJg8BIw0mJBaVZz4NvfBNL/Untitled?node-id=23-1790&p=f&t=Nl7Cmq36Eph2OXV5-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A1790">
+      <div class="project-img" style="background: linear-gradient(135deg,#0d2840,#155a8a,#1e7fc0);">
+        📊
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">UI/UX Design — Web</div>
+        <div class="project-name">Pulse</div>
+        <p class="project-desc">SaaS analytics dashboard UI — charts, stats &amp; data tables.</p>
+        <div class="project-meta">
+          <span>2025</span>
+          <div class="project-tech">
+            <div class="tech-dot">F</div>
+            <div class="tech-dot">UI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="design" data-title="Vault" data-type="UI/UX Design — Android App" data-emoji="🔐" data-desc="UI/UX design for Vault, a personal finance and fintech app. Designed in Figma for Android in dark mode, with a clean, trustworthy aesthetic suited to financial data. Includes a home screen with account overviews and a profile and settings screen." data-tech="Figma · Android · Fintech · Dark Mode · Mobile UI" data-screenshots="vault/screenshot1.jpg|vault/screenshot2.jpg" data-url="https://www.figma.com/proto/CuiYatswl6WpJtyE8AFbIH/Untitled?node-id=3-21&p=f&t=C9X2knGERcRB1aQn-0&scaling=contain&content-scaling=fixed&page-id=0%3A1">
+      <div class="project-img" style="background: linear-gradient(135deg,#06251c,#0f5640,#168a64);">
+        🔐
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">UI/UX Design — Android</div>
+        <div class="project-name">Vault</div>
+        <p class="project-desc">Finance app UI — home &amp; settings screens, fintech, dark mode.</p>
+        <div class="project-meta">
+          <span>2025</span>
+          <div class="project-tech">
+            <div class="tech-dot">F</div>
+            <div class="tech-dot">$</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="design" data-title="Crate" data-type="UI/UX Design — Mobile Store" data-emoji="📦" data-desc="UI/UX design for Crate, a premium tech accessories e-commerce store. Light mode with a minimal Apple Store aesthetic — generous whitespace, crisp product imagery, and confident typography. Includes a product detail page, cart and checkout, and an order confirmation screen, all designed in Figma." data-tech="Figma · Mobile · E-Commerce · Light Mode · UI Design" data-screenshots="crate/screenshot1.jpg" data-url="https://www.figma.com/proto/CuiYatswl6WpJtyE8AFbIH/Untitled?node-id=49-1198&p=f&t=C9X2knGERcRB1aQn-0&scaling=contain&content-scaling=fixed&page-id=49%3A1197">
+      <div class="project-img" style="background: linear-gradient(135deg,#3a2400,#7a4f0b,#b87a1a);">
+        📦
+        <div class="project-overlay">↗ View Project</div>
+      </div>
+      <div class="project-body">
+        <div class="project-type">UI/UX Design — Mobile</div>
+        <div class="project-name">Crate</div>
+        <p class="project-desc">E-commerce store UI — product, cart &amp; checkout, Apple Store style.</p>
+        <div class="project-meta">
+          <span>2025</span>
+          <div class="project-tech">
+            <div class="tech-dot">F</div>
+            <div class="tech-dot">EC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<!-- CONTACT -->
-<section id="contact" aria-label="Contact">
   <div class="reveal">
     <div class="section-label">// Let's build something</div>
     <h2>Get In Touch</h2>
@@ -1152,8 +1257,12 @@
     <button class="modal-close" id="modalClose">✕</button>
     <div class="modal-emoji" id="modalEmoji"></div>
     <div class="modal-screenshots" id="modalScreenshots">
-      <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
-      <div class="modal-screenshot-hint">← scroll to view →</div>
+      <div class="modal-screenshot-viewport">
+        <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">‹</button>
+        <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
+        <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
+      </div>
+      <div class="modal-screenshot-hint">scroll or use arrows to view</div>
     </div>
     <div class="modal-type" id="modalType"></div>
     <div class="modal-title" id="modalTitle"></div>
@@ -1256,6 +1365,15 @@ cards.forEach(card => {
 });
 document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
 modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+// Screenshot scroll arrows
+const scrollTrack = document.getElementById('modalScreenshotTrack');
+document.getElementById('modalScrollLeft').addEventListener('click', () => {
+  scrollTrack.scrollBy({ left: -scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
+});
+document.getElementById('modalScrollRight').addEventListener('click', () => {
+  scrollTrack.scrollBy({ left: scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
+});
 
 // Contact form
 document.getElementById('contactForm').addEventListener('submit', async function(e) {

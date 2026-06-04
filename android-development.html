@@ -338,21 +338,37 @@
   .modal-title { font-family: var(--heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.8rem; }
   .modal-desc { color: var(--muted); line-height: 1.8; font-size: 0.88rem; }
   .modal-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
+  .modal-screenshot-viewport { position: relative; }
   .modal-screenshot-track {
     display: flex; gap: 0.8rem; overflow-x: auto;
-    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; padding-bottom: 0.4rem;
+    -webkit-overflow-scrolling: touch; padding-bottom: 0.8rem;
     margin-bottom: 0.6rem;
+    scrollbar-width: thin; scrollbar-color: var(--accent) var(--border);
+    scroll-behavior: smooth;
   }
-  .modal-screenshot-track::-webkit-scrollbar { display: none; }
+  .modal-screenshot-track::-webkit-scrollbar { height: 8px; }
+  .modal-screenshot-track::-webkit-scrollbar-track { background: var(--border); border-radius: 4px; }
+  .modal-screenshot-track::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
   .modal-screenshot {
-    flex: 0 0 42%; scroll-snap-align: start;
+    flex: 0 0 auto;
     border-radius: 8px; overflow: hidden;
     border: 1px solid var(--border);
-    aspect-ratio: 9/19; max-height: 260px;
+    max-height: 320px;
     background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
   }
-  .modal-screenshot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .modal-screenshot img { max-width: 100%; max-height: 320px; width: auto; height: auto; object-fit: contain; display: block; }
+  .modal-scroll-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(10,10,15,0.85); border: 1px solid var(--accent);
+    color: var(--accent); font-size: 1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 5; transition: background 0.2s; opacity: 0.9;
+  }
+  .modal-scroll-arrow:hover { background: var(--accent); color: #0a0a0f; }
+  .modal-scroll-arrow.left { left: 4px; }
+  .modal-scroll-arrow.right { right: 4px; }
   .modal-screenshot-hint { font-size: 0.65rem; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
 
   /* ── SKIP LINK ── */
@@ -688,15 +704,28 @@
 <div class="modal-bg" id="modalBg">
   <div class="modal">
     <button class="modal-close" id="modalClose">✕</button>
-    <div class="modal-screenshot-track">
-      <div class="modal-screenshot">
-        <img src="https://dkvb.dev/assets/skills-united/screenshot1.jpg" alt="Skills United screenshot 1">
+    <div class="modal-screenshot-viewport">
+      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">‹</button>
+      <div class="modal-screenshot-track" id="modalScreenshotTrack">
+        <div class="modal-screenshot">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot1.jpg" alt="Skills United screenshot 1">
+        </div>
+        <div class="modal-screenshot">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot2.jpg" alt="Skills United screenshot 2">
+        </div>
+        <div class="modal-screenshot">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot3.jpg" alt="Skills United screenshot 3">
+        </div>
+        <div class="modal-screenshot">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot4.jpg" alt="Skills United screenshot 4">
+        </div>
+        <div class="modal-screenshot">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot5.jpg" alt="Skills United screenshot 5">
+        </div>
       </div>
-      <div class="modal-screenshot">
-        <img src="https://dkvb.dev/assets/skills-united/screenshot2.jpg" alt="Skills United screenshot 2">
-      </div>
+      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
     </div>
-    <div class="modal-screenshot-hint">← scroll to view →</div>
+    <div class="modal-screenshot-hint">scroll or use arrows to view</div>
     <div class="modal-type">Android App — In Active Development</div>
     <div class="modal-title">Skills United</div>
     <p class="modal-desc">Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development.</p>
@@ -724,6 +753,15 @@ const modal = document.getElementById('modalBg');
 document.querySelector('.project-card').addEventListener('click', () => modal.classList.add('open'));
 document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
 modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+// Screenshot scroll arrows
+const scrollTrack = document.getElementById('modalScreenshotTrack');
+document.getElementById('modalScrollLeft').addEventListener('click', () => {
+  scrollTrack.scrollBy({ left: -scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
+});
+document.getElementById('modalScrollRight').addEventListener('click', () => {
+  scrollTrack.scrollBy({ left: scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
+});
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
