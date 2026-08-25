@@ -24,8 +24,8 @@
 
 <!-- ── PRIMARY SEO ── -->
 <title>dkvb.dev — Android App & Web Developer | Australia</title>
-<meta name="description" content="Dan Van Blerk is a freelance developer based in Townsville, Queensland, Australia. Specialising in Android app development, front-end web development, UI/UX design, and back-end development. Cost-effective freelance rates — no agency markups. Available for local and remote projects.">
-<meta name="keywords" content="Android developer Townsville, front-end developer Townsville, UI UX designer Townsville, back-end developer Townsville, web developer Queensland, app developer Australia, cost-effective developer Townsville, affordable app development Queensland, freelance rates no agency markup, transparent pricing developer Australia, Kotlin, Firebase, React, Next.js, Figma, Node.js, freelance developer Townsville">
+<meta name="description" content="Dan Van Blerk is a freelance developer based in Townsville, Queensland, Australia. Specialising in Android app development, front-end web development, UI/UX design, and back-end development. Cost-effective freelance rates — no agency markups. Available for local and remote projects. Also building websites, booking systems, and digital tools for Herbert River sugar industry businesses — growers, contractors, and ag suppliers from Ingham to Townsville.">
+<meta name="keywords" content="Android developer Townsville, front-end developer Townsville, UI UX designer Townsville, back-end developer Townsville, web developer Queensland, app developer Australia, cost-effective developer Townsville, affordable app development Queensland, freelance rates no agency markup, transparent pricing developer Australia, Kotlin, Firebase, React, Next.js, Figma, Node.js, freelance developer Townsville, web developer Ingham, website developer Herbert River, sugar industry software Queensland, cane industry digital services, Hinchinbrook web developer, agriculture web developer Queensland, harvesting contractor website">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#00e5a0">
@@ -35,7 +35,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/">
 <meta property="og:title" content="dkvb.dev — Android App & Web Developer">
-<meta property="og:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in Townsville, QLD, Australia. Polished apps and websites built with Kotlin, Firebase, React, and more.">
+<meta property="og:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in Townsville, QLD, Australia. Polished apps and websites built with Kotlin, Firebase, React, and more. Also serving Herbert River sugar industry businesses.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -99,16 +99,26 @@
         "addressRegion": "QLD",
         "addressCountry": "AU"
       },
-      "areaServed": ["AU", "Worldwide"],
+      "areaServed": ["AU", "Worldwide", "Ingham", "Hinchinbrook Shire", "Herbert River"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Development Services",
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Android App Development" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Front-End Web Development" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sugar Industry Digital Services" } }
         ]
       }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://dkvb.dev/sugar-industry.html#service",
+      "name": "Sugar Industry Digital Services",
+      "url": "https://dkvb.dev/sugar-industry.html",
+      "provider": { "@id": "https://dkvb.dev/#dan" },
+      "description": "Websites, booking and scheduling systems, and digital record-keeping tools for Herbert River sugar industry businesses — growers, harvesting and haulage contractors, and ag suppliers.",
+      "areaServed": ["Ingham", "Hinchinbrook Shire", "Herbert River", "Townsville", "AU-QLD"]
     },
     {
       "@type": "WebSite",
@@ -917,6 +927,7 @@
   <ul>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
+    <li><a href="sugar-industry.html">Sugar Industry</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -1021,6 +1032,17 @@
         <span class="tag">Firestore</span>
       </div>
       <div style="margin-top:1.5rem;font-size:0.75rem;color:#00BFFF;letter-spacing:0.08em;">Learn more →</div>
+    </div>
+    <div class="service-card" onclick="window.location='sugar-industry.html'" style="cursor:pointer;">
+      <span class="service-icon">🌾</span>
+      <div class="service-title">Sugar Industry Digital Services</div>
+      <p class="service-desc">Websites, booking systems, and record-keeping tools for Herbert River sugar industry businesses — growers, contractors, and ag suppliers from Ingham to Townsville.</p>
+      <div class="service-tags">
+        <span class="tag">Herbert River</span>
+        <span class="tag">Local</span>
+        <span class="tag">Ag Business</span>
+      </div>
+      <div style="margin-top:1.5rem;font-size:0.75rem;color:#E0A526;letter-spacing:0.08em;">Learn more →</div>
     </div>
   </div>
 </section>
@@ -1206,7 +1228,19 @@
             <option>Front-End Web Development</option>
             <option>Back-End Development</option>
             <option>UI/UX Design</option>
+            <option>Sugar Industry / Ag Business Digital Services</option>
             <option>Other / Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="industry">Industry / Sector (optional)</label>
+          <select id="industry" name="industry">
+            <option value="">— Select if relevant —</option>
+            <option>Sugar Industry / Agriculture (Herbert River)</option>
+            <option>Small Business / Retail</option>
+            <option>Hospitality / Tourism</option>
+            <option>Trades / Construction</option>
+            <option>Other</option>
           </select>
         </div>
         <div class="form-group">
