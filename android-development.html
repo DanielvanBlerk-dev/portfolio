@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Android App Development — dkvb.dev</title>
-<meta name="description" content="Native Android app development by Dan Van Blerk, based in Townsville, Queensland. Cost-effective freelance rates — no agency markups. Also offering front-end web, UI/UX design, and back-end development. Kotlin, Firebase, Jetpack Compose.">
-<meta name="keywords" content="Android developer Townsville, Android app development Queensland, Kotlin developer Australia, Firebase, Jetpack Compose, cost-effective Android development Townsville, affordable app developer Queensland, freelance rates Android Australia, no agency markup app development, mobile app developer Townsville">
+<meta name="description" content="Native Android app development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates — no agency markups. Also offering front-end web, UI/UX design, and back-end development. Kotlin, Firebase, Jetpack Compose.">
+<meta name="keywords" content="Android developer Herbert River Region, Android app development Queensland, Kotlin developer Australia, Firebase, Jetpack Compose, cost-effective Android development Herbert River Region, affordable app developer Queensland, freelance rates Android Australia, no agency markup app development, mobile app developer Herbert River Region">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#4A9EFF">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/android-development.html">
 <meta property="og:title" content="Android App Development — dkvb.dev">
-<meta property="og:description" content="Native Android app development with Kotlin and Firebase. Based in Townsville, QLD — also offering front-end, UI/UX, and back-end development.">
+<meta property="og:description" content="Native Android app development with Kotlin and Firebase. Based in the Herbert River region, QLD — also offering front-end, UI/UX, and back-end development.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,11 +23,11 @@
 <meta name="twitter:url" content="https://dkvb.dev/android-development.html">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="twitter:title" content="Android App Development — dkvb.dev">
-<meta name="twitter:description" content="Android app development with Kotlin and Firebase. Based in Townsville, QLD, Australia.">
+<meta name="twitter:description" content="Android app development with Kotlin and Firebase. Based in the Herbert River region, QLD, Australia.">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
 <meta name="ICBM" content="-19.2576, 146.8178">
-<meta name="geo.placename" content="Townsville, Queensland, Australia">
+<meta name="geo.placename" content="Herbert River Region, Queensland, Australia">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="favicon.ico">
 <meta name="google-site-verification" content="lRfXqEsO768V_a0W93cNCboDo1KRAW9qE23GHBty0Og" />
@@ -235,6 +235,13 @@
   }
   .wip-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: blink 1.5s infinite; }
   @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
+  .modal-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    margin-top: 1.5rem; color: var(--accent); font-size: 0.8rem;
+    text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px; transition: border-color 0.2s;
+  }
+  .modal-link:hover { border-color: var(--accent); }
 
   /* ── PRICING ── */
   .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
@@ -295,6 +302,9 @@
     justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
   }
   .footer-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
   .footer-logo span { color: var(--text); }
   footer p { color: var(--muted); font-size: 0.78rem; }
 
@@ -577,7 +587,6 @@
         <div class="project-type">Android App</div>
         <div class="project-name">Skills United</div>
         <p class="project-desc">Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Features a full custom theme engine, live multi-tag search, persistent in-app notifications, and a real-time inbox.</p>
-        <div class="wip-badge"><span class="wip-dot"></span> In Active Development</div>
         <div class="project-tags">
           <span class="tag">Kotlin</span>
           <span class="tag">Firebase Auth</span>
@@ -708,8 +717,13 @@
 
 <footer role="contentinfo">
   <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2025 dkvb.dev. Built with ☕ and Kotlin.</p>
-  <a href="sugar-industry.html" style="color:var(--accent);text-decoration:none;font-size:0.78rem;">Also serving Herbert River sugar industry businesses →</a>
+  <p>© 2025 dkvb.dev. Built with JavaScript and Kotlin.</p>
+  <div class="footer-links">
+    <a href="sugar-industry.html">Sugar Industry</a>
+    <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+  </div>
 </footer>
 
 <!-- MODAL -->
@@ -738,9 +752,9 @@
       <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
     </div>
     <div class="modal-screenshot-hint">scroll or use arrows to view</div>
-    <div class="modal-type">Android App — In Active Development</div>
+    <div class="modal-type">Android App</div>
     <div class="modal-title">Skills United</div>
-    <p class="modal-desc">Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development.</p>
+    <p class="modal-desc">Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase.</p>
     <div class="modal-tags">
       <span class="tag">Kotlin</span>
       <span class="tag">Firebase Auth</span>
@@ -750,6 +764,7 @@
       <span class="tag">Coroutines</span>
       <span class="tag">Material 3</span>
     </div>
+    <a href="https://github.com/DanielvanBlerk-dev/skillsunited-dev" target="_blank" rel="noopener noreferrer" class="modal-link">View live project ↗</a>
   </div>
 </div>
 

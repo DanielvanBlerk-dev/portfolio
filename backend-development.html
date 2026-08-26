@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Back-End Development — dkvb.dev</title>
-<meta name="description" content="Back-end development by Dan Van Blerk, based in Townsville, Queensland. Cost-effective freelance rates — no agency markups. Also offering Android app development, front-end web development, and UI/UX design. Firebase, Node.js, REST APIs.">
-<meta name="keywords" content="back-end developer Townsville, API developer Queensland, Firebase developer Australia, Node.js developer Townsville, cost-effective back-end development Townsville, affordable API developer Queensland, transparent pricing back-end Australia, freelance rates no agency markup, Firestore developer Townsville">
+<meta name="description" content="Back-end development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates — no agency markups. Also offering Android app development, front-end web development, and UI/UX design. Firebase, Node.js, REST APIs.">
+<meta name="keywords" content="back-end developer Herbert River Region, API developer Queensland, Firebase developer Australia, Node.js developer Herbert River Region, cost-effective back-end development Herbert River Region, affordable API developer Queensland, transparent pricing back-end Australia, freelance rates no agency markup, Firestore developer Herbert River Region">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#00BFFF">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/backend-development.html">
 <meta property="og:title" content="Back-End Development — dkvb.dev">
-<meta property="og:description" content="Scalable APIs, real-time databases, and cloud infrastructure. Based in Townsville, QLD — also offering Android, front-end, and UI/UX development.">
+<meta property="og:description" content="Scalable APIs, real-time databases, and cloud infrastructure. Based in the Herbert River region, QLD — also offering Android, front-end, and UI/UX development.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,12 +22,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://dkvb.dev/backend-development.html">
 <meta name="twitter:title" content="Back-End Development — dkvb.dev">
-<meta name="twitter:description" content="Back-end development with Firebase, Node.js, and REST APIs. Based in Townsville, QLD, Australia.">
+<meta name="twitter:description" content="Back-end development with Firebase, Node.js, and REST APIs. Based in the Herbert River region, QLD, Australia.">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
 <meta name="ICBM" content="-19.2576, 146.8178">
-<meta name="geo.placename" content="Townsville, Queensland, Australia">
+<meta name="geo.placename" content="Herbert River Region, Queensland, Australia">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="favicon.ico">
 <meta name="google-site-verification" content="lRfXqEsO768V_a0W93cNCboDo1KRAW9qE23GHBty0Og" />
@@ -319,6 +319,9 @@
     justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
   }
   .footer-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
   .footer-logo span { color: var(--text); }
   footer p { color: var(--muted); font-size: 0.78rem; }
 
@@ -665,13 +668,12 @@
     <div class="section-divider"></div>
   </div>
   <div class="projects-grid reveal">
-    <div class="project-card" data-title="Skills United" data-type="Android App — Back-End" data-desc="Firebase back-end powering a peer-to-peer skill-exchange platform. Firestore for real-time chat and user profiles, Firebase Auth with atomic batch writes for username reservation, Firebase Storage for avatars, and security rules enforcing per-user data access." data-tech="Firebase Auth · Firestore · Firebase Storage · Security Rules · Real-Time Listeners · Batch Writes" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg">
+    <div class="project-card" data-title="Skills United" data-type="Android App — Back-End" data-desc="Firebase back-end powering a peer-to-peer skill-exchange platform. Firestore for real-time chat and user profiles, Firebase Auth with atomic batch writes for username reservation, Firebase Storage for avatars, and security rules enforcing per-user data access." data-tech="Firebase Auth · Firestore · Firebase Storage · Security Rules · Real-Time Listeners · Batch Writes" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg" data-url="https://github.com/DanielvanBlerk-dev/skillsunited-dev">
       <div class="project-img" style="background: linear-gradient(135deg,#001433,#001F5B,#003080);">🤝</div>
       <div class="project-body">
         <div class="project-type">Android App — Back-End</div>
         <div class="project-name">Skills United</div>
         <p class="project-desc">Firebase back-end powering a peer-to-peer skill-exchange platform. Architecture includes Firestore for real-time chat and user profiles, Firebase Auth for secure login and unique username reservation via atomic batch writes, Firebase Storage for avatars, and Firestore security rules enforcing per-user data access.</p>
-        <div class="wip-badge"><span class="wip-dot"></span> In Active Development</div>
         <div class="project-tags">
           <span class="tag">Firebase Auth</span>
           <span class="tag">Firestore</span>
@@ -816,8 +818,13 @@
 
 <footer role="contentinfo">
   <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2025 dkvb.dev. Built with ☕ and Kotlin.</p>
-  <a href="sugar-industry.html" style="color:var(--accent);text-decoration:none;font-size:0.78rem;">Also serving Herbert River sugar industry businesses →</a>
+  <p>© 2025 dkvb.dev. Built with JavaScript and Kotlin.</p>
+  <div class="footer-links">
+    <a href="sugar-industry.html">Sugar Industry</a>
+    <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+  </div>
 </footer>
 
 <script>

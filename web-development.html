@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Front-End Web Development — dkvb.dev</title>
-<meta name="description" content="Front-end web development by Dan Van Blerk, based in Townsville, Queensland. Cost-effective freelance rates — no agency markups. Also offering Android app development, UI/UX design, and back-end development. React, Next.js, HTML/CSS.">
-<meta name="keywords" content="front-end developer Townsville, web developer Queensland, React developer Australia, Next.js developer Townsville, cost-effective web development Townsville, affordable website developer Queensland, transparent pricing web developer Australia, freelance rates no agency markup, website developer Townsville">
+<meta name="description" content="Front-end web development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates — no agency markups. Also offering Android app development, UI/UX design, and back-end development. React, Next.js, HTML/CSS.">
+<meta name="keywords" content="front-end developer Herbert River Region, web developer Queensland, React developer Australia, Next.js developer Herbert River Region, cost-effective web development Herbert River Region, affordable website developer Queensland, transparent pricing web developer Australia, freelance rates no agency markup, website developer Herbert River Region">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#FF6B35">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/web-development.html">
 <meta property="og:title" content="Front-End Web Development — dkvb.dev">
-<meta property="og:description" content="Front-end web development with React and Next.js. Based in Townsville, QLD — also offering Android, UI/UX, and back-end development.">
+<meta property="og:description" content="Front-end web development with React and Next.js. Based in the Herbert River region, QLD — also offering Android, UI/UX, and back-end development.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,11 +23,11 @@
 <meta name="twitter:url" content="https://dkvb.dev/web-development.html">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="twitter:title" content="Front-End Web Development — dkvb.dev">
-<meta name="twitter:description" content="Front-end web development with React, Next.js, and TypeScript. Based in Townsville, QLD, Australia.">
+<meta name="twitter:description" content="Front-end web development with React, Next.js, and TypeScript. Based in the Herbert River region, QLD, Australia.">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
 <meta name="ICBM" content="-19.2576, 146.8178">
-<meta name="geo.placename" content="Townsville, Queensland, Australia">
+<meta name="geo.placename" content="Herbert River Region, Queensland, Australia">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="favicon.ico">
 <meta name="google-site-verification" content="lRfXqEsO768V_a0W93cNCboDo1KRAW9qE23GHBty0Og" />
@@ -222,6 +222,9 @@
 
   footer { background: var(--bg); border-top: 1px solid var(--border); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
   .footer-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
   .footer-logo span { color: var(--text); }
   footer p { color: var(--muted); font-size: 0.78rem; }
 
@@ -384,19 +387,36 @@
     background: rgba(255,255,255,0.06); color: var(--accent);
     border: 1px solid rgba(255,255,255,0.1);
   }
+  .modal-screenshot-viewport { position: relative; }
   .modal-screenshot-track {
     display: flex; gap: 0.8rem; overflow-x: auto;
-    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; padding-bottom: 0.4rem; margin-bottom: 0.6rem;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.8rem; margin-bottom: 0.6rem;
+    scrollbar-width: thin; scrollbar-color: var(--accent) var(--border);
+    scroll-behavior: smooth;
   }
-  .modal-screenshot-track::-webkit-scrollbar { display: none; }
+  .modal-screenshot-track::-webkit-scrollbar { height: 8px; }
+  .modal-screenshot-track::-webkit-scrollbar-track { background: var(--border); border-radius: 4px; }
+  .modal-screenshot-track::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
   .modal-screenshot {
-    flex: 0 0 42%; scroll-snap-align: start;
+    flex: 0 0 auto;
     border-radius: 8px; overflow: hidden;
     border: 1px solid var(--border);
-    aspect-ratio: 9/19; max-height: 260px; background: var(--bg);
+    max-height: 320px; background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
   }
-  .modal-screenshot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .modal-screenshot img { max-width: 100%; max-height: 320px; width: auto; height: auto; object-fit: contain; display: block; }
+  .modal-scroll-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(10,10,15,0.85); border: 1px solid var(--accent);
+    color: var(--accent); font-size: 1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 5; transition: background 0.2s; opacity: 0.9;
+  }
+  .modal-scroll-arrow:hover { background: var(--accent); color: #0a0a0f; }
+  .modal-scroll-arrow.left { left: 4px; }
+  .modal-scroll-arrow.right { right: 4px; }
   .modal-screenshot-hint { font-size: 0.65rem; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
   .modal-link {
     display: inline-flex; align-items: center; gap: 0.5rem;
@@ -621,8 +641,13 @@
 
 <footer role="contentinfo">
   <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2025 dkvb.dev. Built with ☕ and Kotlin.</p>
-  <a href="sugar-industry.html" style="color:var(--accent);text-decoration:none;font-size:0.78rem;">Also serving Herbert River sugar industry businesses →</a>
+  <p>© 2025 dkvb.dev. Built with JavaScript and Kotlin.</p>
+  <div class="footer-links">
+    <a href="sugar-industry.html">Sugar Industry</a>
+    <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Twitter</a>
+  </div>
 </footer>
 
 <script>
@@ -651,8 +676,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
 <div class="modal-bg" id="modalBg">
   <div class="modal">
     <button class="modal-close" id="modalClose">✕</button>
-    <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
-    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">← scroll to view →</div>
+    <div class="modal-screenshot-viewport" id="modalScreenshotViewport" style="display:none;">
+      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">‹</button>
+      <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
+      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
+    </div>
+    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">scroll or use arrows to view</div>
     <div class="modal-type" id="modalType"></div>
     <div class="modal-title" id="modalTitle"></div>
     <p class="modal-desc" id="modalDesc"></p>
@@ -671,13 +700,16 @@ document.querySelectorAll('.project-card').forEach(card => {
     const screenshots = card.dataset.screenshots ? card.dataset.screenshots.split('|') : [];
     const trackEl = document.getElementById('modalScreenshotTrack');
     const hintEl = document.getElementById('modalScreenshotHint');
+    const viewportEl = document.getElementById('modalScreenshotViewport');
     if (screenshots.length) {
       trackEl.innerHTML = screenshots.map((src, i) =>
         `<div class="modal-screenshot"><img src="${baseUrl}${src}" alt="${card.dataset.title} screenshot ${i+1}"></div>`
       ).join('');
+      viewportEl.style.display = 'block';
       hintEl.style.display = 'block';
     } else {
       trackEl.innerHTML = '';
+      viewportEl.style.display = 'none';
       hintEl.style.display = 'none';
     }
     document.getElementById('modalType').textContent = card.dataset.type || '';
@@ -697,6 +729,15 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
 modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+// Screenshot scroll arrows
+const scrollTrack = document.getElementById('modalScreenshotTrack');
+document.getElementById('modalScrollLeft').addEventListener('click', () => {
+  scrollTrack.scrollBy({ left: -scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
+});
+document.getElementById('modalScrollRight').addEventListener('click', () => {
+  scrollTrack.scrollBy({ left: scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
+});
 </script>
 </body>
 </html>

@@ -24,8 +24,8 @@
 
 <!-- ── PRIMARY SEO ── -->
 <title>dkvb.dev — Android App & Web Developer | Australia</title>
-<meta name="description" content="Dan Van Blerk is a freelance developer based in Townsville, Queensland, Australia. Specialising in Android app development, front-end web development, UI/UX design, and back-end development. Cost-effective freelance rates — no agency markups. Available for local and remote projects. Also building websites, booking systems, and digital tools for Herbert River sugar industry businesses — growers, contractors, and ag suppliers from Ingham to Townsville.">
-<meta name="keywords" content="Android developer Townsville, front-end developer Townsville, UI UX designer Townsville, back-end developer Townsville, web developer Queensland, app developer Australia, cost-effective developer Townsville, affordable app development Queensland, freelance rates no agency markup, transparent pricing developer Australia, Kotlin, Firebase, React, Next.js, Figma, Node.js, freelance developer Townsville, web developer Ingham, website developer Herbert River, sugar industry software Queensland, cane industry digital services, Hinchinbrook web developer, agriculture web developer Queensland, harvesting contractor website">
+<meta name="description" content="Dan Van Blerk is a freelance developer based in the Herbert River region, Queensland, Australia. Specialising in Android app development, front-end web development, UI/UX design, and back-end development. Cost-effective freelance rates — no agency markups. Available for local and remote projects. Also building websites, booking systems, and digital tools for Herbert River sugar industry businesses — growers, contractors, and ag suppliers from Ingham to Townsville.">
+<meta name="keywords" content="Android developer Herbert River Region, front-end developer Herbert River Region, UI UX designer Herbert River Region, back-end developer Herbert River Region, web developer Queensland, app developer Australia, cost-effective developer Herbert River Region, affordable app development Queensland, freelance rates no agency markup, transparent pricing developer Australia, Kotlin, Firebase, React, Next.js, Figma, Node.js, freelance developer Herbert River Region, web developer Ingham, website developer Herbert River, sugar industry software Queensland, cane industry digital services, Hinchinbrook web developer, agriculture web developer Queensland, harvesting contractor website">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#00e5a0">
@@ -35,7 +35,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/">
 <meta property="og:title" content="dkvb.dev — Android App & Web Developer">
-<meta property="og:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in Townsville, QLD, Australia. Polished apps and websites built with Kotlin, Firebase, React, and more. Also serving Herbert River sugar industry businesses.">
+<meta property="og:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in the Herbert River region, QLD, Australia. Polished apps and websites built with Kotlin, Firebase, React, and more. Also serving Herbert River sugar industry businesses.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -46,14 +46,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://dkvb.dev/">
 <meta name="twitter:title" content="dkvb.dev — Android App & Web Developer">
-<meta name="twitter:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in Townsville, QLD. Kotlin, Firebase, React, Figma, Node.js.">
+<meta name="twitter:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in the Herbert River region, QLD. Kotlin, Firebase, React, Figma, Node.js.">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 
 <!-- ── GEO / LOCAL SEO ── -->
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
 <meta name="ICBM" content="-19.2576, 146.8178">
-<meta name="geo.placename" content="Townsville, Queensland, Australia">
+<meta name="geo.placename" content="Herbert River Region, Queensland, Australia">
 
 <!-- ── STRUCTURED DATA: Person + LocalBusiness ── -->
 <script type="application/ld+json">
@@ -68,10 +68,10 @@
       "url": "https://dkvb.dev",
       "email": "vanblerkdaniel@gmail.com",
       "jobTitle": "Freelance Android & Front-End Developer",
-      "description": "Freelance developer based in Townsville, QLD, specialising in Android apps (Kotlin, Firebase) and front-end web development (React, Next.js), with a strong focus on UI/UX design.",
+      "description": "Freelance developer based in the Herbert River region, QLD, specialising in Android apps (Kotlin, Firebase) and front-end web development (React, Next.js), with a strong focus on UI/UX design.",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Townsville",
+        "addressLocality": "Ingham",
         "addressRegion": "QLD",
         "addressCountry": "AU"
       },
@@ -95,7 +95,7 @@
       "founder": { "@id": "https://dkvb.dev/#dan" },
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Townsville",
+        "addressLocality": "Ingham",
         "addressRegion": "QLD",
         "addressCountry": "AU"
       },
@@ -330,6 +330,18 @@
     transition: color 0.2s;
   }
   nav a:hover { color: var(--accent); }
+  .nav-toggle {
+    display: none; flex-direction: column; justify-content: center; gap: 5px;
+    width: 32px; height: 32px; background: none; border: none; cursor: pointer;
+    padding: 0; z-index: 110;
+  }
+  .nav-toggle span {
+    display: block; width: 100%; height: 2px; background: var(--text);
+    border-radius: 2px; transition: transform 0.25s, opacity 0.25s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   /* ── HERO ── */
   #hero {
@@ -791,10 +803,20 @@
 
   @media (max-width: 768px) {
     html, body { overflow-x: hidden; max-width: 100vw; }
-    nav { padding: 1rem 1.2rem; }
-    nav ul { gap: 1rem; }
-    nav a { font-size: 0.72rem; letter-spacing: 0.06em; }
+    nav { padding: 1rem 1.2rem; position: relative; }
+    .nav-toggle { display: flex; }
     .nav-logo { font-size: 1.1rem; }
+    nav ul#navMenu {
+      display: none; flex-direction: column; gap: 0;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: rgba(10,10,15,0.97); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 1.2rem 1rem;
+    }
+    nav ul#navMenu.open { display: flex; }
+    nav ul#navMenu li { border-top: 1px solid var(--border); }
+    nav ul#navMenu li:first-child { border-top: none; }
+    nav ul#navMenu a { display: block; padding: 0.9rem 0.2rem; font-size: 0.8rem; letter-spacing: 0.1em; }
     #hero { padding: 7rem 1.2rem 4rem; }
     section { padding-left: 1.2rem; padding-right: 1.2rem; }
     h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
@@ -814,8 +836,6 @@
 
   @media (max-width: 400px) {
     h1 { font-size: 2rem; }
-    nav ul { gap: 0.7rem; }
-    nav a { font-size: 0.65rem; }
   }
 
   /* ── UNIFIED PROJECT CARD GRID ── */
@@ -924,7 +944,10 @@
 <header role="banner">
 <nav aria-label="Main navigation">
   <div class="nav-logo">dkvb<span>.dev</span></div>
-  <ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="navMenu">
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
     <li><a href="sugar-industry.html">Sugar Industry</a></li>
@@ -1057,14 +1080,13 @@
 
   <div class="portfolio-grid reveal" id="portfolioGrid">
 
-    <div class="project-card featured-card" data-cat="android" data-title="Skills United" data-type="Android App — In Active Development" data-emoji="🤝" data-desc="Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase, currently in active development." data-tech="Kotlin · Firebase Auth · Firestore · Firebase Storage · Glide · Coroutines · Material 3" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg">
+    <div class="project-card featured-card" data-cat="android" data-title="Skills United" data-type="Android App" data-emoji="🤝" data-desc="Peer-to-peer skill-exchange platform where users list what they can teach and want to learn, then connect via real-time one-to-one chat. Built with Kotlin and Firebase." data-tech="Kotlin · Firebase Auth · Firestore · Firebase Storage · Glide · Coroutines · Material 3" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg" data-url="https://github.com/DanielvanBlerk-dev/skillsunited-dev">
       <div class="project-img" style="background: linear-gradient(135deg,#001433,#001F5B,#003080); position:relative;">
         🤝
-        <div style="position:absolute;top:12px;left:12px;background:rgba(0,229,160,0.15);border:1px solid rgba(0,229,160,0.4);border-radius:100px;padding:3px 10px;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:#00e5a0;">● In Development</div>
         <div class="project-overlay">↗ View Project</div>
       </div>
       <div class="project-body">
-        <div class="project-type">Android App — Active Development</div>
+        <div class="project-type">Android App</div>
         <div class="project-name">Skills United</div>
         <p class="project-desc">Peer skill-exchange app with real-time chat, custom theme engine &amp; live search.</p>
         <div class="project-meta">
@@ -1196,7 +1218,7 @@
       </div>
       <div class="contact-detail">
         <span class="contact-detail-icon">📍</span>
-        Townsville, QLD — Remote-friendly
+        Herbert River Region, QLD — Remote-friendly
       </div>
       <div class="contact-detail">
         <span class="contact-detail-icon">⏱</span>
@@ -1280,7 +1302,7 @@
 <!-- FOOTER -->
 <footer role="contentinfo">
   <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2025 dkvb.dev. Built with ☕ and Kotlin.</p>
+  <p>© 2025 dkvb.dev. Built with JavaScript and Kotlin.</p>
   <div class="footer-links">
     <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
     <a href="#">LinkedIn</a>
@@ -1311,6 +1333,27 @@
 
 <script>
 // Scroll reveal
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+navToggle.addEventListener('click', () => {
+  const isOpen = navMenu.classList.toggle('open');
+  navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navMenu.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
+document.addEventListener('click', e => {
+  if (!e.target.closest('nav') && navMenu.classList.contains('open')) {
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
