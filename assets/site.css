@@ -63,6 +63,15 @@ footer { flex-wrap: wrap; }
 .cc-accept { background: var(--accent, #00e5a0); color: #0a0a0f; }
 .cc-essential { background: transparent; color: #e8e8f0; }
 .cc-actions button:hover { filter: brightness(1.12); }
+.cc-actions button[aria-pressed="true"]::before { content: "\2713\00a0"; }
+.cc-status { margin: -0.4rem 0 1rem; font-size: 0.78rem; color: var(--accent, #00e5a0); }
+.cc-status:empty { display: none; }
+.cc-banner.cc-attn { animation: cc-attn 0.6s ease; }
+@keyframes cc-attn {
+  0% { transform: translateY(16px); opacity: 0.4; }
+  60% { transform: translateY(-4px); opacity: 1; box-shadow: 0 0 0 3px var(--accent, #00e5a0), 0 20px 60px rgba(0,0,0,0.55); }
+  100% { transform: none; }
+}
 
 /* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {

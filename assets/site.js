@@ -48,6 +48,7 @@
       '<h2>Your privacy choices</h2>' +
       '<p>This site uses no tracking or advertising cookies. With your OK, it saves a small note in your browser so the ' +
       'mailing-list pop-up doesn’t keep reappearing. <a href="cookies.html">Cookie Policy</a></p>' +
+      '<p class="cc-status" aria-live="polite"></p>' +
       '<div class="cc-actions">' +
       '<button type="button" class="cc-accept">Accept</button>' +
       '<button type="button" class="cc-essential">Essential only</button>' +
@@ -56,10 +57,25 @@
     banner.querySelector('.cc-essential').addEventListener('click', function () { decide('essential'); });
     document.body.appendChild(banner);
   }
-  function showBanner(focus) {
+  // fromSettings: opened by a "Cookie settings" button, so show the current choice,
+  // draw attention to the banner (it may already be open) and move focus into it.
+  function showBanner(fromSettings) {
     if (!banner) buildBanner();
+    var accept = banner.querySelector('.cc-accept');
+    var essential = banner.querySelector('.cc-essential');
+    var status = banner.querySelector('.cc-status');
+    accept.setAttribute('aria-pressed', choice === 'all' ? 'true' : 'false');
+    essential.setAttribute('aria-pressed', choice === 'essential' ? 'true' : 'false');
+    status.textContent = choice
+      ? 'Current choice: ' + (choice === 'all' ? 'Accept' : 'Essential only') + '. Pick again to change it.'
+      : '';
     banner.hidden = false;
-    if (focus === true) banner.querySelector('.cc-accept').focus({ preventScroll: true });
+    if (fromSettings === true) {
+      banner.classList.remove('cc-attn');
+      void banner.offsetWidth; // restart the animation if the banner was already showing
+      banner.classList.add('cc-attn');
+      (choice === 'essential' ? essential : accept).focus({ preventScroll: true });
+    }
   }
   function hideBanner() { if (banner) banner.hidden = true; }
 
