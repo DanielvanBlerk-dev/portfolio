@@ -12,17 +12,16 @@
 
   var forced = /[?&]mailinglist=1\b/.test(location.search);
 
+  // Persistent memory only with consent (see assets/site.js); otherwise this tab session only.
+  function store() {
+    var c = window.dkvbConsent && window.dkvbConsent.get();
+    try { return c === 'all' ? localStorage : sessionStorage; } catch (e) { return null; }
+  }
   function read() {
-    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+    try { return JSON.parse(store().getItem(KEY)) || {}; } catch (e) { return {}; }
   }
   function write(v) {
-    try { localStorage.setItem(KEY, JSON.stringify(v)); } catch (e) {}
-  }
-
-  var state = read();
-  if (!forced) {
-    if (state.s) return;
-    if (state.d && Date.now() - state.d < SNOOZE_DAYS * 864e5) return;
+    try { store().setItem(KEY, JSON.stringify(v)); } catch (e) {}
   }
 
   var css = '\
@@ -48,17 +47,17 @@
 .ml-list li::before{content:"";flex:0 0 18px;height:18px;margin-top:1px;border-radius:50%;background:color-mix(in srgb,var(--a) 22%,transparent) url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'%3E%3Cpath d=\'M4 8.4l2.6 2.6L12 5.6\' fill=\'none\' stroke=\'%23fff\' stroke-width=\'1.8\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/%3E%3C/svg%3E") center/12px no-repeat}\
 .ml-root .ml-form{display:flex;flex-direction:row;align-items:stretch;gap:.5rem;margin:0;max-width:none}\
 .ml-root .ml-input{width:auto;flex:1;min-width:0;margin:0;background:#08080e;border:1px solid #2a2a3a;border-radius:10px;padding:.95rem 1rem;color:inherit;font:inherit;font-size:.92rem;outline:none;transition:border-color .2s,box-shadow .2s}\
-.ml-input::placeholder{color:#5c5c72}\
+.ml-input::placeholder{color:#7a7a90}\
 .ml-input:focus{border-color:var(--a);box-shadow:0 0 0 3px color-mix(in srgb,var(--a) 22%,transparent)}\
 .ml-root .ml-btn{width:auto;margin:0;flex:0 0 auto;white-space:nowrap;border:0;border-radius:10px;padding:.95rem 1.3rem;background:var(--a);color:#07070c;font-family:var(--mono,"DM Mono",monospace);font-weight:500;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s,filter .2s}\
 .ml-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px color-mix(in srgb,var(--a) 40%,transparent);filter:brightness(1.1)}\
 .ml-btn:disabled{opacity:.6;cursor:wait;transform:none;box-shadow:none}\
-.ml-fine{margin:.85rem 0 0;font-family:var(--mono,"DM Mono",monospace);font-size:.68rem;color:#6b6b80}\
+.ml-fine{margin:.85rem 0 0;font-family:var(--mono,"DM Mono",monospace);font-size:.7rem;line-height:1.5;color:#8e8ea4}\n.ml-fine a{color:var(--a);text-decoration:underline}\
 .ml-err{min-height:1.1em;margin:.55rem 0 0;font-size:.78rem;color:#ff7a7a}\
 .ml-hp{position:absolute!important;left:-9999px;opacity:0;pointer-events:none}\
 .ml-close{position:absolute;top:.8rem;right:.8rem;z-index:2;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);background:rgba(10,10,16,.6);color:#c8c8d8;font-size:1.15rem;line-height:1;cursor:pointer;transition:background .2s,color .2s,transform .2s}\
 .ml-close:hover{background:var(--a);color:#07070c;transform:rotate(90deg)}\
-.ml-skip{align-self:flex-start;margin-top:.9rem;background:none;border:0;padding:0;color:#6b6b80;font:inherit;font-size:.75rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px}\
+.ml-skip{align-self:flex-start;margin-top:.9rem;background:none;border:0;padding:0;color:#8e8ea4;font:inherit;font-size:.75rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px}\
 .ml-skip:hover{color:#c8c8d8}\
 .ml-done{display:none;text-align:left}\
 .ml-card.ml-ok .ml-pre{display:none}\
@@ -103,7 +102,7 @@
 <button class="ml-btn" type="submit">Count me in &rarr;</button>\
 </form>\
 <p class="ml-err" role="alert" aria-live="polite"></p>\
-<p class="ml-fine">No spam, ever. Unsubscribe in one click.</p>\
+<p class="ml-fine">No spam, ever. Unsubscribe any time. By joining you agree to receive emails from dkvb.dev and to the <a href="privacy.html">Privacy Policy</a>.</p>\
 <button class="ml-skip" type="button" data-ml-close>No thanks, maybe later</button>\
 </div>\
 <div class="ml-done" role="status" aria-live="polite">\
@@ -184,7 +183,6 @@
     data.append('_gotcha', form._gotcha.value);
     data.append('form_type', 'mailing-list');
     data.append('_subject', 'New mailing list signup');
-    data.append('page', location.pathname);
     fetch(ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body: data })
       .then(function (res) {
         if (!res.ok) throw new Error('bad status');
@@ -218,6 +216,9 @@
   /* Triggers: whichever comes first — time on page, scroll depth, or (desktop) exit intent. */
   function arm() {
     if (forced) { open(); return; }
+    var state = read();
+    if (state.s) return;
+    if (state.d && Date.now() - state.d < SNOOZE_DAYS * 864e5) return;
     var fired = false;
     function go() {
       if (fired) return;
@@ -236,6 +237,11 @@
     document.addEventListener('mouseout', onOut);
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', arm);
-  else arm();
+  // Wait for the cookie banner to be answered so the two never stack.
+  function start() {
+    if (forced || !window.dkvbConsent) arm();
+    else window.dkvbConsent.onDecided(function () { arm(); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();

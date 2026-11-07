@@ -128,7 +128,7 @@
     --accent: #00BFFF;
     --accent-glow: rgba(0,191,255,0.14);
     --text: #e8e8f0;
-    --muted: #6b6b80;
+    --muted: #8e8ea4;
     --heading: 'Syne', sans-serif;
     --mono: 'DM Mono', monospace;
   }
@@ -520,6 +520,7 @@
   .modal-link:hover { border-color: var(--accent); }
 
 </style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
@@ -539,7 +540,7 @@
   <div class="hero-glow"></div>
   <div class="page-badge">🔌 Back-End Development</div>
   <h1>The Engine<br><span>Under the Hood.</span></h1>
-  <p class="page-sub">Scalable APIs, real-time databases, and cloud infrastructure that power apps reliably — whether you have ten users or ten thousand. Built to grow with you.</p>
+  <p class="page-sub">Scalable APIs, real-time databases, and cloud infrastructure that power apps reliably and are designed to grow with you.</p>
   <div class="hero-ctas">
     <a href="#contact" class="btn btn-primary">Start a Project</a>
     <a href="#skills" class="btn btn-ghost">See the Stack</a>
@@ -552,7 +553,7 @@
     <div class="section-label">// Tech Stack</div>
     <h2>Skills &amp; Tools</h2>
     <div class="section-divider"></div>
-    <p>A battle-tested back-end stack focused on reliability, real-time capability, and rapid development.</p>
+    <p>A dependable back-end stack focused on reliability, real-time capability, and rapid development.</p>
   </div>
   <div class="skills-grid reveal">
     <div class="skill-item">
@@ -668,7 +669,7 @@
     <div class="section-divider"></div>
   </div>
   <div class="projects-grid reveal">
-    <div class="project-card" data-title="Skills United" data-type="Android App — Back-End" data-desc="Firebase back-end powering a peer-to-peer skill-exchange platform. Firestore for real-time chat and user profiles, Firebase Auth with atomic batch writes for username reservation, Firebase Storage for avatars, and security rules enforcing per-user data access." data-tech="Firebase Auth · Firestore · Firebase Storage · Security Rules · Real-Time Listeners · Batch Writes" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg" data-url="https://github.com/DanielvanBlerk-dev/skillsunited-dev">
+    <div class="project-card" data-title="Skills United" data-type="Android App — Back-End" data-desc="Firebase back-end powering a peer-to-peer skill-exchange platform. Firestore for real-time chat and user profiles, Firebase Auth with atomic batch writes for username reservation, Firebase Storage for avatars, and security rules enforcing per-user data access." data-tech="Firebase Auth · Firestore · Firebase Storage · Security Rules · Real-Time Listeners · Batch Writes" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg" data-alts="Skills United login screen with email and password fields, Log In and Create Account buttons|Skills United Create Account screen with full name, unique username, email and password fields|Skills United Terms of Service and Privacy Policy dialog with an agreement checkbox and Accept and Decline buttons|Skills United Browse Skills screen with a search bar and member cards listing what each person teaches and wants to learn|Skills United Chat Requests screen with incoming and outgoing tabs and a pending request comparing both members’ skills" data-url="https://github.com/DanielvanBlerk-dev/skillsunited-dev">
       <div class="project-img" style="background: linear-gradient(135deg,#001433,#001F5B,#003080);">🤝</div>
       <div class="project-body">
         <div class="project-type">Android App — Back-End</div>
@@ -684,7 +685,7 @@
         </div>
       </div>
     </div>
-    <div class="project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website — Back-End" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-url="https://airliebeachart.com">
+    <div class="project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website — Back-End" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-alts="Airlie Beach Art home page heading, tagline “Paintings made to be lived with” and an introduction to the artist|Airlie Beach Art gallery grid of Whitsunday seascape paintings with titles, sizes, prices and Add to Selection buttons" data-url="https://airliebeachart.com">
       <div class="project-img" style="background: linear-gradient(135deg,#1a0a00,#3d1f00,#5c3000);">🖼️</div>
       <div class="project-body">
         <div class="project-type">Full-Stack Website — Back-End</div>
@@ -726,7 +727,7 @@
     <div class="pricing-card featured">
       <div class="pricing-tier">Standard</div>
       <div class="pricing-price">$1,200 <span>/ project</span></div>
-      <p class="pricing-desc">Full Firebase back-end with real-time data, storage, and production-grade security.</p>
+      <p class="pricing-desc">Full Firebase back-end with real-time data, storage, and hardened security rules.</p>
       <ul class="pricing-features">
         <li>Full Firebase setup</li>
         <li>Real-time Firestore listeners</li>
@@ -749,7 +750,7 @@
       </ul>
     </div>
   </div>
-  <p class="pricing-note reveal">All prices in AUD. Final quote provided after project scoping.</p>
+  <p class="pricing-note reveal">All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</p>
 </section>
 
 <!-- CONTACT -->
@@ -758,23 +759,17 @@
     <div class="section-label">// Get Started</div>
     <h2>Start Your Back-End Project</h2>
     <div class="section-divider"></div>
-    <p>Tell me about your app's data and infrastructure needs and I'll get back to you within 24 hours.</p>
+    <p>Tell me about your app's data and infrastructure needs and I aim to reply within one business day.</p>
   </div>
   <div class="contact-wrap reveal">
     <form id="contactForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="first_name" placeholder="Jane" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
+      <div class="form-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" name="name" placeholder="Jane Smith" maxlength="80" autocomplete="name" required>
         </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="last_name" placeholder="Smith" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
-        </div>
-      </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" required>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" autocomplete="email" required>
       </div>
       <div class="form-group">
         <label for="industry">Industry / Sector (optional)</label>
@@ -803,13 +798,18 @@
         <textarea id="message" name="message" placeholder="Describe your app, what data it needs to store, how many users you expect, and any specific back-end requirements…" maxlength="2000" required></textarea>
       </div>
       <input type="hidden" name="service" value="Back-End Development">
+      <fieldset class="form-consent">
+        <legend class="sr-only">Consent</legend>
+        <label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required> <span>I agree to dkvb.dev using these details to reply to my enquiry, as set out in the <a href="privacy.html">Privacy Policy</a>. <span class="consent-req">(required)</span></span></label>
+        <label class="consent-row"><input type="checkbox" name="mailing_list_opt_in" value="yes"> <span>Optional: also send me the occasional build-notes email. Unsubscribe any time.</span></label>
+      </fieldset>
       <!-- Honeypot — hidden from real users, bots will fill it -->
       <div style="display:none;" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
       <button type="submit" class="btn-submit">Send Message →</button>
-      <div class="form-success" id="formSuccess">✅ Message sent! I'll be in touch within 24 hours.</div>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">✅ Message sent, thanks! I aim to reply within one business day.</div>
     </form>
   </div>
 </section>
@@ -818,12 +818,18 @@
 
 <footer role="contentinfo">
   <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2025 dkvb.dev. Built with JavaScript and Kotlin.</p>
+  <p>© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
   <div class="footer-links">
     <a href="sugar-industry.html">Sugar Industry</a>
     <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Twitter</a>
+    <a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <div class="footer-legal" role="navigation" aria-label="Legal">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refund-policy.html">Refunds</a>
+    <a href="cookies.html">Cookies</a>
+    <button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button>
   </div>
 </footer>
 
@@ -880,7 +886,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     const viewportEl = document.getElementById('modalScreenshotViewport');
     if (screenshots.length) {
       trackEl.innerHTML = screenshots.map((src, i) =>
-        `<div class="modal-screenshot"><img src="${baseUrl}${src}" alt="${card.dataset.title} screenshot ${i+1}"></div>`
+        `<div class="modal-screenshot"><img src="${baseUrl}${src}" alt="${(card.dataset.alts || '').split('|')[i] || card.dataset.title + ' screenshot ' + (i + 1)}"></div>`
       ).join('');
       viewportEl.style.display = 'block';
       hintEl.style.display = 'block';
@@ -916,6 +922,7 @@ document.getElementById('modalScrollRight').addEventListener('click', () => {
   scrollTrack.scrollBy({ left: scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
 });
 </script>
+<script src="assets/site.js" defer></script>
 <script src="assets/mailing-list.js" defer></script>
 </body>
 </html>

@@ -128,7 +128,7 @@
     --accent: #FF6B35;
     --accent-glow: rgba(255,107,53,0.15);
     --text: #e8e8f0;
-    --muted: #6b6b80;
+    --muted: #8e8ea4;
     --heading: 'Syne', sans-serif;
     --mono: 'DM Mono', monospace;
   }
@@ -427,6 +427,7 @@
   .modal-link:hover { border-color: var(--accent); }
 
 </style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
@@ -487,12 +488,12 @@
     <div class="skill-item">
       <span class="skill-icon">⚡</span>
       <div class="skill-name">Performance</div>
-      <div class="skill-desc">Fast load times, optimised assets, and high Lighthouse scores as standard.</div>
+      <div class="skill-desc">Fast load times and optimised assets, checked with Lighthouse audits.</div>
     </div>
     <div class="skill-item">
       <span class="skill-icon">♿</span>
       <div class="skill-name">Accessibility</div>
-      <div class="skill-desc">WCAG-compliant, semantic HTML and ARIA — usable by everyone.</div>
+      <div class="skill-desc">Built to WCAG 2.2 AA guidelines with semantic HTML and ARIA.</div>
     </div>
     <div class="skill-item">
       <span class="skill-icon">🔍</span>
@@ -509,7 +510,7 @@
     <div class="section-divider"></div>
   </div>
   <div class="projects-grid reveal">
-    <div class="project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-url="https://airliebeachart.com">
+    <div class="project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-alts="Airlie Beach Art home page heading, tagline “Paintings made to be lived with” and an introduction to the artist|Airlie Beach Art gallery grid of Whitsunday seascape paintings with titles, sizes, prices and Add to Selection buttons" data-url="https://airliebeachart.com">
       <div class="project-img" style="background: linear-gradient(135deg,#1a0a00,#3d1f00,#5c3000);">🖼️</div>
       <div class="project-body">
         <div class="project-type">Full-Stack Website</div>
@@ -573,7 +574,7 @@
       </ul>
     </div>
   </div>
-  <p class="pricing-note reveal">All prices in AUD. Final quote provided after project scoping.</p>
+  <p class="pricing-note reveal">All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</p>
 </section>
 
 <section id="contact" aria-label="Contact">
@@ -581,23 +582,17 @@
     <div class="section-label">// Get Started</div>
     <h2>Start Your Web Project</h2>
     <div class="section-divider"></div>
-    <p>Tell me about your website or web app and I'll get back to you within 24 hours.</p>
+    <p>Tell me about your website or web app and I aim to reply within one business day.</p>
   </div>
   <div class="contact-wrap reveal">
     <form id="contactForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="first_name" placeholder="Jane" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
+      <div class="form-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" name="name" placeholder="Jane Smith" maxlength="80" autocomplete="name" required>
         </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="last_name" placeholder="Smith" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
-        </div>
-      </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" required>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" autocomplete="email" required>
       </div>
       <div class="form-group">
         <label for="industry">Industry / Sector (optional)</label>
@@ -626,13 +621,18 @@
         <textarea id="message" name="message" placeholder="Describe your website or web app, what pages you need, and any specific requirements…" maxlength="2000" required></textarea>
       </div>
       <input type="hidden" name="service" value="Front-End Web Development">
+      <fieldset class="form-consent">
+        <legend class="sr-only">Consent</legend>
+        <label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required> <span>I agree to dkvb.dev using these details to reply to my enquiry, as set out in the <a href="privacy.html">Privacy Policy</a>. <span class="consent-req">(required)</span></span></label>
+        <label class="consent-row"><input type="checkbox" name="mailing_list_opt_in" value="yes"> <span>Optional: also send me the occasional build-notes email. Unsubscribe any time.</span></label>
+      </fieldset>
       <!-- Honeypot — hidden from real users, bots will fill it -->
       <div style="display:none;" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
       <button type="submit" class="btn-submit">Send Message →</button>
-      <div class="form-success" id="formSuccess">✅ Message sent! I'll be in touch within 24 hours.</div>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">✅ Message sent, thanks! I aim to reply within one business day.</div>
     </form>
   </div>
 </section>
@@ -641,12 +641,18 @@
 
 <footer role="contentinfo">
   <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2025 dkvb.dev. Built with JavaScript and Kotlin.</p>
+  <p>© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
   <div class="footer-links">
     <a href="sugar-industry.html">Sugar Industry</a>
     <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Twitter</a>
+    <a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <div class="footer-legal" role="navigation" aria-label="Legal">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refund-policy.html">Refunds</a>
+    <a href="cookies.html">Cookies</a>
+    <button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button>
   </div>
 </footer>
 
@@ -703,7 +709,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     const viewportEl = document.getElementById('modalScreenshotViewport');
     if (screenshots.length) {
       trackEl.innerHTML = screenshots.map((src, i) =>
-        `<div class="modal-screenshot"><img src="${baseUrl}${src}" alt="${card.dataset.title} screenshot ${i+1}"></div>`
+        `<div class="modal-screenshot"><img src="${baseUrl}${src}" alt="${(card.dataset.alts || '').split('|')[i] || card.dataset.title + ' screenshot ' + (i + 1)}"></div>`
       ).join('');
       viewportEl.style.display = 'block';
       hintEl.style.display = 'block';
@@ -739,6 +745,7 @@ document.getElementById('modalScrollRight').addEventListener('click', () => {
   scrollTrack.scrollBy({ left: scrollTrack.clientWidth * 0.6, behavior: 'smooth' });
 });
 </script>
+<script src="assets/site.js" defer></script>
 <script src="assets/mailing-list.js" defer></script>
 </body>
 </html>

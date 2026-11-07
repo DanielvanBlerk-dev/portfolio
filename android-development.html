@@ -128,7 +128,7 @@
     --accent: #4A9EFF;
     --accent-glow: rgba(74,158,255,0.15);
     --text: #e8e8f0;
-    --muted: #6b6b80;
+    --muted: #8e8ea4;
     --heading: 'Syne', sans-serif;
     --mono: 'DM Mono', monospace;
   }
@@ -495,6 +495,7 @@
   }
 
 </style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
@@ -648,7 +649,7 @@
       </ul>
     </div>
   </div>
-  <p class="pricing-note reveal">All prices in AUD. Final quote provided after project scoping.</p>
+  <p class="pricing-note reveal">All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</p>
 </section>
 
 <!-- CONTACT -->
@@ -657,23 +658,17 @@
     <div class="section-label">// Get Started</div>
     <h2>Start Your Android Project</h2>
     <div class="section-divider"></div>
-    <p>Tell me about your app idea and I'll get back to you within 24 hours.</p>
+    <p>Tell me about your app idea and I aim to reply within one business day.</p>
   </div>
   <div class="contact-wrap reveal">
     <form id="contactForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="first_name" placeholder="Jane" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
+      <div class="form-group">
+          <label for="fname">Your Name</label>
+          <input type="text" id="fname" name="name" placeholder="Jane Smith" maxlength="80" autocomplete="name" required>
         </div>
-        <div class="form-group">
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="last_name" placeholder="Smith" maxlength="50" pattern="[A-Za-z\s\-']{1,50}" title="Letters, spaces, hyphens and apostrophes only" required>
-        </div>
-      </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" required>
+        <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" autocomplete="email" required>
       </div>
       <div class="form-group">
         <label for="industry">Industry / Sector (optional)</label>
@@ -702,13 +697,18 @@
         <textarea id="message" name="message" placeholder="Describe your app idea, key features, and any specific requirements…" maxlength="2000" required></textarea>
       </div>
       <input type="hidden" name="service" value="Android App Development">
+      <fieldset class="form-consent">
+        <legend class="sr-only">Consent</legend>
+        <label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required> <span>I agree to dkvb.dev using these details to reply to my enquiry, as set out in the <a href="privacy.html">Privacy Policy</a>. <span class="consent-req">(required)</span></span></label>
+        <label class="consent-row"><input type="checkbox" name="mailing_list_opt_in" value="yes"> <span>Optional: also send me the occasional build-notes email. Unsubscribe any time.</span></label>
+      </fieldset>
       <!-- Honeypot — hidden from real users, bots will fill it -->
       <div style="display:none;" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
       <button type="submit" class="btn-submit">Send Message →</button>
-      <div class="form-success" id="formSuccess">✅ Message sent! I'll be in touch within 24 hours.</div>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">✅ Message sent, thanks! I aim to reply within one business day.</div>
     </form>
   </div>
 </section>
@@ -717,12 +717,18 @@
 
 <footer role="contentinfo">
   <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2025 dkvb.dev. Built with JavaScript and Kotlin.</p>
+  <p>© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
   <div class="footer-links">
     <a href="sugar-industry.html">Sugar Industry</a>
     <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Twitter</a>
+    <a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <div class="footer-legal" role="navigation" aria-label="Legal">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="refund-policy.html">Refunds</a>
+    <a href="cookies.html">Cookies</a>
+    <button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button>
   </div>
 </footer>
 
@@ -734,19 +740,19 @@
       <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">‹</button>
       <div class="modal-screenshot-track" id="modalScreenshotTrack">
         <div class="modal-screenshot">
-          <img src="https://dkvb.dev/assets/skills-united/screenshot1.jpg" alt="Skills United screenshot 1">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot1.jpg" alt="Skills United login screen with email and password fields, Log In and Create Account buttons">
         </div>
         <div class="modal-screenshot">
-          <img src="https://dkvb.dev/assets/skills-united/screenshot2.jpg" alt="Skills United screenshot 2">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot2.jpg" alt="Skills United Create Account screen with full name, unique username, email and password fields">
         </div>
         <div class="modal-screenshot">
-          <img src="https://dkvb.dev/assets/skills-united/screenshot3.jpg" alt="Skills United screenshot 3">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot3.jpg" alt="Skills United Terms of Service and Privacy Policy dialog with an agreement checkbox and Accept and Decline buttons">
         </div>
         <div class="modal-screenshot">
-          <img src="https://dkvb.dev/assets/skills-united/screenshot4.jpg" alt="Skills United screenshot 4">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot4.jpg" alt="Skills United Browse Skills screen with a search bar and member cards listing what each person teaches and wants to learn">
         </div>
         <div class="modal-screenshot">
-          <img src="https://dkvb.dev/assets/skills-united/screenshot5.jpg" alt="Skills United screenshot 5">
+          <img src="https://dkvb.dev/assets/skills-united/screenshot5.jpg" alt="Skills United Chat Requests screen with incoming and outgoing tabs and a pending request comparing both members’ skills">
         </div>
       </div>
       <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
@@ -804,6 +810,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   btn.textContent = 'Send Message →'; btn.disabled = false;
 });
 </script>
+<script src="assets/site.js" defer></script>
 <script src="assets/mailing-list.js" defer></script>
 </body>
 </html>
