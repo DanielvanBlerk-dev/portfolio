@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Front-End Web Development — dkvb.dev</title>
-<meta name="description" content="Front-end web development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates — no agency markups. Also offering Android app development, UI/UX design, and back-end development. React, Next.js, HTML/CSS.">
+<title>Front-End Web Development | dkvb.dev</title>
+<meta name="description" content="Front-end web development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates, no agency markups. Also offering Android app development, UI/UX design, and back-end development. React, Next.js, HTML/CSS.">
 <meta name="keywords" content="front-end developer Herbert River Region, web developer Queensland, React developer Australia, Next.js developer Herbert River Region, cost-effective web development Herbert River Region, affordable website developer Queensland, transparent pricing web developer Australia, freelance rates no agency markup, website developer Herbert River Region">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#FF6B35">
+<meta name="theme-color" content="#0f0c19">
 <link rel="canonical" href="https://dkvb.dev/web-development.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/web-development.html">
-<meta property="og:title" content="Front-End Web Development — dkvb.dev">
-<meta property="og:description" content="Front-end web development with React and Next.js. Based in the Herbert River region, QLD — also offering Android, UI/UX, and back-end development.">
+<meta property="og:title" content="Front-End Web Development, dkvb.dev">
+<meta property="og:description" content="Front-end web development with React and Next.js. Based in the Herbert River region, QLD, also offering Android, UI/UX, and back-end development.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://dkvb.dev/web-development.html">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
-<meta name="twitter:title" content="Front-End Web Development — dkvb.dev">
+<meta name="twitter:title" content="Front-End Web Development, dkvb.dev">
 <meta name="twitter:description" content="Front-end web development with React, Next.js, and TypeScript. Based in the Herbert River region, QLD, Australia.">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
@@ -60,531 +60,127 @@
   "serviceType": "Front-End Web Development"
 }
 </script>
-<style>
-
-  /* ── SELF-HOSTED FONTS ── */
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-regular.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-600.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-700.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-800.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-300.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-300italic.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-500.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-500italic.woff2') format('woff2');
-  }
-
-  :root {
-    --bg: #0a0a0f;
-    --surface: #111118;
-    --card: #16161f;
-    --border: #2a2a3a;
-    --accent: #FF6B35;
-    --accent-glow: rgba(255,107,53,0.15);
-    --text: #e8e8f0;
-    --muted: #8e8ea4;
-    --heading: 'Syne', sans-serif;
-    --mono: 'DM Mono', monospace;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: var(--mono); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
-
-  .back-bar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; gap: 1rem;
-    padding: 1.1rem 3rem;
-    background: rgba(10,10,15,0.9); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .back-btn { display: flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; transition: opacity 0.2s; }
-  .back-btn:hover { opacity: 0.7; }
-  .back-bar-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); margin-left: auto; }
-  .back-bar-logo span { color: var(--text); }
-
-  .page-hero {
-    min-height: 52vh; display: flex; flex-direction: column; justify-content: center;
-    padding: 9rem 3rem 5rem; position: relative; overflow: hidden;
-  }
-  .hero-glow {
-    position: absolute; width: 600px; height: 600px; border-radius: 50%;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-    top: -150px; right: -150px; animation: pulse 6s ease-in-out infinite;
-  }
-  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-  .page-badge {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.25);
-    border-radius: 100px; padding: 0.4rem 1rem;
-    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 1.5rem; width: fit-content;
-  }
-  h1 { font-family: var(--heading); font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
-  h1 span { color: var(--accent); }
-  .page-sub { max-width: 560px; color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2.5rem; }
-  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn { padding: 0.9rem 2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: none; cursor: pointer; transition: all 0.25s; display: inline-block; }
-  .btn-primary { background: var(--accent); color: #0a0a0f; }
-  .btn-primary:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,53,0.3); }
-  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-
-  section { padding: 5rem 3rem; }
-  section:nth-child(even) { background: var(--surface); }
-  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 1rem; }
-  h2 { font-family: var(--heading); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; }
-  .section-divider { width: 40px; height: 2px; background: var(--accent); margin-bottom: 2.5rem; }
-  p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
-
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
-  .skill-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem 1.5rem; transition: border-color 0.2s, transform 0.2s; }
-  .skill-item:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .skill-icon { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
-  .skill-name { font-family: var(--heading); font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
-  .skill-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
-
-  .tag { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; background: rgba(255,107,53,0.08); color: var(--accent); border: 1px solid rgba(255,107,53,0.2); }
-  .empty-portfolio { background: var(--card); border: 1px dashed var(--border); border-radius: 10px; padding: 3rem; text-align: center; color: var(--muted); font-size: 0.85rem; line-height: 1.8; }
-  .empty-portfolio .icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
-
-  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-  .pricing-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; position: relative; transition: border-color 0.2s; }
-  .pricing-card.featured { border-color: var(--accent); }
-  .pricing-card.featured::before { content: 'Most Popular'; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #0a0a0f; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.8rem; border-radius: 0 0 6px 6px; }
-  .pricing-tier { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.8rem; }
-  .pricing-price { font-family: var(--heading); font-size: 2.2rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 0.3rem; }
-  .pricing-price span { font-size: 1rem; color: var(--muted); font-family: var(--mono); }
-  .pricing-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; }
-  .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-  .pricing-features li { font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: flex-start; }
-  .pricing-features li::before { content: '✓'; color: var(--accent); flex-shrink: 0; }
-  .pricing-note { font-size: 0.72rem; color: var(--muted); margin-top: 2rem; text-align: center; }
-
-  .contact-wrap { max-width: 600px; }
-  form { display: flex; flex-direction: column; gap: 1.2rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-  label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
-  input, textarea, select { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem 1rem; color: var(--text); font-family: var(--mono); font-size: 0.85rem; transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%; }
-  input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,107,53,0.1); }
-  textarea { resize: vertical; min-height: 130px; }
-  select option { background: var(--card); }
-  .btn-submit { background: var(--accent); color: #0a0a0f; padding: 0.95rem 2.2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; transition: all 0.25s; width: fit-content; }
-  .btn-submit:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,53,0.3); }
-  .form-success { display: none; padding: 1rem 1.5rem; background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; color: var(--accent); font-size: 0.85rem; margin-top: 1rem; }
-  .form-success.visible { display: block; }
-
-  footer { background: var(--bg); border-top: 1px solid var(--border); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .footer-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--accent); }
-  .footer-logo span { color: var(--text); }
-  footer p { color: var(--muted); font-size: 0.78rem; }
-
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* ── SKIP LINK ── */
-  .skip-link {
-    position: absolute; top: -100px; left: 1rem;
-    background: var(--accent); color: #0a0a0f;
-    padding: 0.5rem 1rem; border-radius: 0 0 6px 6px;
-    font-size: 0.8rem; text-decoration: none; z-index: 999;
-    transition: top 0.2s;
-  }
-  .skip-link:focus { top: 0; }
-
-  @media (max-width: 768px) {
-
-    .portfolio-grid,
-    .projects-grid { grid-template-columns: repeat(2, 1fr); }
-    .featured-card { grid-column: span 2; }
-
-    .back-bar { padding: 1rem 1.5rem; }
-    .page-hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
-    h1 { font-size: 2.5rem; }
-    .form-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; text-align: center; }
-  }
-
-  /* ── UNIFIED PROJECT CARD GRID ── */
-  .portfolio-grid,
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));
-    gap: 1rem;
-  }
-  .project-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-  }
-  .project-card.hidden { display: none; }
-  .project-img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .project-overlay {
-    position: absolute; inset: 0;
-    background: rgba(10,10,15,0.7);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity 0.3s;
-    font-size: 0.65rem; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent);
-  }
-  .project-card:hover .project-overlay { opacity: 1; }
-  .project-body {
-    padding: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .project-type {
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 0.25rem;
-  }
-  .project-name {
-    font-family: var(--heading);
-    font-size: 0.88rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-    color: var(--text);
-  }
-  .project-desc {
-    color: var(--muted);
-    font-size: 0.7rem;
-    line-height: 1.55;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .project-meta {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-top: auto; padding-top: 0.7rem;
-    border-top: 1px solid var(--border);
-    font-size: 0.62rem; color: var(--muted);
-  }
-  .project-tech { display: flex; gap: 0.3rem; }
-  .tech-dot {
-    width: 16px; height: 16px; border-radius: 50%;
-    background: var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.48rem; color: var(--text); font-weight: bold;
-  }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.6rem; }
-  .project-tags .tag {
-    font-size: 0.58rem; padding: 0.2rem 0.5rem;
-  }
-
-
-  /* ── MODAL ── */
-  .modal-bg {
-    display: none; position: fixed; inset: 0; z-index: 200;
-    background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
-    align-items: center; justify-content: center;
-    padding: 2rem; overflow-y: auto;
-  }
-  .modal-bg.open { display: flex; }
-  .modal {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; max-width: 520px; width: 100%;
-    max-height: 90vh; overflow-y: auto;
-    padding: 2.5rem; position: relative;
-    animation: modalIn 0.3s ease;
-    scrollbar-width: thin; scrollbar-color: var(--border) transparent;
-  }
-  .modal::-webkit-scrollbar { width: 4px; }
-  .modal::-webkit-scrollbar-track { background: transparent; }
-  .modal::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-  @keyframes modalIn {
-    from { transform: scale(0.92) translateY(20px); opacity: 0; }
-    to   { transform: scale(1) translateY(0); opacity: 1; }
-  }
-  .modal-close {
-    position: absolute; top: 1.2rem; right: 1.2rem;
-    background: var(--border); border: none; color: var(--muted);
-    width: 32px; height: 32px; border-radius: 50%;
-    cursor: pointer; font-size: 1rem;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s;
-  }
-  .modal-close:hover { background: var(--accent); color: #0a0a0f; }
-  .modal-type { color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-  .modal-title { font-family: var(--heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.8rem; }
-  .modal-desc { color: var(--muted); line-height: 1.8; font-size: 0.88rem; }
-  .modal-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
-  .modal-tag {
-    font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 0.25rem 0.6rem; border-radius: 4px;
-    background: rgba(255,255,255,0.06); color: var(--accent);
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-  .modal-screenshot-viewport { position: relative; }
-  .modal-screenshot-track {
-    display: flex; gap: 0.8rem; overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.8rem; margin-bottom: 0.6rem;
-    scrollbar-width: thin; scrollbar-color: var(--accent) var(--border);
-    scroll-behavior: smooth;
-  }
-  .modal-screenshot-track::-webkit-scrollbar { height: 8px; }
-  .modal-screenshot-track::-webkit-scrollbar-track { background: var(--border); border-radius: 4px; }
-  .modal-screenshot-track::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
-  .modal-screenshot {
-    flex: 0 0 auto;
-    border-radius: 8px; overflow: hidden;
-    border: 1px solid var(--border);
-    max-height: 320px; background: var(--bg);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .modal-screenshot img { max-width: 100%; max-height: 320px; width: auto; height: auto; object-fit: contain; display: block; }
-  .modal-scroll-arrow {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 32px; height: 32px; border-radius: 50%;
-    background: rgba(10,10,15,0.85); border: 1px solid var(--accent);
-    color: var(--accent); font-size: 1rem; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 5; transition: background 0.2s; opacity: 0.9;
-  }
-  .modal-scroll-arrow:hover { background: var(--accent); color: #0a0a0f; }
-  .modal-scroll-arrow.left { left: 4px; }
-  .modal-scroll-arrow.right { right: 4px; }
-  .modal-screenshot-hint { font-size: 0.65rem; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
-  .modal-link {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    margin-top: 1.5rem; color: var(--accent); font-size: 0.8rem;
-    text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 2px; transition: border-color 0.2s;
-  }
-  .modal-link:hover { border-color: var(--accent); }
-
-</style>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/dkvb.css">
+<script src="assets/motion.js"></script>
 </head>
 <body>
-
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<header role="banner">
-  <div class="back-bar">
-    <a href="index.html" class="back-btn">← Back to Home</a>
-    <div class="back-bar-logo">dkvb<span>.dev</span></div>
+
+<header class="site-header">
+  <div class="announce"><div class="container"><span>Available for freelance work.</span><span class="announce-aside">Herbert River region, QLD, and remote</span></div></div>
+  <div class="bar">
+    <nav class="container" aria-label="Main">
+      <a class="wordmark" href="index.html" aria-label="dkvb.dev home">dkvb.dev</a>
+      <button class="nav-toggle" id="siteNavToggle" type="button" aria-expanded="false" aria-controls="siteNavMenu">Menu</button>
+      <ul class="nav-links" id="siteNavMenu">
+        <li><a href="index.html#services" aria-current="page">Services</a></li>
+        <li><a href="index.html#portfolio">Work</a></li>
+        <li><a href="sugar-industry.html">Sugar industry</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <main id="main-content">
-
-<section class="page-hero" aria-label="Front-End Development Introduction">
-  <div class="hero-glow"></div>
-  <div class="page-badge">🌐 Front-End Development</div>
-  <h1>Websites That<br><span>Perform.</span></h1>
-  <p class="page-sub">Clean, fast, responsive websites and web apps. From landing pages to interactive experiences — built with modern tools and an eye for detail.</p>
-  <div class="hero-ctas">
-    <a href="#contact" class="btn btn-primary">Start a Project</a>
-    <a href="#portfolio" class="btn btn-ghost">See My Work</a>
+<section class="hero hero--stage" id="hero">
+  <div class="container">
+    <div>
+      <h1>Websites that <span class="verb">perform</span>.</h1>
+      <p class="lead">Clean, fast, responsive websites and web apps with an eye for detail.</p>
+      <div class="actions"><a class="btn btn--primary" href="#contact">Start a project</a><a class="btn btn--secondary" href="#portfolio">See the work</a></div>
+    </div>
+    <figure class="diagram" data-loop role="img" aria-label="Diagram: the order a page loads in, from the HTML document to images below the fold">
+      <ul class="waterfall">
+        <li><span class="readout">HTML document</span><span class="lane"><span class="bar bar--key" style="--start:0%;--len:14%;--i:0"></span></span></li>
+        <li><span class="readout">Stylesheet</span><span class="lane"><span class="bar" style="--start:12%;--len:10%;--i:1"></span></span></li>
+        <li><span class="readout">Fonts</span><span class="lane"><span class="bar" style="--start:18%;--len:12%;--i:2"></span></span></li>
+        <li><span class="readout">Script</span><span class="lane"><span class="bar" style="--start:20%;--len:16%;--i:3"></span></span></li>
+        <li><span class="readout">Hero image</span><span class="lane"><span class="bar bar--key" style="--start:26%;--len:22%;--i:4"></span></span></li>
+        <li><span class="readout">Images below</span><span class="lane"><span class="bar" style="--start:44%;--len:30%;--i:5"></span></span></li>
+      </ul>
+      <p class="axis readout"><span>Request</span><span>First paint</span><span>Loaded</span></p>
+      <figcaption><span>The order a page loads in, drawn as a sample</span><button class="loop-toggle" type="button" data-loop-toggle aria-pressed="false">Pause</button></figcaption>
+    </figure>
   </div>
 </section>
 
-<section id="skills" aria-label="Skills and Tools">
-  <div class="reveal">
-    <div class="section-label">// Tech Stack</div>
-    <h2>Skills &amp; Tools</h2>
-    <div class="section-divider"></div>
-    <p>A modern front-end stack focused on performance, accessibility, and maintainability.</p>
-  </div>
-  <div class="skills-grid reveal">
-    <div class="skill-item">
-      <span class="skill-icon">⚛️</span>
-      <div class="skill-name">React</div>
-      <div class="skill-desc">Component-based UI development for dynamic, interactive web experiences.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">▲</span>
-      <div class="skill-name">Next.js</div>
-      <div class="skill-desc">React framework with routing, SSR, and performance optimisations built in.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🔷</span>
-      <div class="skill-name">TypeScript</div>
-      <div class="skill-desc">Type-safe JavaScript for catching errors early and writing confident code.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🎨</span>
-      <div class="skill-name">HTML & CSS</div>
-      <div class="skill-desc">Semantic markup and hand-crafted styles — no unnecessary abstractions.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">📱</span>
-      <div class="skill-name">Responsive Design</div>
-      <div class="skill-desc">Layouts that look great on every device, from mobile to ultrawide.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">⚡</span>
-      <div class="skill-name">Performance</div>
-      <div class="skill-desc">Fast load times and optimised assets, checked with Lighthouse audits.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">♿</span>
-      <div class="skill-name">Accessibility</div>
-      <div class="skill-desc">Built to WCAG 2.2 AA guidelines with semantic HTML and ARIA.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🔍</span>
-      <div class="skill-name">SEO</div>
-      <div class="skill-desc">Meta tags, structured data, canonical URLs, and Search Console setup.</div>
-    </div>
+<section class="section" id="skills">
+  <div class="container">
+    <div class="head reveal"><h2>Skills &amp; tools</h2><p class="lead">A front-end stack focused on performance, accessibility and maintainability.</p></div>
+    <dl class="tools">
+      <div><dt>React</dt><dd>Component-based UI for dynamic, interactive web experiences.</dd></div>
+      <div><dt>Next.js</dt><dd>React framework with routing, SSR and performance optimisations built in.</dd></div>
+      <div><dt>TypeScript</dt><dd>Type-safe JavaScript for catching errors early.</dd></div>
+      <div><dt>Semantic HTML &amp; CSS</dt><dd>Semantic markup and hand-written styles, no unnecessary abstractions.</dd></div>
+      <div><dt>Responsive design</dt><dd>Layouts that work on every device, from mobile to ultrawide.</dd></div>
+      <div><dt>Performance</dt><dd>Fast load times and optimised assets, checked with Lighthouse audits.</dd></div>
+      <div><dt>Accessibility</dt><dd>Built to WCAG 2.2 AA guidelines with semantic HTML and ARIA.</dd></div>
+      <div><dt>SEO</dt><dd>Meta tags, structured data, canonical URLs and Search Console setup.</dd></div>
+    </dl>
   </div>
 </section>
 
-<section id="portfolio" aria-label="Portfolio">
-  <div class="reveal">
-    <div class="section-label">// Work</div>
-    <h2>Web Projects</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="projects-grid reveal">
-    <div class="project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-alts="Airlie Beach Art home page heading, tagline “Paintings made to be lived with” and an introduction to the artist|Airlie Beach Art gallery grid of Whitsunday seascape paintings with titles, sizes, prices and Add to Selection buttons" data-url="https://airliebeachart.com">
-      <div class="project-img" style="background: linear-gradient(135deg,#1a0a00,#3d1f00,#5c3000);">🖼️</div>
-      <div class="project-body">
-        <div class="project-type">Full-Stack Website</div>
-        <div class="project-name">Airlie Beach Art</div>
-        <p class="project-desc">A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel.</p>
-        <div class="project-tags">
-          <span class="tag">GitHub</span>
-          <span class="tag">Vercel</span>
-          <span class="tag">Square</span>
-          <span class="tag">APIs</span>
-          <span class="tag">Domains</span>
-        </div>
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="head reveal"><h2>Web projects</h2><p class="lead">Airlie Beach Art: an original art shop, built from the ground up.</p></div>
+    <div class="case">
+      <figure class="shot-main shot-top" data-slot="web-main" data-kind="product" data-alt="Airlie Beach Art gallery grid of Whitsunday seascape paintings with prices"><img src="assets/airliebeachart/Screenshot%202.jpg" width="1101" height="816" alt="Airlie Beach Art gallery grid of Whitsunday seascape paintings with prices" loading="lazy" decoding="async"></figure>
+      <div class="case-side">
+        <figure class="shot-side shot-top" data-slot="web-side" data-kind="product" data-alt="Airlie Beach Art home page heading and introduction"><img src="assets/airliebeachart/Screenshot%201.jpg" width="754" height="401" alt="Airlie Beach Art home page heading and introduction" loading="lazy" decoding="async"></figure>
+        <dl class="facts">
+          <div><dt>The owner</dt><dd>Lists original paintings and manages the gallery as admin</dd></div>
+          <div><dt>Payments</dt><dd>Real card payments through Square</dd></div>
+          <div><dt>Shipping</dt><dd>Live Australia Post rates</dd></div>
+          <div><dt>Built on</dt><dd>GitHub, Vercel, Square, APIs, domains</dd></div>
+        </dl>
+        <div class="actions"><button type="button" class="btn btn--secondary project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-alts="Airlie Beach Art home page heading, tagline “Paintings made to be lived with” and an introduction to the artist|Airlie Beach Art gallery grid of Whitsunday seascape paintings with titles, sizes, prices and Add to Selection buttons" data-url="https://airliebeachart.com"><span class="project-title">Open project details</span></button></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="pricing" aria-label="Pricing">
-  <div class="reveal">
-    <div class="section-label">// Investment</div>
-    <h2>Pricing</h2>
-    <div class="section-divider"></div>
-    <p>Transparent pricing with no surprises. Final quotes are scoped per project.</p>
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="head reveal"><h2>Pricing</h2><p class="lead">Transparent pricing with no surprises. Final quotes are scoped per project.</p></div>
+    <table class="rates">
+      <caption>All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</caption>
+      <thead><tr><th scope="col">Plan</th><th scope="col">From</th><th scope="col">What it is</th><th scope="col">Included</th></tr></thead>
+      <tbody>
+        <tr>
+          <th scope="row">Landing page</th>
+          <td class="price">$300<span class="readout">AUD</span></td>
+          <td><p>A single, polished page to show your product, service or brand.</p></td>
+          <td><ul><li>Single page design</li><li>Fully responsive</li><li>Contact form</li><li>Basic SEO setup</li><li>1 round of revisions</li></ul></td>
+        </tr>
+        <tr>
+          <th scope="row">Website</th>
+          <td class="price">$800<span class="readout">AUD</span></td>
+          <td><p>A multi-page website with navigation, content sections and full SEO.</p></td>
+          <td><ul><li>Up to 5 pages</li><li>Fully responsive</li><li>Contact form with email</li><li>Full SEO implementation</li><li>Performance optimised</li><li>3 rounds of revisions</li></ul></td>
+        </tr>
+        <tr>
+          <th scope="row">Web app</th>
+          <td class="price">Let’s talk</td>
+          <td><p>Interactive web applications with dynamic data, auth and custom features.</p></td>
+          <td><ul><li>Custom scope</li><li>React or Next.js build</li><li>Authentication</li><li>API integration</li><li>Flexible revisions</li></ul></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="pricing-grid reveal">
-    <div class="pricing-card">
-      <div class="pricing-tier">Landing Page</div>
-      <div class="pricing-price">$300 <span>/ project</span></div>
-      <p class="pricing-desc">A single, polished page to showcase your product, service, or brand.</p>
-      <ul class="pricing-features">
-        <li>Single page design</li>
-        <li>Fully responsive</li>
-        <li>Contact form</li>
-        <li>Basic SEO setup</li>
-        <li>1 round of revisions</li>
-      </ul>
-    </div>
-    <div class="pricing-card featured">
-      <div class="pricing-tier">Website</div>
-      <div class="pricing-price">$800 <span>/ project</span></div>
-      <p class="pricing-desc">A multi-page website with navigation, content sections, and full SEO.</p>
-      <ul class="pricing-features">
-        <li>Up to 5 pages</li>
-        <li>Fully responsive</li>
-        <li>Contact form with email</li>
-        <li>Full SEO implementation</li>
-        <li>Performance optimised</li>
-        <li>3 rounds of revisions</li>
-      </ul>
-    </div>
-    <div class="pricing-card">
-      <div class="pricing-tier">Web App</div>
-      <div class="pricing-price">Let's <span>talk</span></div>
-      <p class="pricing-desc">Interactive web applications with dynamic data, auth, and custom features.</p>
-      <ul class="pricing-features">
-        <li>Custom scope</li>
-        <li>React / Next.js build</li>
-        <li>Authentication</li>
-        <li>API integration</li>
-        <li>Flexible revisions</li>
-      </ul>
-    </div>
-  </div>
-  <p class="pricing-note reveal">All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</p>
 </section>
 
-<section id="contact" aria-label="Contact">
-  <div class="reveal">
-    <div class="section-label">// Get Started</div>
-    <h2>Start Your Web Project</h2>
-    <div class="section-divider"></div>
-    <p>Tell me about your website or web app and I aim to reply within one business day.</p>
-  </div>
-  <div class="contact-wrap reveal">
+<section class="section section--l" id="contact">
+  <div class="container contact">
+    <div class="contact-info">
+      <h2>Start your web project</h2>
+      <p>Tell me about your website or web app: what it is for and when you need it.</p>
+      <dl class="contact-lines">
+        <div><dt>Email</dt><dd><a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a></dd></div>
+        <div><dt>Based in</dt><dd>Herbert River Region, QLD. Remote-friendly.</dd></div>
+        <div><dt>Replies</dt><dd>Usually within one business day</dd></div>
+      </dl>
+    </div>
     <form id="contactForm">
       <div class="form-group">
           <label for="fname">Your Name</label>
@@ -597,7 +193,7 @@
       <div class="form-group">
         <label for="industry">Industry / Sector (optional)</label>
         <select id="industry" name="industry">
-          <option value="">— Select if relevant —</option>
+          <option value="">Select if relevant</option>
           <option>Sugar Industry / Agriculture (Herbert River)</option>
           <option>Small Business / Retail</option>
           <option>Hospitality / Tourism</option>
@@ -608,10 +204,10 @@
       <div class="form-group">
         <label for="budget">Approximate Budget</label>
         <select id="budget" name="budget">
-          <option value="">— Select a range —</option>
+          <option value="">Select a range</option>
           <option>Under $300</option>
-          <option>$300 – $800</option>
-          <option>$800 – $3,000</option>
+          <option>$300 to $800</option>
+          <option>$800 to $3,000</option>
           <option>$3,000+</option>
           <option>Prefer to discuss</option>
         </select>
@@ -626,33 +222,36 @@
         <label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required> <span>I agree to dkvb.dev using these details to reply to my enquiry, as set out in the <a href="privacy.html">Privacy Policy</a>. <span class="consent-req">(required)</span></span></label>
         <label class="consent-row"><input type="checkbox" name="mailing_list_opt_in" value="yes"> <span>Optional: also send me the occasional build-notes email. Unsubscribe any time.</span></label>
       </fieldset>
-      <!-- Honeypot — hidden from real users, bots will fill it -->
+      <!-- Honeypot, hidden from real users, bots will fill it -->
       <div style="display:none;" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
-      <button type="submit" class="btn-submit">Send Message →</button>
-      <div class="form-success" id="formSuccess" role="status" aria-live="polite">✅ Message sent, thanks! I aim to reply within one business day.</div>
+      <button type="submit" class="btn btn--primary btn-submit">Send message</button>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">Message sent, thanks! I aim to reply within one business day.</div>
     </form>
   </div>
 </section>
-
 </main>
 
-<footer role="contentinfo">
-  <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
-  <div class="footer-links">
-    <a href="sugar-industry.html">Sugar Industry</a>
-    <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  </div>
-  <div class="footer-legal" role="navigation" aria-label="Legal">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="refund-policy.html">Refunds</a>
-    <a href="cookies.html">Cookies</a>
-    <button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button>
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p class="foot-statement">Apps and websites, built in the Herbert River region and shipped anywhere.</p>
+    <div class="foot-links">
+      <ul aria-label="Elsewhere">
+        <li><a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="sugar-industry.html">Sugar industry</a></li>
+      </ul>
+      <ul class="footer-legal" aria-label="Legal">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund-policy.html">Refunds</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
+      </ul>
+    </div>
+    <p class="foot-copy">© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
   </div>
 </footer>
 
@@ -674,25 +273,25 @@ document.getElementById('contactForm').addEventListener('submit', async function
     if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
     else { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
   } catch { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
-  btn.textContent = 'Send Message →'; btn.disabled = false;
+  btn.textContent = 'Send message'; btn.disabled = false;
 });
 </script>
 
 <!-- MODAL -->
 <div class="modal-bg" id="modalBg">
   <div class="modal">
-    <button class="modal-close" id="modalClose">✕</button>
+    <button class="modal-close" id="modalClose">Close</button>
     <div class="modal-screenshot-viewport" id="modalScreenshotViewport" style="display:none;">
-      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">‹</button>
+      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">Back</button>
       <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
-      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
+      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">Next</button>
     </div>
-    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">scroll or use arrows to view</div>
+    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">Scroll or use the arrows to view</div>
     <div class="modal-type" id="modalType"></div>
     <div class="modal-title" id="modalTitle"></div>
     <p class="modal-desc" id="modalDesc"></p>
     <div class="modal-tags" id="modalTags"></div>
-    <a href="#" class="modal-link" id="modalLink" target="_blank" rel="noopener noreferrer" style="display:none;">View live project ↗</a>
+    <a href="#" class="modal-link" id="modalLink" target="_blank" rel="noopener noreferrer" style="display:none;">View live project</a>
   </div>
 </div>
 

@@ -88,14 +88,9 @@
   }
 
   function enhanceCards() {
-    document.querySelectorAll('.service-card[onclick]').forEach(function (card) {
-      var title = card.querySelector('h3, .service-title, .service-name');
-      card.setAttribute('tabindex', '0');
-      card.setAttribute('role', 'link');
-      if (title) card.setAttribute('aria-label', title.textContent.trim() + ' — learn more');
-      activateOnKey(card);
-    });
+    // Service cards are real links now; only the project rows need help.
     document.querySelectorAll('.project-card').forEach(function (card) {
+      if (card.tagName === 'BUTTON') return;
       var title = card.dataset.title || (card.querySelector('h3, .project-title, .project-name') || {}).textContent || 'project';
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');

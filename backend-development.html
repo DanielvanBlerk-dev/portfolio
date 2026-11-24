@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Back-End Development — dkvb.dev</title>
-<meta name="description" content="Back-end development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates — no agency markups. Also offering Android app development, front-end web development, and UI/UX design. Firebase, Node.js, REST APIs.">
+<title>Back-End Development | dkvb.dev</title>
+<meta name="description" content="Back-end development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates, no agency markups. Also offering Android app development, front-end web development, and UI/UX design. Firebase, Node.js, REST APIs.">
 <meta name="keywords" content="back-end developer Herbert River Region, API developer Queensland, Firebase developer Australia, Node.js developer Herbert River Region, cost-effective back-end development Herbert River Region, affordable API developer Queensland, transparent pricing back-end Australia, freelance rates no agency markup, Firestore developer Herbert River Region">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#00BFFF">
+<meta name="theme-color" content="#0f0c19">
 <link rel="canonical" href="https://dkvb.dev/backend-development.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/backend-development.html">
-<meta property="og:title" content="Back-End Development — dkvb.dev">
-<meta property="og:description" content="Scalable APIs, real-time databases, and cloud infrastructure. Based in the Herbert River region, QLD — also offering Android, front-end, and UI/UX development.">
+<meta property="og:title" content="Back-End Development, dkvb.dev">
+<meta property="og:description" content="Scalable APIs, real-time databases, and cloud infrastructure. Based in the Herbert River region, QLD, also offering Android, front-end, and UI/UX development.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="dkvb.dev">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://dkvb.dev/backend-development.html">
-<meta name="twitter:title" content="Back-End Development — dkvb.dev">
+<meta name="twitter:title" content="Back-End Development, dkvb.dev">
 <meta name="twitter:description" content="Back-end development with Firebase, Node.js, and REST APIs. Based in the Herbert River region, QLD, Australia.">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="geo.region" content="AU-QLD">
@@ -60,708 +60,149 @@
   "serviceType": "Back-End Development"
 }
 </script>
-<style>
-
-  /* ── SELF-HOSTED FONTS ── */
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-regular.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-600.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-700.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-800.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-300.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-300italic.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-500.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-500italic.woff2') format('woff2');
-  }
-
-  :root {
-    --bg: #0a0a0f;
-    --surface: #111118;
-    --card: #16161f;
-    --border: #2a2a3a;
-    --accent: #00BFFF;
-    --accent-glow: rgba(0,191,255,0.14);
-    --text: #e8e8f0;
-    --muted: #8e8ea4;
-    --heading: 'Syne', sans-serif;
-    --mono: 'DM Mono', monospace;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: var(--mono); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
-
-  /* ── SKIP LINK ── */
-  .skip-link {
-    position: absolute; top: -100px; left: 1rem;
-    background: var(--accent); color: #0a0a0f;
-    padding: 0.5rem 1rem; border-radius: 0 0 6px 6px;
-    font-size: 0.8rem; text-decoration: none; z-index: 999;
-    transition: top 0.2s;
-  }
-  .skip-link:focus { top: 0; }
-
-  /* ── BACK BAR ── */
-  .back-bar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; gap: 1rem;
-    padding: 1.1rem 3rem;
-    background: rgba(10,10,15,0.9); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .back-btn {
-    display: flex; align-items: center; gap: 0.5rem;
-    color: var(--accent); text-decoration: none;
-    font-size: 0.78rem; letter-spacing: 0.08em;
-    text-transform: uppercase; transition: opacity 0.2s;
-  }
-  .back-btn:hover { opacity: 0.7; }
-  .back-bar-logo {
-    font-family: var(--heading); font-weight: 800;
-    font-size: 1.1rem; color: var(--accent); margin-left: auto;
-  }
-  .back-bar-logo span { color: var(--text); }
-
-  /* ── HERO ── */
-  .page-hero {
-    min-height: 52vh; display: flex; flex-direction: column;
-    justify-content: center; padding: 9rem 3rem 5rem;
-    position: relative; overflow: hidden;
-  }
-  .hero-glow {
-    position: absolute; width: 600px; height: 600px; border-radius: 50%;
-    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
-    top: -150px; right: -150px; animation: pulse 6s ease-in-out infinite;
-  }
-  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-  .page-badge {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: rgba(0,191,255,0.08); border: 1px solid rgba(0,191,255,0.25);
-    border-radius: 100px; padding: 0.4rem 1rem;
-    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 1.5rem; width: fit-content;
-  }
-  h1 {
-    font-family: var(--heading); font-size: clamp(2.8rem, 6vw, 5.5rem);
-    font-weight: 800; line-height: 1; letter-spacing: -0.03em; margin-bottom: 1.5rem;
-  }
-  h1 span { color: var(--accent); }
-  .page-sub { max-width: 560px; color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2.5rem; }
-  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn {
-    padding: 0.9rem 2rem; font-family: var(--mono); font-size: 0.8rem;
-    letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
-    border-radius: 6px; border: none; cursor: pointer; transition: all 0.25s; display: inline-block;
-  }
-  .btn-primary { background: var(--accent); color: #0a0a0f; }
-  .btn-primary:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,191,255,0.3); }
-  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-
-  /* ── SECTIONS ── */
-  section { padding: 5rem 3rem; }
-  section:nth-child(even) { background: var(--surface); }
-  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 1rem; }
-  h2 { font-family: var(--heading); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; }
-  .section-divider { width: 40px; height: 2px; background: var(--accent); margin-bottom: 2.5rem; }
-  p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
-
-  /* ── SKILLS GRID ── */
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
-  .skill-item {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 8px; padding: 1.2rem 1.5rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .skill-item:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .skill-icon { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
-  .skill-name { font-family: var(--heading); font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
-  .skill-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
-
-  /* ── HOW IT WORKS ── */
-  .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem; counter-reset: step; }
-  .process-step {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 1.8rem; position: relative; counter-increment: step;
-  }
-  .process-step::before {
-    content: "0" counter(step); font-family: var(--heading); font-size: 2.5rem;
-    font-weight: 800; color: rgba(0,191,255,0.12);
-    position: absolute; top: 1rem; right: 1.2rem; line-height: 1;
-  }
-  .process-title { font-family: var(--heading); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
-  .process-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
-
-  /* ── PORTFOLIO ── */
-  .empty-portfolio {
-    background: var(--card); border: 1px dashed var(--border);
-    border-radius: 10px; padding: 3rem; text-align: center;
-    color: var(--muted); font-size: 0.85rem; line-height: 1.8;
-  }
-  .empty-portfolio .icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
-
-  /* Skills United card */
-  .tag {
-    font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 0.25rem 0.6rem; border-radius: 4px;
-    background: rgba(0,191,255,0.08); color: var(--accent);
-    border: 1px solid rgba(0,191,255,0.2);
-  }
-  .wip-badge {
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    background: rgba(0,191,255,0.1); border: 1px solid rgba(0,191,255,0.3);
-    border-radius: 100px; padding: 0.25rem 0.7rem;
-    font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--accent); margin-top: 0.8rem; width: fit-content;
-  }
-  .wip-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: blink 1.5s infinite; }
-  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.2;} }
-
-  /* ── PRICING ── */
-  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-  .pricing-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 2rem; position: relative;
-  }
-  .pricing-card.featured { border-color: var(--accent); }
-  .pricing-card.featured::before {
-    content: 'Most Popular'; position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
-    background: var(--accent); color: #0a0a0f;
-    font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
-    padding: 0.2rem 0.8rem; border-radius: 0 0 6px 6px;
-  }
-  .pricing-tier { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.8rem; }
-  .pricing-price { font-family: var(--heading); font-size: 2.2rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 0.3rem; }
-  .pricing-price span { font-size: 1rem; color: var(--muted); font-family: var(--mono); }
-  .pricing-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; }
-  .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-  .pricing-features li { font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: flex-start; }
-  .pricing-features li::before { content: '✓'; color: var(--accent); flex-shrink: 0; }
-  .pricing-note { font-size: 0.72rem; color: var(--muted); margin-top: 2rem; text-align: center; }
-
-  /* ── CONTACT ── */
-  .contact-wrap { max-width: 600px; }
-  form { display: flex; flex-direction: column; gap: 1.2rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-  label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
-  input, textarea, select {
-    background: var(--card); border: 1px solid var(--border); border-radius: 6px;
-    padding: 0.85rem 1rem; color: var(--text); font-family: var(--mono);
-    font-size: 0.85rem; transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%;
-  }
-  input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,191,255,0.1); }
-  textarea { resize: vertical; min-height: 130px; }
-  select option { background: var(--card); }
-  .btn-submit {
-    background: var(--accent); color: #0a0a0f; padding: 0.95rem 2.2rem;
-    font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em;
-    text-transform: uppercase; border: none; border-radius: 6px;
-    cursor: pointer; transition: all 0.25s; width: fit-content;
-  }
-  .btn-submit:hover { background: #fff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,191,255,0.3); }
-  .form-success {
-    display: none; padding: 1rem 1.5rem;
-    background: rgba(0,191,255,0.08); border: 1px solid rgba(0,191,255,0.3);
-    border-radius: 8px; color: var(--accent); font-size: 0.85rem; margin-top: 1rem;
-  }
-  .form-success.visible { display: block; }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--bg); border-top: 1px solid var(--border);
-    padding: 2.5rem 3rem; display: flex;
-    justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--accent); }
-  .footer-logo span { color: var(--text); }
-  footer p { color: var(--muted); font-size: 0.78rem; }
-
-  /* ── REVEAL ── */
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  @media (max-width: 768px) {
-
-    .portfolio-grid,
-    .projects-grid { grid-template-columns: repeat(2, 1fr); }
-    .featured-card { grid-column: span 2; }
-
-    html, body { overflow-x: hidden; max-width: 100vw; }
-      .back-bar { padding: 1rem 1.2rem; }
-    .page-hero, section { padding-left: 1.2rem; padding-right: 1.2rem; }
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 1.7rem; }
-    .form-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; text-align: center; padding: 2rem 1.2rem; }
-  }
-  @media (max-width: 400px) {
-    h1 { font-size: 2rem; }
-  }
-
-  /* ── UNIFIED PROJECT CARD GRID ── */
-  .portfolio-grid,
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 260px));
-    gap: 1rem;
-  }
-  .project-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-  }
-  .project-card.hidden { display: none; }
-  .project-img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .project-overlay {
-    position: absolute; inset: 0;
-    background: rgba(10,10,15,0.7);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity 0.3s;
-    font-size: 0.65rem; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent);
-  }
-  .project-card:hover .project-overlay { opacity: 1; }
-  .project-body {
-    padding: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-  }
-  .project-type {
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 0.25rem;
-  }
-  .project-name {
-    font-family: var(--heading);
-    font-size: 0.88rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-    color: var(--text);
-  }
-  .project-desc {
-    color: var(--muted);
-    font-size: 0.7rem;
-    line-height: 1.55;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  .project-meta {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-top: auto; padding-top: 0.7rem;
-    border-top: 1px solid var(--border);
-    font-size: 0.62rem; color: var(--muted);
-  }
-  .project-tech { display: flex; gap: 0.3rem; }
-  .tech-dot {
-    width: 16px; height: 16px; border-radius: 50%;
-    background: var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.48rem; color: var(--text); font-weight: bold;
-  }
-  .project-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.6rem; }
-  .project-tags .tag {
-    font-size: 0.58rem; padding: 0.2rem 0.5rem;
-  }
-
-
-  /* ── MODAL ── */
-  .modal-bg {
-    display: none; position: fixed; inset: 0; z-index: 200;
-    background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
-    align-items: center; justify-content: center;
-    padding: 2rem; overflow-y: auto;
-  }
-  .modal-bg.open { display: flex; }
-  .modal {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; max-width: 520px; width: 100%;
-    max-height: 90vh; overflow-y: auto;
-    padding: 2.5rem; position: relative;
-    animation: modalIn 0.3s ease;
-    scrollbar-width: thin; scrollbar-color: var(--border) transparent;
-  }
-  .modal::-webkit-scrollbar { width: 4px; }
-  .modal::-webkit-scrollbar-track { background: transparent; }
-  .modal::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-  @keyframes modalIn {
-    from { transform: scale(0.92) translateY(20px); opacity: 0; }
-    to   { transform: scale(1) translateY(0); opacity: 1; }
-  }
-  .modal-close {
-    position: absolute; top: 1.2rem; right: 1.2rem;
-    background: var(--border); border: none; color: var(--muted);
-    width: 32px; height: 32px; border-radius: 50%;
-    cursor: pointer; font-size: 1rem;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s;
-  }
-  .modal-close:hover { background: var(--accent); color: #0a0a0f; }
-  .modal-type { color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-  .modal-title { font-family: var(--heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.8rem; }
-  .modal-desc { color: var(--muted); line-height: 1.8; font-size: 0.88rem; }
-  .modal-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
-  .modal-tag {
-    font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 0.25rem 0.6rem; border-radius: 4px;
-    background: rgba(255,255,255,0.06); color: var(--accent);
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-  .modal-screenshot-viewport { position: relative; }
-  .modal-screenshot-track {
-    display: flex; gap: 0.8rem; overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.8rem; margin-bottom: 0.6rem;
-    scrollbar-width: thin; scrollbar-color: var(--accent) var(--border);
-    scroll-behavior: smooth;
-  }
-  .modal-screenshot-track::-webkit-scrollbar { height: 8px; }
-  .modal-screenshot-track::-webkit-scrollbar-track { background: var(--border); border-radius: 4px; }
-  .modal-screenshot-track::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
-  .modal-screenshot {
-    flex: 0 0 auto;
-    border-radius: 8px; overflow: hidden;
-    border: 1px solid var(--border);
-    max-height: 320px; background: var(--bg);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .modal-screenshot img { max-width: 100%; max-height: 320px; width: auto; height: auto; object-fit: contain; display: block; }
-  .modal-scroll-arrow {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 32px; height: 32px; border-radius: 50%;
-    background: rgba(10,10,15,0.85); border: 1px solid var(--accent);
-    color: var(--accent); font-size: 1rem; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 5; transition: background 0.2s; opacity: 0.9;
-  }
-  .modal-scroll-arrow:hover { background: var(--accent); color: #0a0a0f; }
-  .modal-scroll-arrow.left { left: 4px; }
-  .modal-scroll-arrow.right { right: 4px; }
-  .modal-screenshot-hint { font-size: 0.65rem; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
-  .modal-link {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    margin-top: 1.5rem; color: var(--accent); font-size: 0.8rem;
-    text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 2px; transition: border-color 0.2s;
-  }
-  .modal-link:hover { border-color: var(--accent); }
-
-</style>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/dkvb.css">
+<script src="assets/motion.js"></script>
 </head>
 <body>
-
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header role="banner">
-  <div class="back-bar">
-    <a href="index.html" class="back-btn">← Back to Home</a>
-    <div class="back-bar-logo">dkvb<span>.dev</span></div>
+<header class="site-header">
+  <div class="announce"><div class="container"><span>Available for freelance work.</span><span class="announce-aside">Herbert River region, QLD, and remote</span></div></div>
+  <div class="bar">
+    <nav class="container" aria-label="Main">
+      <a class="wordmark" href="index.html" aria-label="dkvb.dev home">dkvb.dev</a>
+      <button class="nav-toggle" id="siteNavToggle" type="button" aria-expanded="false" aria-controls="siteNavMenu">Menu</button>
+      <ul class="nav-links" id="siteNavMenu">
+        <li><a href="index.html#services" aria-current="page">Services</a></li>
+        <li><a href="index.html#portfolio">Work</a></li>
+        <li><a href="sugar-industry.html">Sugar industry</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <main id="main-content">
-
-<!-- HERO -->
-<section class="page-hero" aria-label="Back-End Development Introduction">
-  <div class="hero-glow"></div>
-  <div class="page-badge">🔌 Back-End Development</div>
-  <h1>The Engine<br><span>Under the Hood.</span></h1>
-  <p class="page-sub">Scalable APIs, real-time databases, and cloud infrastructure that power apps reliably and are designed to grow with you.</p>
-  <div class="hero-ctas">
-    <a href="#contact" class="btn btn-primary">Start a Project</a>
-    <a href="#skills" class="btn btn-ghost">See the Stack</a>
-  </div>
-</section>
-
-<!-- SKILLS & TOOLS -->
-<section id="skills" aria-label="Skills and Tools">
-  <div class="reveal">
-    <div class="section-label">// Tech Stack</div>
-    <h2>Skills &amp; Tools</h2>
-    <div class="section-divider"></div>
-    <p>A dependable back-end stack focused on reliability, real-time capability, and rapid development.</p>
-  </div>
-  <div class="skills-grid reveal">
-    <div class="skill-item">
-      <span class="skill-icon">🔐</span>
-      <div class="skill-name">Authentication &amp; Authorisation</div>
-      <div class="skill-desc">Secure login flows with Firebase Auth — email/password, Google Sign-In, and custom token strategies.</div>
+<section class="hero hero--stage" id="hero">
+  <div class="container">
+    <div>
+      <h1>The engine that <span class="verb">runs</span> your app.</h1>
+      <p class="lead">APIs, real-time databases and cloud infrastructure that power apps reliably.</p>
+      <div class="actions"><a class="btn btn--primary" href="#contact">Start a project</a><a class="btn btn--secondary" href="#skills">See the stack</a></div>
     </div>
-    <div class="skill-item">
-      <span class="skill-icon">🛡️</span>
-      <div class="skill-name">Security</div>
-      <div class="skill-desc">Firestore security rules, server-side validation, and access control that keeps data safe without exposing logic to the client.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🗄️</span>
-      <div class="skill-name">Databases</div>
-      <div class="skill-desc">Firestore (NoSQL), Room DB (SQLite), and relational database design — choosing the right tool for the use case.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">📐</span>
-      <div class="skill-name">Data Modelling</div>
-      <div class="skill-desc">Structuring collections, documents, and relationships for clarity, query efficiency, and long-term scalability.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🌐</span>
-      <div class="skill-name">API Design</div>
-      <div class="skill-desc">Clean, well-structured REST APIs with predictable endpoints, consistent error handling, and clear contracts.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">⚡</span>
-      <div class="skill-name">Real-Time Systems</div>
-      <div class="skill-desc">Firestore live listeners and WebSocket-style data sync — updates that reach every client the moment they happen.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🔗</span>
-      <div class="skill-name">API Integration</div>
-      <div class="skill-desc">Connecting apps to third-party services via REST and SDK — Retrofit on Android, fetch/axios on the web.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🔍</span>
-      <div class="skill-name">Debugging &amp; Diagnosis</div>
-      <div class="skill-desc">Systematic root-cause analysis across Firestore, auth flows, and network layers — finding what's broken and why.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">📦</span>
-      <div class="skill-name">File Storage</div>
-      <div class="skill-desc">Firebase Storage for user-generated content — images, avatars, and documents uploaded, stored, and served reliably.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">📧</span>
-      <div class="skill-name">Email</div>
-      <div class="skill-desc">Transactional email via services like Formspree, EmailJS, and Firebase Extensions — contact forms, notifications, and confirmations.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🟢</span>
-      <div class="skill-name">Node.js</div>
-      <div class="skill-desc">Lightweight, performant server-side logic and API endpoints — ideal for custom back-end functions and middleware.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">☁️</span>
-      <div class="skill-name">Serverless Architecture</div>
-      <div class="skill-desc">Firebase Cloud Functions and serverless patterns — back-end logic that scales automatically with zero server management.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🚀</span>
-      <div class="skill-name">DevOps &amp; Deployment</div>
-      <div class="skill-desc">GitHub Pages, Firebase Hosting, and CI/CD pipelines — shipping reliably from code to production.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">💳</span>
-      <div class="skill-name">Payment Processing</div>
-      <div class="skill-desc">Stripe integration for secure payment flows — one-time purchases, subscriptions, and webhook handling.</div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="process" aria-label="Development Process">
-  <div class="reveal">
-    <div class="section-label">// How I Work</div>
-    <h2>My Back-End Process</h2>
-    <div class="section-divider"></div>
-    <p>Good back-end work is invisible — users never think about it because everything just works.</p>
-  </div>
-  <div class="process-grid reveal">
-    <div class="process-step">
-      <div class="process-title">Scope</div>
-      <p class="process-desc">Understanding your data model, user flows, and scale requirements before writing a single line.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Design</div>
-      <p class="process-desc">Structuring your database, auth flows, and API contracts for clarity and long-term maintainability.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Build</div>
-      <p class="process-desc">Implementing with security rules, error handling, and real-time capabilities baked in from the start.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Secure</div>
-      <p class="process-desc">Firestore rules and auth checks that enforce data access — no sensitive logic exposed to the client.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Handoff</div>
-      <p class="process-desc">Clean documentation of endpoints, data models, and rules — so you or another dev can pick it up easily.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" aria-label="Portfolio">
-  <div class="reveal">
-    <div class="section-label">// Work</div>
-    <h2>Back-End Projects</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="projects-grid reveal">
-    <div class="project-card" data-title="Skills United" data-type="Android App — Back-End" data-desc="Firebase back-end powering a peer-to-peer skill-exchange platform. Firestore for real-time chat and user profiles, Firebase Auth with atomic batch writes for username reservation, Firebase Storage for avatars, and security rules enforcing per-user data access." data-tech="Firebase Auth · Firestore · Firebase Storage · Security Rules · Real-Time Listeners · Batch Writes" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg" data-alts="Skills United login screen with email and password fields, Log In and Create Account buttons|Skills United Create Account screen with full name, unique username, email and password fields|Skills United Terms of Service and Privacy Policy dialog with an agreement checkbox and Accept and Decline buttons|Skills United Browse Skills screen with a search bar and member cards listing what each person teaches and wants to learn|Skills United Chat Requests screen with incoming and outgoing tabs and a pending request comparing both members’ skills" data-url="https://github.com/DanielvanBlerk-dev/skillsunited-dev">
-      <div class="project-img" style="background: linear-gradient(135deg,#001433,#001F5B,#003080);">🤝</div>
-      <div class="project-body">
-        <div class="project-type">Android App — Back-End</div>
-        <div class="project-name">Skills United</div>
-        <p class="project-desc">Firebase back-end powering a peer-to-peer skill-exchange platform. Architecture includes Firestore for real-time chat and user profiles, Firebase Auth for secure login and unique username reservation via atomic batch writes, Firebase Storage for avatars, and Firestore security rules enforcing per-user data access.</p>
-        <div class="project-tags">
-          <span class="tag">Firebase Auth</span>
-          <span class="tag">Firestore</span>
-          <span class="tag">Firebase Storage</span>
-          <span class="tag">Security Rules</span>
-          <span class="tag">Real-Time Listeners</span>
-          <span class="tag">Batch Writes</span>
-        </div>
+    <figure class="diagram" data-loop role="img" aria-label="Diagram: phone A writes to Firestore and the change reaches phone B, the web dashboard and the admin panel">
+      <div class="fanout">
+        <span class="node">Phone A<br>sends a message</span>
+        <span class="wire"><span class="pulse" aria-hidden="true"></span></span>
+        <span class="node node--key">Firestore<br>security rules</span>
+        <span class="wires"><span class="wire"><span class="pulse" aria-hidden="true"></span></span><span class="wire"><span class="pulse" aria-hidden="true"></span></span><span class="wire"><span class="pulse" aria-hidden="true"></span></span></span>
+        <span class="clients">
+          <span class="node">Phone B<span class="swap"><span>Unread 0</span><span>Unread 1</span></span></span>
+          <span class="node">Web dashboard<span class="swap"><span>Inbox idle</span><span>Inbox updated</span></span></span>
+          <span class="node">Admin panel<span class="swap"><span>Log quiet</span><span>Log written</span></span></span>
+        </span>
       </div>
-    </div>
-    <div class="project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website — Back-End" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-alts="Airlie Beach Art home page heading, tagline “Paintings made to be lived with” and an introduction to the artist|Airlie Beach Art gallery grid of Whitsunday seascape paintings with titles, sizes, prices and Add to Selection buttons" data-url="https://airliebeachart.com">
-      <div class="project-img" style="background: linear-gradient(135deg,#1a0a00,#3d1f00,#5c3000);">🖼️</div>
-      <div class="project-body">
-        <div class="project-type">Full-Stack Website — Back-End</div>
-        <div class="project-name">Airlie Beach Art</div>
-        <p class="project-desc">A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel.</p>
-        <div class="project-tags">
-          <span class="tag">GitHub</span>
-          <span class="tag">Vercel</span>
-          <span class="tag">Square</span>
-          <span class="tag">APIs</span>
-          <span class="tag">Domains</span>
-        </div>
-      </div>
+      <figcaption><span>One write, and every listening client updates</span><button class="loop-toggle" type="button" data-loop-toggle aria-pressed="false">Pause</button></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <div class="head reveal"><h2>Skills &amp; tools</h2><p class="lead">A dependable back-end stack focused on reliability, real-time capability and quick development.</p></div>
+    <dl class="tools">
+      <div><dt>Authentication &amp; authorisation</dt><dd>Secure login flows with Firebase Auth: email and password, Google Sign-In and custom tokens.</dd></div>
+      <div><dt>Security</dt><dd>Firestore security rules, server-side validation and access control that keep data safe.</dd></div>
+      <div><dt>Databases</dt><dd>Firestore (NoSQL), Room DB (SQLite) and relational design, the right tool for the use case.</dd></div>
+      <div><dt>Data modelling</dt><dd>Collections, documents and relationships structured for clear, efficient queries.</dd></div>
+      <div><dt>API design</dt><dd>Clean REST APIs with predictable endpoints, consistent errors and clear contracts.</dd></div>
+      <div><dt>Real-time systems</dt><dd>Firestore live listeners and WebSocket-style sync that reach every client at once.</dd></div>
+      <div><dt>API integration</dt><dd>Third-party services over REST and SDKs: Retrofit on Android, fetch and axios on the web.</dd></div>
+      <div><dt>Debugging &amp; diagnosis</dt><dd>Root-cause analysis across Firestore, auth flows and network layers.</dd></div>
+      <div><dt>File storage</dt><dd>Firebase Storage for user content: images, avatars and documents.</dd></div>
+      <div><dt>Email</dt><dd>Transactional email through Formspree, EmailJS and Firebase Extensions.</dd></div>
+      <div><dt>Node.js</dt><dd>Lightweight server-side logic and API endpoints for custom functions and middleware.</dd></div>
+      <div><dt>Serverless architecture</dt><dd>Firebase Cloud Functions: back-end logic that scales with no server to manage.</dd></div>
+      <div><dt>DevOps &amp; deployment</dt><dd>GitHub Pages, Firebase Hosting and CI/CD pipelines, from code to production.</dd></div>
+      <div><dt>Payment processing</dt><dd>Stripe integration for one-time purchases, subscriptions and webhooks.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="head reveal"><h2>My back-end process</h2><p class="lead">Good back-end work is invisible: users never think about it because it just works.</p></div>
+    <ol class="steps">
+      <li><h3>Scope</h3><p>Your data model, user flows and scale needs, understood before a line is written.</p></li>
+      <li><h3>Design</h3><p>Database, auth flows and API contracts structured for clarity and upkeep.</p></li>
+      <li><h3>build</h3><p>Security rules, error handling and real-time features built in from the start.</p></li>
+      <li><h3>Secure</h3><p>Firestore rules and auth checks that enforce access, with no sensitive logic on the client.</p></li>
+      <li><h3>Handoff</h3><p>Clear documentation of endpoints, data models and rules, so anyone can pick it up.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="head reveal"><h2>Back-end projects</h2><p class="lead">Two live data layers: a real-time chat app and a shop that takes payments.</p></div>
+    <div class="pair">
+      <article>
+        <figure class="shot-pair shot-top" data-slot="be-1" data-kind="product" data-alt="Skills United chat requests screen"><img src="assets/skills-united/screenshot5.jpg" width="1080" height="2129" alt="Skills United chat requests screen" loading="lazy" decoding="async"></figure>
+        <h3>Skills United</h3>
+        <p>Firestore for real-time chat and profiles, Firebase Auth with atomic batch writes for usernames, Storage for avatars, and per-user security rules.</p>
+        <button type="button" class="btn btn--secondary project-card" data-title="Skills United" data-type="Android App, Back-End" data-desc="Firebase back-end powering a peer-to-peer skill-exchange platform. Firestore for real-time chat and user profiles, Firebase Auth with atomic batch writes for username reservation, Firebase Storage for avatars, and security rules enforcing per-user data access." data-tech="Firebase Auth · Firestore · Firebase Storage · Security Rules · Real-Time Listeners · Batch Writes" data-screenshots="skills-united/screenshot1.jpg|skills-united/screenshot2.jpg|skills-united/screenshot3.jpg|skills-united/screenshot4.jpg|skills-united/screenshot5.jpg" data-alts="Skills United login screen with email and password fields, Log In and Create Account buttons|Skills United Create Account screen with full name, unique username, email and password fields|Skills United Terms of Service and Privacy Policy dialog with an agreement checkbox and Accept and Decline buttons|Skills United Browse Skills screen with a search bar and member cards listing what each person teaches and wants to learn|Skills United Chat Requests screen with incoming and outgoing tabs and a pending request comparing both members’ skills" data-url="https://github.com/DanielvanBlerk-dev/skillsunited-dev"><span class="project-title">Open the architecture</span></button>
+      </article>
+      <article>
+        <figure class="shot-pair shot-top" data-slot="be-2" data-kind="product" data-alt="Airlie Beach Art gallery page"><img src="assets/airliebeachart/Screenshot%202.jpg" width="1101" height="816" alt="Airlie Beach Art gallery page" loading="lazy" decoding="async"></figure>
+        <h3>Airlie Beach Art</h3>
+        <p>Square card payments, live Australia Post shipping rates, and full order details by email and in an admin orders panel.</p>
+        <button type="button" class="btn btn--secondary project-card" data-title="Airlie Beach Art" data-type="Full-Stack Website, Back-End" data-desc="A full-stack original art shop built from the ground up. Allows the owner to list original paintings for sale, manage the gallery as admin, accept real card payments via Square, calculate real Australia Post shipping rates, and receive full order details by email and in an admin orders panel." data-tech="GitHub · Vercel · Square · APIs · Domains" data-screenshots="airliebeachart/Screenshot%201.jpg|airliebeachart/Screenshot%202.jpg" data-alts="Airlie Beach Art home page heading, tagline “Paintings made to be lived with” and an introduction to the artist|Airlie Beach Art gallery grid of Whitsunday seascape paintings with titles, sizes, prices and Add to Selection buttons" data-url="https://airliebeachart.com"><span class="project-title">Open the architecture</span></button>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" aria-label="Pricing">
-  <div class="reveal">
-    <div class="section-label">// Investment</div>
-    <h2>Pricing</h2>
-    <div class="section-divider"></div>
-    <p>Back-end work is scoped per project. These ranges give you a starting point — complexity and scale determine the final quote.</p>
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="head reveal"><h2>Pricing</h2><p class="lead">Scoped per project. Complexity and scale set the final quote.</p></div>
+    <table class="rates">
+      <caption>All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</caption>
+      <thead><tr><th scope="col">Plan</th><th scope="col">From</th><th scope="col">What it is</th><th scope="col">Included</th></tr></thead>
+      <tbody>
+        <tr>
+          <th scope="row">Starter</th>
+          <td class="price">$400<span class="readout">AUD</span></td>
+          <td><p>Firebase setup for a simple app: auth, database and basic security rules.</p></td>
+          <td><ul><li>Firebase project setup</li><li>Email and password auth</li><li>Firestore data model</li><li>Basic security rules</li><li>1 round of revisions</li></ul></td>
+        </tr>
+        <tr>
+          <th scope="row">Standard</th>
+          <td class="price">$1,200<span class="readout">AUD</span></td>
+          <td><p>A full Firebase back end with real-time data, storage and hardened security rules.</p></td>
+          <td><ul><li>Full Firebase setup</li><li>Real-time Firestore listeners</li><li>Firebase Storage</li><li>Production security rules</li><li>REST API integration</li><li>3 rounds of revisions</li></ul></td>
+        </tr>
+        <tr>
+          <th scope="row">Custom</th>
+          <td class="price">Let’s talk</td>
+          <td><p>Complex data architectures, Node.js APIs, or ongoing back-end development and support.</p></td>
+          <td><ul><li>Custom data architecture</li><li>Node.js API development</li><li>Advanced integrations</li><li>Ongoing development</li><li>Priority support</li></ul></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="pricing-grid reveal">
-    <div class="pricing-card">
-      <div class="pricing-tier">Starter</div>
-      <div class="pricing-price">$400 <span>/ project</span></div>
-      <p class="pricing-desc">Firebase setup for a simple app — auth, database, and basic security rules.</p>
-      <ul class="pricing-features">
-        <li>Firebase project setup</li>
-        <li>Email/password auth</li>
-        <li>Firestore data model</li>
-        <li>Basic security rules</li>
-        <li>1 round of revisions</li>
-      </ul>
-    </div>
-    <div class="pricing-card featured">
-      <div class="pricing-tier">Standard</div>
-      <div class="pricing-price">$1,200 <span>/ project</span></div>
-      <p class="pricing-desc">Full Firebase back-end with real-time data, storage, and hardened security rules.</p>
-      <ul class="pricing-features">
-        <li>Full Firebase setup</li>
-        <li>Real-time Firestore listeners</li>
-        <li>Firebase Storage</li>
-        <li>Production security rules</li>
-        <li>REST API integration</li>
-        <li>3 rounds of revisions</li>
-      </ul>
-    </div>
-    <div class="pricing-card">
-      <div class="pricing-tier">Custom</div>
-      <div class="pricing-price">Let's <span>talk</span></div>
-      <p class="pricing-desc">Complex data architectures, Node.js APIs, or ongoing back-end development and support.</p>
-      <ul class="pricing-features">
-        <li>Custom data architecture</li>
-        <li>Node.js API development</li>
-        <li>Advanced integrations</li>
-        <li>Ongoing development</li>
-        <li>Priority support</li>
-      </ul>
-    </div>
-  </div>
-  <p class="pricing-note reveal">All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</p>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" aria-label="Contact">
-  <div class="reveal">
-    <div class="section-label">// Get Started</div>
-    <h2>Start Your Back-End Project</h2>
-    <div class="section-divider"></div>
-    <p>Tell me about your app's data and infrastructure needs and I aim to reply within one business day.</p>
-  </div>
-  <div class="contact-wrap reveal">
+<section class="section section--l" id="contact">
+  <div class="container contact">
+    <div class="contact-info">
+      <h2>Start your back-end project</h2>
+      <p>Tell me about your app’s data and infrastructure needs.</p>
+      <dl class="contact-lines">
+        <div><dt>Email</dt><dd><a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a></dd></div>
+        <div><dt>Based in</dt><dd>Herbert River Region, QLD. Remote-friendly.</dd></div>
+        <div><dt>Replies</dt><dd>Usually within one business day</dd></div>
+      </dl>
+    </div>
     <form id="contactForm">
       <div class="form-group">
           <label for="fname">Your Name</label>
@@ -774,7 +215,7 @@
       <div class="form-group">
         <label for="industry">Industry / Sector (optional)</label>
         <select id="industry" name="industry">
-          <option value="">— Select if relevant —</option>
+          <option value="">Select if relevant</option>
           <option>Sugar Industry / Agriculture (Herbert River)</option>
           <option>Small Business / Retail</option>
           <option>Hospitality / Tourism</option>
@@ -785,10 +226,10 @@
       <div class="form-group">
         <label for="budget">Approximate Budget</label>
         <select id="budget" name="budget">
-          <option value="">— Select a range —</option>
+          <option value="">Select a range</option>
           <option>Under $400</option>
-          <option>$400 – $1,200</option>
-          <option>$1,200 – $5,000</option>
+          <option>$400 to $1,200</option>
+          <option>$1,200 to $5,000</option>
           <option>$5,000+</option>
           <option>Prefer to discuss</option>
         </select>
@@ -803,33 +244,36 @@
         <label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required> <span>I agree to dkvb.dev using these details to reply to my enquiry, as set out in the <a href="privacy.html">Privacy Policy</a>. <span class="consent-req">(required)</span></span></label>
         <label class="consent-row"><input type="checkbox" name="mailing_list_opt_in" value="yes"> <span>Optional: also send me the occasional build-notes email. Unsubscribe any time.</span></label>
       </fieldset>
-      <!-- Honeypot — hidden from real users, bots will fill it -->
+      <!-- Honeypot, hidden from real users, bots will fill it -->
       <div style="display:none;" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
-      <button type="submit" class="btn-submit">Send Message →</button>
-      <div class="form-success" id="formSuccess" role="status" aria-live="polite">✅ Message sent, thanks! I aim to reply within one business day.</div>
+      <button type="submit" class="btn btn--primary btn-submit">Send message</button>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">Message sent, thanks! I aim to reply within one business day.</div>
     </form>
   </div>
 </section>
-
 </main>
 
-<footer role="contentinfo">
-  <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
-  <div class="footer-links">
-    <a href="sugar-industry.html">Sugar Industry</a>
-    <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  </div>
-  <div class="footer-legal" role="navigation" aria-label="Legal">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="refund-policy.html">Refunds</a>
-    <a href="cookies.html">Cookies</a>
-    <button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button>
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p class="foot-statement">Apps and websites, built in the Herbert River region and shipped anywhere.</p>
+    <div class="foot-links">
+      <ul aria-label="Elsewhere">
+        <li><a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="sugar-industry.html">Sugar industry</a></li>
+      </ul>
+      <ul class="footer-legal" aria-label="Legal">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund-policy.html">Refunds</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
+      </ul>
+    </div>
+    <p class="foot-copy">© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
   </div>
 </footer>
 
@@ -851,25 +295,25 @@ document.getElementById('contactForm').addEventListener('submit', async function
     if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
     else { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
   } catch { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
-  btn.textContent = 'Send Message →'; btn.disabled = false;
+  btn.textContent = 'Send message'; btn.disabled = false;
 });
 </script>
 
 <!-- MODAL -->
 <div class="modal-bg" id="modalBg">
   <div class="modal">
-    <button class="modal-close" id="modalClose">✕</button>
+    <button class="modal-close" id="modalClose">Close</button>
     <div class="modal-screenshot-viewport" id="modalScreenshotViewport" style="display:none;">
-      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">‹</button>
+      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">Back</button>
       <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
-      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
+      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">Next</button>
     </div>
-    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">scroll or use arrows to view</div>
+    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">Scroll or use the arrows to view</div>
     <div class="modal-type" id="modalType"></div>
     <div class="modal-title" id="modalTitle"></div>
     <p class="modal-desc" id="modalDesc"></p>
     <div class="modal-tags" id="modalTags"></div>
-    <a href="#" class="modal-link" id="modalLink" target="_blank" rel="noopener noreferrer" style="display:none;">View live project ↗</a>
+    <a href="#" class="modal-link" id="modalLink" target="_blank" rel="noopener noreferrer" style="display:none;">View live project</a>
   </div>
 </div>
 

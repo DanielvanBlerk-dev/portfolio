@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UI/UX Design — dkvb.dev</title>
-<meta name="description" content="UI/UX design by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates — no agency markups. Also offering Android app development, front-end web development, and back-end development. Figma, Material You, prototyping.">
+<title>UI/UX Design | dkvb.dev</title>
+<meta name="description" content="UI/UX design by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates, no agency markups. Also offering Android app development, front-end web development, and back-end development. Figma, Material You, prototyping.">
 <meta name="keywords" content="UI UX designer Herbert River Region, app designer Queensland, Figma designer Australia, cost-effective UI design Herbert River Region, affordable UX designer Queensland, transparent pricing designer Australia, freelance designer rates no agency markup, interface designer Herbert River Region, Material You designer">
 <meta name="author" content="Dan Van Blerk">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#9B6BFF">
+<meta name="theme-color" content="#0f0c19">
 <link rel="canonical" href="https://dkvb.dev/ui-ux-design.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/ui-ux-design.html">
-<meta property="og:title" content="UI/UX Design — dkvb.dev">
-<meta property="og:description" content="Polished UI/UX design with Figma and Material You. Based in the Herbert River region, QLD — also offering Android, front-end, and back-end development.">
+<meta property="og:title" content="UI/UX Design, dkvb.dev">
+<meta property="og:description" content="Polished UI/UX design with Figma and Material You. Based in the Herbert River region, QLD, also offering Android, front-end, and back-end development.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://dkvb.dev/ui-ux-design.html">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
-<meta name="twitter:title" content="UI/UX Design — dkvb.dev">
+<meta name="twitter:title" content="UI/UX Design, dkvb.dev">
 <meta name="twitter:description" content="UI/UX design with Figma and Material You. Based in the Herbert River region, QLD, Australia.">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
@@ -60,480 +60,149 @@
   "serviceType": "UI/UX Design"
 }
 </script>
-<style>
-
-  /* ── SELF-HOSTED FONTS ── */
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-regular.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-600.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-700.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'Syne';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url('assets/fonts/syne-v24-latin-800.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-300.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-300italic.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-500.woff2') format('woff2');
-  }
-  @font-face {
-    font-family: 'DM Mono';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url('assets/fonts/dm-mono-v16-latin-500italic.woff2') format('woff2');
-  }
-
-  :root {
-    --bg: #0a0a0f;
-    --surface: #111118;
-    --card: #16161f;
-    --border: #2a2a3a;
-    --accent: #9B6BFF;
-    --accent-glow: rgba(155,107,255,0.15);
-    --text: #e8e8f0;
-    --muted: #8e8ea4;
-    --heading: 'Syne', sans-serif;
-    --mono: 'DM Mono', monospace;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: var(--mono); font-size: 15px; line-height: 1.7; overflow-x: hidden; }
-
-  .back-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; gap: 1rem; padding: 1.1rem 3rem; background: rgba(10,10,15,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-  .back-btn { display: flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; transition: opacity 0.2s; }
-  .back-btn:hover { opacity: 0.7; }
-  .back-bar-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); margin-left: auto; }
-  .back-bar-logo span { color: var(--text); }
-
-  .page-hero { min-height: 52vh; display: flex; flex-direction: column; justify-content: center; padding: 9rem 3rem 5rem; position: relative; overflow: hidden; }
-  .hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); top: -150px; right: -150px; animation: pulse 6s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-  .page-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(155,107,255,0.08); border: 1px solid rgba(155,107,255,0.25); border-radius: 100px; padding: 0.4rem 1rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; width: fit-content; }
-  h1 { font-family: var(--heading); font-size: clamp(2.8rem, 6vw, 5.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
-  h1 span { color: var(--accent); }
-  .page-sub { max-width: 560px; color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2.5rem; }
-  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn { padding: 0.9rem 2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 6px; border: none; cursor: pointer; transition: all 0.25s; display: inline-block; }
-  .btn-primary { background: var(--accent); color: #0a0a0f; }
-  .btn-primary:hover { background: #fff; color: #0a0a0f; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(155,107,255,0.3); }
-  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-
-  section { padding: 5rem 3rem; }
-  section:nth-child(even) { background: var(--surface); }
-  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 1rem; }
-  h2 { font-family: var(--heading); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; }
-  .section-divider { width: 40px; height: 2px; background: var(--accent); margin-bottom: 2.5rem; }
-  p { color: var(--muted); line-height: 1.8; margin-bottom: 1rem; }
-
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
-  .skill-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem 1.5rem; transition: border-color 0.2s, transform 0.2s; }
-  .skill-item:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .skill-icon { font-size: 1.5rem; margin-bottom: 0.6rem; display: block; }
-  .skill-name { font-family: var(--heading); font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
-  .skill-desc { font-size: 0.75rem; color: var(--muted); line-height: 1.5; }
-
-  .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem; counter-reset: step; }
-  .process-step { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.8rem; position: relative; counter-increment: step; }
-  .process-step::before { content: "0" counter(step); font-family: var(--heading); font-size: 2.5rem; font-weight: 800; color: rgba(155,107,255,0.15); position: absolute; top: 1rem; right: 1.2rem; line-height: 1; }
-  .process-title { font-family: var(--heading); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
-  .process-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
-
-  .empty-portfolio { background: var(--card); border: 1px dashed var(--border); border-radius: 10px; padding: 3rem; text-align: center; color: var(--muted); font-size: 0.85rem; line-height: 1.8; }
-  .empty-portfolio .icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
-
-  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-  .pricing-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; position: relative; }
-  .pricing-card.featured { border-color: var(--accent); }
-  .pricing-card.featured::before { content: 'Most Popular'; position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.8rem; border-radius: 0 0 6px 6px; }
-  .pricing-tier { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.8rem; }
-  .pricing-price { font-family: var(--heading); font-size: 2.2rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 0.3rem; }
-  .pricing-price span { font-size: 1rem; color: var(--muted); font-family: var(--mono); }
-  .pricing-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.6; }
-  .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-  .pricing-features li { font-size: 0.8rem; color: var(--muted); display: flex; gap: 0.6rem; align-items: flex-start; }
-  .pricing-features li::before { content: '✓'; color: var(--accent); flex-shrink: 0; }
-  .pricing-note { font-size: 0.72rem; color: var(--muted); margin-top: 2rem; text-align: center; }
-
-  .contact-wrap { max-width: 600px; }
-  form { display: flex; flex-direction: column; gap: 1.2rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-  label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
-  input, textarea, select { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem 1rem; color: var(--text); font-family: var(--mono); font-size: 0.85rem; transition: border-color 0.2s, box-shadow 0.2s; outline: none; width: 100%; }
-  input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(155,107,255,0.1); }
-  textarea { resize: vertical; min-height: 130px; }
-  select option { background: var(--card); }
-  .btn-submit { background: var(--accent); color: #0a0a0f; padding: 0.95rem 2.2rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; transition: all 0.25s; width: fit-content; }
-  .btn-submit:hover { background: #fff; color: #0a0a0f; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(155,107,255,0.3); }
-  .form-success { display: none; padding: 1rem 1.5rem; background: rgba(155,107,255,0.08); border: 1px solid rgba(155,107,255,0.3); border-radius: 8px; color: var(--accent); font-size: 0.85rem; margin-top: 1rem; }
-  .form-success.visible { display: block; }
-
-  footer { background: var(--bg); border-top: 1px solid var(--border); padding: 2.5rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .footer-logo { font-family: var(--heading); font-weight: 800; font-size: 1.1rem; color: var(--accent); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--accent); }
-  .footer-logo span { color: var(--text); }
-  footer p { color: var(--muted); font-size: 0.78rem; }
-
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* ── SKIP LINK ── */
-  .skip-link {
-    position: absolute; top: -100px; left: 1rem;
-    background: var(--accent); color: #0a0a0f;
-    padding: 0.5rem 1rem; border-radius: 0 0 6px 6px;
-    font-size: 0.8rem; text-decoration: none; z-index: 999;
-    transition: top 0.2s;
-  }
-  .skip-link:focus { top: 0; }
-
-  @media (max-width: 768px) {
-    .back-bar { padding: 1rem 1.5rem; }
-    .page-hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
-    h1 { font-size: 2.5rem; }
-    .projects-grid { grid-template-columns: repeat(2, 1fr); }
-    .form-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; text-align: center; }
-  }
-
-  /* ── PROJECT CARDS ── */
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 260px)); gap: 1rem; }
-  .project-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 10px; overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer; display: flex; flex-direction: column; width: 100%;
-  }
-  .project-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(155,107,255,0.2); }
-  .project-img { width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; font-size: 2rem; position: relative; flex-shrink: 0; }
-  .project-overlay {
-    position: absolute; inset: 0; background: rgba(10,10,15,0.7);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity 0.3s;
-    font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
-  }
-  .project-card:hover .project-overlay { opacity: 1; }
-  .project-body { padding: 0.9rem; display: flex; flex-direction: column; flex: 1; }
-  .project-type { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.25rem; }
-  .project-name { font-family: var(--heading); font-size: 0.88rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--text); }
-  .project-desc { color: var(--muted); font-size: 0.7rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-
-  /* ── MODAL ── */
-  .modal-bg {
-    display: none; position: fixed; inset: 0; z-index: 200;
-    background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
-    align-items: center; justify-content: center; padding: 2rem; overflow-y: auto;
-  }
-  .modal-bg.open { display: flex; }
-  .modal {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; max-width: 520px; width: 100%;
-    max-height: 90vh; overflow-y: auto; padding: 2.5rem; position: relative;
-    animation: modalIn 0.3s ease;
-    scrollbar-width: thin; scrollbar-color: var(--border) transparent;
-  }
-  .modal::-webkit-scrollbar { width: 4px; }
-  .modal::-webkit-scrollbar-track { background: transparent; }
-  .modal::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-  @keyframes modalIn { from { transform: scale(0.92) translateY(20px); opacity: 0; } to { transform: scale(1) translateY(0); opacity: 1; } }
-  .modal-close {
-    position: absolute; top: 1.2rem; right: 1.2rem;
-    background: var(--border); border: none; color: var(--muted);
-    width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 1rem;
-    display: flex; align-items: center; justify-content: center; transition: background 0.2s;
-  }
-  .modal-close:hover { background: var(--accent); color: #fff; }
-  .modal-type { color: var(--accent); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-  .modal-title { font-family: var(--heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.8rem; }
-  .modal-desc { color: var(--muted); line-height: 1.8; font-size: 0.88rem; }
-  .modal-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
-  .modal-tag { font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 4px; background: rgba(155,107,255,0.08); color: var(--accent); border: 1px solid rgba(155,107,255,0.2); }
-  .modal-screenshot-viewport { position: relative; margin-bottom: 1.2rem; }
-  .modal-screenshot-track {
-    display: flex; gap: 0.8rem; overflow-x: auto; -webkit-overflow-scrolling: touch;
-    padding-bottom: 0.8rem; margin-bottom: 0.6rem;
-    scrollbar-width: thin; scrollbar-color: var(--accent) var(--border); scroll-behavior: smooth;
-  }
-  .modal-screenshot-track::-webkit-scrollbar { height: 8px; }
-  .modal-screenshot-track::-webkit-scrollbar-track { background: var(--border); border-radius: 4px; }
-  .modal-screenshot-track::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
-  .modal-screenshot {
-    flex: 0 0 auto; border-radius: 8px; overflow: hidden;
-    border: 1px solid var(--border); max-height: 320px; background: var(--bg);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .modal-screenshot img { max-width: 100%; max-height: 320px; width: auto; height: auto; object-fit: contain; display: block; }
-  .modal-scroll-arrow {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 32px; height: 32px; border-radius: 50%;
-    background: rgba(10,10,15,0.85); border: 1px solid var(--accent);
-    color: var(--accent); font-size: 1rem; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 5; transition: background 0.2s; opacity: 0.9;
-  }
-  .modal-scroll-arrow:hover { background: var(--accent); color: #fff; }
-  .modal-scroll-arrow.left { left: 4px; }
-  .modal-scroll-arrow.right { right: 4px; }
-  .modal-screenshot-hint { font-size: 0.65rem; color: var(--muted); text-align: center; letter-spacing: 0.08em; text-transform: uppercase; }
-  .modal-link {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    margin-top: 1.5rem; color: var(--accent); font-size: 0.8rem;
-    text-decoration: none; border-bottom: 1px solid rgba(155,107,255,0.3);
-    padding-bottom: 2px; transition: border-color 0.2s;
-  }
-  .modal-link:hover { border-color: var(--accent); }
-
-</style>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/dkvb.css">
+<script src="assets/motion.js"></script>
 </head>
 <body>
-
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<header role="banner">
-  <div class="back-bar">
-    <a href="index.html" class="back-btn">← Back to Home</a>
-    <div class="back-bar-logo">dkvb<span>.dev</span></div>
+
+<header class="site-header">
+  <div class="announce"><div class="container"><span>Available for freelance work.</span><span class="announce-aside">Herbert River region, QLD, and remote</span></div></div>
+  <div class="bar">
+    <nav class="container" aria-label="Main">
+      <a class="wordmark" href="index.html" aria-label="dkvb.dev home">dkvb.dev</a>
+      <button class="nav-toggle" id="siteNavToggle" type="button" aria-expanded="false" aria-controls="siteNavMenu">Menu</button>
+      <ul class="nav-links" id="siteNavMenu">
+        <li><a href="index.html#services" aria-current="page">Services</a></li>
+        <li><a href="index.html#portfolio">Work</a></li>
+        <li><a href="sugar-industry.html">Sugar industry</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <main id="main-content">
-
-<section class="page-hero" aria-label="UI/UX Design Introduction">
-  <div class="hero-glow"></div>
-  <div class="page-badge">🎨 UI/UX Design</div>
-  <h1>Design That<br><span>Feels Right.</span></h1>
-  <p class="page-sub">Polished interfaces that balance aesthetics with usability. I design as I build — so what you see in Figma is what users actually get.</p>
-  <div class="hero-ctas">
-    <a href="#contact" class="btn btn-primary">Start a Project</a>
-    <a href="#process" class="btn btn-ghost">My Process</a>
+<section class="hero hero--stage" id="hero">
+  <div class="container">
+    <div>
+      <h1>Design that <span class="verb">feels</span> right.</h1>
+      <p class="lead">Interfaces that balance looks and usability, designed as I build them.</p>
+      <div class="actions"><a class="btn btn--primary" href="#contact">Start a project</a><a class="btn btn--secondary" href="#process">My process</a></div>
+    </div>
+    <figure class="diagram" data-loop role="img" aria-label="Diagram: the design process from discover to wireframe, design, prototype and build">
+      <div class="path-rows"><figure class="ux-hero-shot" data-slot="ux-hero" data-kind="product" data-alt="Five Flo app screens: splash, welcome, focus sessions, tasks and sign-in"><img src="assets/flo/screenshot1.png" width="1427" height="551" alt="Five Flo app screens: splash, welcome, focus sessions, tasks and sign-in" fetchpriority="high" decoding="async"></figure><div><p class="path-label">The design process</p><div class="path" style="--n:5"><span class="node" style="--i:0">Discover</span><span class="node" style="--i:1">Wireframe</span><span class="node" style="--i:2">Design</span><span class="node" style="--i:3">Prototype</span><span class="node node--key" style="--i:4">build</span><span class="pulse" aria-hidden="true"></span></div></div></div>
+      <figcaption><span>Every project runs this path, ending in code</span><button class="loop-toggle" type="button" data-loop-toggle aria-pressed="false">Pause</button></figcaption>
+    </figure>
   </div>
 </section>
 
-<section id="skills" aria-label="Skills and Tools">
-  <div class="reveal">
-    <div class="section-label">// Tools & Approach</div>
-    <h2>Skills &amp; Tools</h2>
-    <div class="section-divider"></div>
-    <p>Design and development treated as one discipline — no handoff friction, no lost intent.</p>
-  </div>
-  <div class="skills-grid reveal">
-    <div class="skill-item">
-      <span class="skill-icon">🖊️</span>
-      <div class="skill-name">Figma</div>
-      <div class="skill-desc">End-to-end design — wireframes, components, prototypes, and handoff specs.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🎨</span>
-      <div class="skill-name">Material You</div>
-      <div class="skill-desc">Google's adaptive design system, applied with precision for Android interfaces.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🔲</span>
-      <div class="skill-name">Wireframing</div>
-      <div class="skill-desc">Low and mid-fidelity wireframes to validate structure before visual design begins.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">▶️</span>
-      <div class="skill-name">Prototyping</div>
-      <div class="skill-desc">Interactive prototypes for user testing and stakeholder walkthroughs.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🌈</span>
-      <div class="skill-name">Colour Systems</div>
-      <div class="skill-desc">Accessible, themeable colour palettes — including custom theme engines like Skills United's 8-colour system.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">🔤</span>
-      <div class="skill-name">Typography</div>
-      <div class="skill-desc">Type pairings, hierarchy, and spacing that make interfaces readable and elegant.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">📐</span>
-      <div class="skill-name">Design Systems</div>
-      <div class="skill-desc">Reusable component libraries that keep design consistent at scale.</div>
-    </div>
-    <div class="skill-item">
-      <span class="skill-icon">♿</span>
-      <div class="skill-name">Accessibility</div>
-      <div class="skill-desc">Contrast ratios, touch targets, and inclusive design patterns built in from the start.</div>
-    </div>
+<section class="section" id="skills">
+  <div class="container">
+    <div class="head reveal"><h2>Skills &amp; tools</h2><p class="lead">Design and development treated as one discipline, so nothing is lost between them.</p></div>
+    <dl class="tools">
+      <div><dt>Figma</dt><dd>End-to-end design: wireframes, components, prototypes and handoff specs.</dd></div>
+      <div><dt>Material You</dt><dd>Google’s adaptive design system, applied with care for Android interfaces.</dd></div>
+      <div><dt>Wireframing</dt><dd>Low and mid-fidelity wireframes to test structure before visual design begins.</dd></div>
+      <div><dt>Prototyping</dt><dd>Interactive prototypes for user testing and stakeholder walkthroughs.</dd></div>
+      <div><dt>Colour systems</dt><dd>Accessible, themeable palettes, including custom theme engines like Skills United’s 8-colour system.</dd></div>
+      <div><dt>Typography</dt><dd>Type pairings, hierarchy and spacing that make interfaces readable.</dd></div>
+      <div><dt>Design systems</dt><dd>Reusable component libraries that keep design consistent at scale.</dd></div>
+      <div><dt>Accessibility</dt><dd>Contrast ratios, touch targets and inclusive patterns built in from the start.</dd></div>
+    </dl>
   </div>
 </section>
 
-<section id="process" aria-label="Design Process">
-  <div class="reveal">
-    <div class="section-label">// How I Work</div>
-    <h2>My Design Process</h2>
-    <div class="section-divider"></div>
-    <p>A clear, collaborative process — so you always know what's happening and why.</p>
-  </div>
-  <div class="process-grid reveal">
-    <div class="process-step">
-      <div class="process-title">Discover</div>
-      <p class="process-desc">Understanding your users, goals, and constraints before a single pixel is placed.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Wireframe</div>
-      <p class="process-desc">Mapping out structure and flow — getting the bones right before adding visual polish.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Design</div>
-      <p class="process-desc">High-fidelity screens with a cohesive visual language, component system, and full screen coverage.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Prototype</div>
-      <p class="process-desc">Interactive Figma prototypes for testing, feedback, and sign-off before development.</p>
-    </div>
-    <div class="process-step">
-      <div class="process-title">Build</div>
-      <p class="process-desc">I implement the designs myself — no handoff loss, no interpretation errors.</p>
-    </div>
+<section class="section" id="process">
+  <div class="container">
+    <div class="head reveal"><h2>My design process</h2><p class="lead">A clear, collaborative process, so you always know what is happening and why.</p></div>
+    <ol class="steps">
+      <li><h3>Discover</h3><p>Understanding your users, goals and constraints before a single pixel is placed.</p></li>
+      <li><h3>Wireframe</h3><p>Mapping out structure and flow, getting the bones right before the polish.</p></li>
+      <li><h3>Design</h3><p>High-fidelity screens with one visual language, a component system and full screen coverage.</p></li>
+      <li><h3>Prototype</h3><p>Interactive Figma prototypes for testing, feedback and sign-off before development.</p></li>
+      <li><h3>build</h3><p>I implement the designs myself, so nothing is lost or misread in a handoff.</p></li>
+    </ol>
   </div>
 </section>
 
-<section id="portfolio" aria-label="Portfolio">
-  <div class="reveal">
-    <div class="section-label">// Work</div>
-    <h2>Design Projects</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="projects-grid reveal">
-
-    <div class="project-card" data-title="Flo" data-type="UI/UX Design — Android App" data-desc="UI/UX design for Flo, a personal productivity app for tasks, focus sessions, and daily habits. Designed in Figma for Android using Material You dynamic colour — a deep navy/indigo base with a cyan accent. Includes a minimal splash screen and a five-screen onboarding and sign-in flow, built with Auto Layout throughout for production-ready developer handoff." data-tech="Figma · Material You · Android · Auto Layout · Dark Mode" data-screenshots="flo/screenshot1.png" data-alts="Five Flo app screens: splash, welcome, focus sessions onboarding, tasks onboarding and sign-in, in a dark navy and cyan theme" data-url="https://www.figma.com/proto/CA3IUyaUV0NhyqJQHo5maj/Untitled?node-id=2-22&p=f&t=dlvQJ9h7kdNtHYO1-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A22&show-proto-sidebar=1">
-      <div class="project-img" style="background: linear-gradient(135deg,#0a0e2e,#1a1f5c,#2a2f8c);">🌊<div class="project-overlay">↗ View Project</div></div>
-      <div class="project-body">
-        <div class="project-type">UI/UX Design — Android</div>
-        <div class="project-name">Flo</div>
-        <p class="project-desc">Productivity app UI — splash &amp; onboarding, Material You, dark mode.</p>
-      </div>
-    </div>
-
-    <div class="project-card" data-title="Pulse" data-type="UI/UX Design — Web App" data-desc="UI/UX design for Pulse, a SaaS project management and sprint analytics tool. Light mode, Notion-influenced — soft grey surfaces, generous whitespace, the Inter typeface, and a data-forward layout. Includes a dashboard overview, stats and chart views, and a data table/list view, all designed in Figma." data-tech="Figma · Web · Data Visualisation · Light Mode · SaaS" data-screenshots="pulse/screenshot1.jpg|pulse/screenshot2.jpg" data-alts="Pulse dashboard overview with task stats, a sprint velocity bar chart, recent activity and project progress bars|Pulse tasks data table with status filters and columns for task, status, assignee, priority, due date and project" data-url="https://www.figma.com/proto/zJg8BIw0mJBaVZz4NvfBNL/Untitled?node-id=23-1790&p=f&t=Nl7Cmq36Eph2OXV5-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A1790">
-      <div class="project-img" style="background: linear-gradient(135deg,#0d2840,#155a8a,#1e7fc0);">📊<div class="project-overlay">↗ View Project</div></div>
-      <div class="project-body">
-        <div class="project-type">UI/UX Design — Web</div>
-        <div class="project-name">Pulse</div>
-        <p class="project-desc">SaaS analytics dashboard UI — charts, stats &amp; data tables.</p>
-      </div>
-    </div>
-
-    <div class="project-card" data-title="Vault" data-type="UI/UX Design — Android App" data-desc="UI/UX design for Vault, a personal finance and fintech app. Designed in Figma for Android in dark mode, with a clean, trustworthy aesthetic suited to financial data. Includes a home screen with account overviews and a profile and settings screen." data-tech="Figma · Android · Fintech · Dark Mode · Mobile UI" data-screenshots="vault/screenshot1.jpg|vault/screenshot2.jpg" data-alts="Vault finance app home screen in dark mode showing net worth, assets and liabilities, a monthly chart and spending cards|Vault profile screen with linked bank accounts and a settings screen with account, security and preference options" data-url="https://www.figma.com/proto/CuiYatswl6WpJtyE8AFbIH/Untitled?node-id=3-21&p=f&t=C9X2knGERcRB1aQn-0&scaling=contain&content-scaling=fixed&page-id=0%3A1">
-      <div class="project-img" style="background: linear-gradient(135deg,#06251c,#0f5640,#168a64);">🔐<div class="project-overlay">↗ View Project</div></div>
-      <div class="project-body">
-        <div class="project-type">UI/UX Design — Android</div>
-        <div class="project-name">Vault</div>
-        <p class="project-desc">Finance app UI — home &amp; settings screens, fintech, dark mode.</p>
-      </div>
-    </div>
-
-    <div class="project-card" data-title="Crate" data-type="UI/UX Design — Mobile Store" data-desc="UI/UX design for Crate, a premium tech accessories e-commerce store. Light mode with a minimal Apple Store aesthetic — generous whitespace, crisp product imagery, and confident typography. Includes a product detail page, cart and checkout, and an order confirmation screen, all designed in Figma." data-tech="Figma · Mobile · E-Commerce · Light Mode · UI Design" data-screenshots="crate/screenshot1.jpg" data-alts="Three Crate shop screens: headphones product page, cart with order totals, and order confirmation" data-url="https://www.figma.com/proto/CuiYatswl6WpJtyE8AFbIH/Untitled?node-id=49-1198&p=f&t=C9X2knGERcRB1aQn-0&scaling=contain&content-scaling=fixed&page-id=49%3A1197">
-      <div class="project-img" style="background: linear-gradient(135deg,#3a2400,#7a4f0b,#b87a1a);">📦<div class="project-overlay">↗ View Project</div></div>
-      <div class="project-body">
-        <div class="project-type">UI/UX Design — Mobile</div>
-        <div class="project-name">Crate</div>
-        <p class="project-desc">E-commerce store UI — product, cart &amp; checkout, minimal retail style.</p>
-      </div>
-    </div>
-
+<section class="section" id="work">
+  <div class="container">
+    <div class="head reveal"><h2>Design projects</h2><p class="lead">Open a project for its screens and the live Figma prototype.</p></div>
+    <ul class="index">
+      <li><button type="button" class="project-card project-card--lead" data-title="Flo" data-type="UI/UX Design, Android App" data-desc="UI/UX design for Flo, a personal productivity app for tasks, focus sessions, and daily habits. Designed in Figma for Android using Material You dynamic colour, a deep navy/indigo base with a cyan accent. Includes a minimal splash screen and a five-screen onboarding and sign-in flow, built with Auto Layout throughout for production-ready developer handoff." data-tech="Figma · Material You · Android · Auto Layout · Dark Mode" data-screenshots="flo/screenshot1.png" data-alts="Five Flo app screens: splash, welcome, focus sessions onboarding, tasks onboarding and sign-in, in a dark navy and cyan theme" data-url="https://www.figma.com/proto/CA3IUyaUV0NhyqJQHo5maj/Untitled?node-id=2-22&p=f&t=dlvQJ9h7kdNtHYO1-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A22&show-proto-sidebar=1">
+        <span class="thumb" data-slot="work-1" data-kind="product" data-alt="Flo screen"><img src="assets/flo/screenshot1.png" width="1427" height="551" alt="" loading="lazy" decoding="async"></span>
+        <span class="project-name">Flo</span>
+        <span class="project-meta">UI/UX Design, Android App</span>
+        <span class="project-stack">Figma, Material You, Android, Auto Layout, Dark Mode</span>
+        <span class="project-year">2025</span>
+      </button></li>
+      <li><button type="button" class="project-card" data-title="Pulse" data-type="UI/UX Design, Web App" data-desc="UI/UX design for Pulse, a SaaS project management and sprint analytics tool. Light mode, Notion-influenced, soft grey surfaces, generous whitespace, the Inter typeface, and a data-forward layout. Includes a dashboard overview, stats and chart views, and a data table/list view, all designed in Figma." data-tech="Figma · Web · Data Visualisation · Light Mode · SaaS" data-screenshots="pulse/screenshot1.jpg|pulse/screenshot2.jpg" data-alts="Pulse dashboard overview with task stats, a sprint velocity bar chart, recent activity and project progress bars|Pulse tasks data table with status filters and columns for task, status, assignee, priority, due date and project" data-url="https://www.figma.com/proto/zJg8BIw0mJBaVZz4NvfBNL/Untitled?node-id=23-1790&p=f&t=Nl7Cmq36Eph2OXV5-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=23%3A1790">
+        <span class="thumb" data-slot="work-2" data-kind="product" data-alt="Pulse screen"><img src="assets/pulse/screenshot1.jpg" width="1421" height="888" alt="" loading="lazy" decoding="async"></span>
+        <span class="project-name">Pulse</span>
+        <span class="project-meta">UI/UX Design, Web App</span>
+        <span class="project-stack">Figma, Web, Data Visualisation, Light Mode, SaaS</span>
+        <span class="project-year">2025</span>
+      </button></li>
+      <li><button type="button" class="project-card" data-title="Vault" data-type="UI/UX Design, Android App" data-desc="UI/UX design for Vault, a personal finance and fintech app. Designed in Figma for Android in dark mode, with a clean, trustworthy aesthetic suited to financial data. Includes a home screen with account overviews and a profile and settings screen." data-tech="Figma · Android · Fintech · Dark Mode · Mobile UI" data-screenshots="vault/screenshot1.jpg|vault/screenshot2.jpg" data-alts="Vault finance app home screen in dark mode showing net worth, assets and liabilities, a monthly chart and spending cards|Vault profile screen with linked bank accounts and a settings screen with account, security and preference options" data-url="https://www.figma.com/proto/CuiYatswl6WpJtyE8AFbIH/Untitled?node-id=3-21&p=f&t=C9X2knGERcRB1aQn-0&scaling=contain&content-scaling=fixed&page-id=0%3A1">
+        <span class="thumb" data-slot="work-3" data-kind="product" data-alt="Vault screen"><img src="assets/vault/screenshot1.jpg" width="477" height="975" alt="" loading="lazy" decoding="async"></span>
+        <span class="project-name">Vault</span>
+        <span class="project-meta">UI/UX Design, Android App</span>
+        <span class="project-stack">Figma, Android, Fintech, Dark Mode, Mobile UI</span>
+        <span class="project-year">2025</span>
+      </button></li>
+      <li><button type="button" class="project-card" data-title="Crate" data-type="UI/UX Design, Mobile Store" data-desc="UI/UX design for Crate, a premium tech accessories e-commerce store. Light mode with a minimal retail aesthetic, generous whitespace, crisp product imagery, and confident typography. Includes a product detail page, cart and checkout, and an order confirmation screen, all designed in Figma." data-tech="Figma · Mobile · E-Commerce · Light Mode · UI Design" data-screenshots="crate/screenshot1.jpg" data-alts="Three Crate shop screens: headphones product page, cart with order totals, and order confirmation" data-url="https://www.figma.com/proto/CuiYatswl6WpJtyE8AFbIH/Untitled?node-id=49-1198&p=f&t=C9X2knGERcRB1aQn-0&scaling=contain&content-scaling=fixed&page-id=49%3A1197">
+        <span class="thumb" data-slot="work-4" data-kind="product" data-alt="Crate screen"><img src="assets/crate/screenshot1.jpg" width="939" height="516" alt="" loading="lazy" decoding="async"></span>
+        <span class="project-name">Crate</span>
+        <span class="project-meta">UI/UX Design, Mobile Store</span>
+        <span class="project-stack">Figma, Mobile, E-Commerce, Light Mode, UI Design</span>
+        <span class="project-year">2025</span>
+      </button></li>
+    </ul>
   </div>
 </section>
 
-<section id="pricing" aria-label="Pricing">
-  <div class="reveal">
-    <div class="section-label">// Investment</div>
-    <h2>Pricing</h2>
-    <div class="section-divider"></div>
-    <p>Design-only or design-and-build — flexible to suit your needs.</p>
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="head reveal"><h2>Pricing</h2><p class="lead">Design only, or design and build together.</p></div>
+    <table class="rates">
+      <caption>All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</caption>
+      <thead><tr><th scope="col">Plan</th><th scope="col">From</th><th scope="col">What it is</th><th scope="col">Included</th></tr></thead>
+      <tbody>
+        <tr>
+          <th scope="row">Design only</th>
+          <td class="price">$400<span class="readout">AUD</span></td>
+          <td><p>Full Figma designs delivered for your own team to build.</p></td>
+          <td><ul><li>Wireframes and hi-fi screens</li><li>Component library</li><li>Interactive prototype</li><li>Figma file handoff</li><li>2 rounds of revisions</li></ul></td>
+        </tr>
+        <tr>
+          <th scope="row">Design and build</th>
+          <td class="price">Bundled</td>
+          <td><p>Design and development together, the shortest path from idea to product.</p></td>
+          <td><ul><li>Full design process</li><li>Implemented by me</li><li>No handoff friction</li><li>Faster turnaround</li><li>Discounted against separate</li></ul></td>
+        </tr>
+        <tr>
+          <th scope="row">Design system</th>
+          <td class="price">Let’s talk</td>
+          <td><p>A full component and token library for teams building at scale.</p></td>
+          <td><ul><li>Token-based colour system</li><li>Full component library</li><li>Usage documentation</li><li>Light and dark mode</li><li>Flexible scope</li></ul></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="pricing-grid reveal">
-    <div class="pricing-card">
-      <div class="pricing-tier">Design Only</div>
-      <div class="pricing-price">$400 <span>/ project</span></div>
-      <p class="pricing-desc">Full Figma designs delivered for your own team to implement.</p>
-      <ul class="pricing-features">
-        <li>Wireframes + hi-fi screens</li>
-        <li>Component library</li>
-        <li>Interactive prototype</li>
-        <li>Figma file handoff</li>
-        <li>2 rounds of revisions</li>
-      </ul>
-    </div>
-    <div class="pricing-card featured">
-      <div class="pricing-tier">Design + Build</div>
-      <div class="pricing-price">Bundled <span>savings</span></div>
-      <p class="pricing-desc">Design and development together — the most efficient path from idea to product.</p>
-      <ul class="pricing-features">
-        <li>Full design process</li>
-        <li>Implemented by me</li>
-        <li>No handoff friction</li>
-        <li>Faster turnaround</li>
-        <li>Discounted vs separate</li>
-      </ul>
-    </div>
-    <div class="pricing-card">
-      <div class="pricing-tier">Design System</div>
-      <div class="pricing-price">Let's <span>talk</span></div>
-      <p class="pricing-desc">A full component and token library for teams building at scale.</p>
-      <ul class="pricing-features">
-        <li>Token-based colour system</li>
-        <li>Full component library</li>
-        <li>Usage documentation</li>
-        <li>Light & dark mode</li>
-        <li>Flexible scope</li>
-      </ul>
-    </div>
-  </div>
-  <p class="pricing-note reveal">All prices are in AUD and are indicative starting points, not fixed quotes. Your written quote is final and states whether GST applies. See the <a href="terms.html">Terms</a> and <a href="refund-policy.html">Refund Policy</a>.</p>
 </section>
 
-<section id="contact" aria-label="Contact">
-  <div class="reveal">
-    <div class="section-label">// Get Started</div>
-    <h2>Start Your Design Project</h2>
-    <div class="section-divider"></div>
-    <p>Tell me what you're building and I aim to reply within one business day.</p>
-  </div>
-  <div class="contact-wrap reveal">
+<section class="section section--l" id="contact">
+  <div class="container contact">
+    <div class="contact-info">
+      <h2>Start your design project</h2>
+      <p>Tell me what you’re building and where the design stands today.</p>
+      <dl class="contact-lines">
+        <div><dt>Email</dt><dd><a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a></dd></div>
+        <div><dt>Based in</dt><dd>Herbert River Region, QLD. Remote-friendly.</dd></div>
+        <div><dt>Replies</dt><dd>Usually within one business day</dd></div>
+      </dl>
+    </div>
     <form id="contactForm">
       <div class="form-group">
           <label for="fname">Your Name</label>
@@ -546,7 +215,7 @@
       <div class="form-group">
         <label for="type">Project Type</label>
         <select id="type" name="project_type">
-          <option value="">— Select a type —</option>
+          <option value="">Select a type</option>
           <option>Design Only</option>
           <option>Design + Build</option>
           <option>Design System</option>
@@ -556,7 +225,7 @@
       <div class="form-group">
         <label for="industry">Industry / Sector (optional)</label>
         <select id="industry" name="industry">
-          <option value="">— Select if relevant —</option>
+          <option value="">Select if relevant</option>
           <option>Sugar Industry / Agriculture (Herbert River)</option>
           <option>Small Business / Retail</option>
           <option>Hospitality / Tourism</option>
@@ -567,10 +236,10 @@
       <div class="form-group">
         <label for="budget">Approximate Budget</label>
         <select id="budget" name="budget">
-          <option value="">— Select a range —</option>
+          <option value="">Select a range</option>
           <option>Under $400</option>
-          <option>$400 – $1,000</option>
-          <option>$1,000 – $3,000</option>
+          <option>$400 to $1,000</option>
+          <option>$1,000 to $3,000</option>
           <option>$3,000+</option>
           <option>Prefer to discuss</option>
         </select>
@@ -585,33 +254,36 @@
         <label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required> <span>I agree to dkvb.dev using these details to reply to my enquiry, as set out in the <a href="privacy.html">Privacy Policy</a>. <span class="consent-req">(required)</span></span></label>
         <label class="consent-row"><input type="checkbox" name="mailing_list_opt_in" value="yes"> <span>Optional: also send me the occasional build-notes email. Unsubscribe any time.</span></label>
       </fieldset>
-      <!-- Honeypot — hidden from real users, bots will fill it -->
+      <!-- Honeypot, hidden from real users, bots will fill it -->
       <div style="display:none;" aria-hidden="true">
         <label for="website">Website</label>
         <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
       </div>
-      <button type="submit" class="btn-submit">Send Message →</button>
-      <div class="form-success" id="formSuccess" role="status" aria-live="polite">✅ Message sent, thanks! I aim to reply within one business day.</div>
+      <button type="submit" class="btn btn--primary btn-submit">Send message</button>
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">Message sent, thanks! I aim to reply within one business day.</div>
     </form>
   </div>
 </section>
-
 </main>
 
-<footer role="contentinfo">
-  <div class="footer-logo">dkvb<span>.dev</span></div>
-  <p>© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
-  <div class="footer-links">
-    <a href="sugar-industry.html">Sugar Industry</a>
-    <a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-  </div>
-  <div class="footer-legal" role="navigation" aria-label="Legal">
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="refund-policy.html">Refunds</a>
-    <a href="cookies.html">Cookies</a>
-    <button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button>
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p class="foot-statement">Apps and websites, built in the Herbert River region and shipped anywhere.</p>
+    <div class="foot-links">
+      <ul aria-label="Elsewhere">
+        <li><a href="https://github.com/DanielvanBlerk-dev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/daniel-van-blerk-b03007448/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="sugar-industry.html">Sugar industry</a></li>
+      </ul>
+      <ul class="footer-legal" aria-label="Legal">
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="refund-policy.html">Refunds</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><button type="button" class="cookie-settings-link" data-cookie-settings>Cookie settings</button></li>
+      </ul>
+    </div>
+    <p class="foot-copy">© 2026 dkvb.dev. Built with HTML, CSS and JavaScript.</p>
   </div>
 </footer>
 
@@ -633,25 +305,25 @@ document.getElementById('contactForm').addEventListener('submit', async function
     if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
     else { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
   } catch { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
-  btn.textContent = 'Send Message →'; btn.disabled = false;
+  btn.textContent = 'Send message'; btn.disabled = false;
 });
 </script>
 
 <!-- MODAL -->
 <div class="modal-bg" id="modalBg">
   <div class="modal">
-    <button class="modal-close" id="modalClose">✕</button>
+    <button class="modal-close" id="modalClose">Close</button>
     <div class="modal-screenshot-viewport" id="modalScreenshotViewport" style="display:none;">
-      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">‹</button>
+      <button class="modal-scroll-arrow left" id="modalScrollLeft" aria-label="Scroll left">Back</button>
       <div class="modal-screenshot-track" id="modalScreenshotTrack"></div>
-      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">›</button>
+      <button class="modal-scroll-arrow right" id="modalScrollRight" aria-label="Scroll right">Next</button>
     </div>
-    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">scroll or use arrows to view</div>
+    <div class="modal-screenshot-hint" id="modalScreenshotHint" style="display:none;">Scroll or use the arrows to view</div>
     <div class="modal-type" id="modalType"></div>
     <div class="modal-title" id="modalTitle"></div>
     <p class="modal-desc" id="modalDesc"></p>
     <div class="modal-tags" id="modalTags"></div>
-    <a href="#" class="modal-link" id="modalLink" target="_blank" rel="noopener noreferrer" style="display:none;">View live prototype ↗</a>
+    <a href="#" class="modal-link" id="modalLink" target="_blank" rel="noopener noreferrer" style="display:none;">View live prototype</a>
   </div>
 </div>
 
