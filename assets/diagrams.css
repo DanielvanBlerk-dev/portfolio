@@ -13,8 +13,8 @@
 .path-label { margin-bottom: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
 
 /* fan-out: one write, every listener updated (back-end) */
-.fanout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) minmax(0, 2fr) minmax(0, 3fr) minmax(0, 2fr); align-items: center; gap: 0; }
-.fanout .wire { position: relative; height: 1px; background: var(--color-rule-2); }
+.fanout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr) minmax(0, 2fr) minmax(0, 1.5fr) minmax(0, 3fr); align-items: center; gap: 0; }
+.fanout .wire { position: relative; height: 1px; background: var(--color-rule-2); overflow-x: clip; }
 .fanout .wire .pulse { top: 0; animation-duration: var(--loop-dur); }
 .fanout .clients { display: grid; gap: var(--space-md); }
 .fanout .clients .node { flex-direction: column; gap: var(--space-2xs); }
@@ -53,6 +53,12 @@
 }
 
 
+/* mid widths: tighter path and nodes so the longest step names fit */
+@media (max-width: 80rem) {
+  .path { gap: var(--space-xs); }
+  .path .node, .fanout .node { padding-inline: var(--space-xs); font-size: var(--text-xs); }
+}
+
 /* small screens: stack the diagrams (kept here so they follow the rules above) */
 @media (max-width: 60rem) {
   .fanout { grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
@@ -60,4 +66,28 @@
   .path { grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); }
   .path::before { left: 50%; right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
   .pulse { display: none; }
+}
+
+/* the season calendar (sugar): a real year, not sample bookings */
+.season .months { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 2px; margin: 0; padding: 0; list-style: none; }
+.season .m { display: flex; align-items: flex-end; height: 120px; padding: var(--space-xs) var(--space-2xs); font-size: var(--text-sm); color: var(--color-ink-2); }
+.season .m--wet { background: color-mix(in oklab, var(--color-paper-3) 70%, oklch(55% 0.08 235)); }
+.season .m--crush { background: color-mix(in oklab, var(--color-paper-3) 55%, var(--color-accent)); color: var(--color-ink); }
+.season .m--quiet { background: var(--color-paper-3); }
+.season-track { position: relative; height: 14px; margin-top: var(--space-xs); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+.season .now { position: absolute; left: 0; right: 0; top: 0; height: 0; animation: now-run 24s linear infinite; }
+.season .now::before { content: ""; position: absolute; left: 0; top: 0; width: 2px; height: 14px; background: var(--color-ink); }
+@keyframes now-run { from { transform: translateX(0); } to { transform: translateX(calc(100% - 2px)); } }
+.season-key { display: grid; gap: var(--space-sm); margin: var(--space-lg) 0 0; }
+.season-key > div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: var(--space-md); }
+.season-key dt { display: flex; align-items: center; gap: var(--space-xs); font-weight: 700; color: var(--color-ink); }
+.season-key dt::before { content: ""; width: 12px; height: 12px; border-radius: 2px; flex: none; }
+.k--wet dt::before { background: color-mix(in oklab, var(--color-paper-3) 70%, oklch(55% 0.08 235)); }
+.k--crush dt::before { background: color-mix(in oklab, var(--color-paper-3) 55%, var(--color-accent)); }
+.k--quiet dt::before { background: var(--color-paper-3); outline: 1px solid var(--color-rule-2); }
+.season-key dd { margin: 0; color: var(--color-ink-2); }
+@media (prefers-reduced-motion: reduce) { .season .now { animation: none; display: none; } }
+@media (max-width: 40rem) {
+  .season .m { height: 72px; font-size: var(--text-xs); writing-mode: vertical-rl; justify-content: flex-end; }
+  .season-key > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-3xs); }
 }

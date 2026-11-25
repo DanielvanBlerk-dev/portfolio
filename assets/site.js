@@ -114,11 +114,54 @@
     if (closeBtn) closeBtn.setAttribute('aria-label', 'Close project details');
     bg.setAttribute('aria-hidden', 'true');
 
+    // Screenshot strip: Back and Next show only when there is more to see, and grey out at each end.
+    var track = document.getElementById('modalScreenshotTrack');
+    var back = document.getElementById('modalScrollLeft');
+    var next = document.getElementById('modalScrollRight');
+    var hint = bg.querySelector('.modal-screenshot-hint');
+    function syncStrip() {
+      if (!track || !back || !next) return;
+      var more = track.scrollWidth > track.clientWidth + 2;
+      [back, next, hint].forEach(function (el) { if (el) el.hidden = !more; });
+      back.disabled = !more || track.scrollLeft <= 2;
+      next.disabled = !more || track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+    // Back and Next step one screenshot at a time. They run before the page's own handlers and replace them,
+    // because a fixed-distance smooth scroll is unreliable against the strip's snap points.
+    function step(dir) {
+      var items = Array.prototype.slice.call(track.querySelectorAll('.modal-screenshot'));
+      var x = track.scrollLeft, max = track.scrollWidth - track.clientWidth, target;
+      var lefts = items.map(function (el) { return el.offsetLeft - track.offsetLeft; });
+      if (dir > 0) {
+        target = lefts.filter(function (l) { return l > x + 4; })[0];
+        if (target === undefined || target > max) target = max;
+      } else {
+        var before = lefts.filter(function (l) { return l < x - 4; });
+        target = before.length ? before[before.length - 1] : 0;
+      }
+      var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      track.scrollTo({ left: target, behavior: smooth ? 'smooth' : 'auto' });
+      setTimeout(function () { if (Math.abs(track.scrollLeft - x) < 1 && Math.abs(target - x) >= 1) track.scrollLeft = target; syncStrip(); }, 450);
+    }
+    [[back, -1], [next, 1]].forEach(function (pair) {
+      if (!pair[0] || !track) return;
+      pair[0].addEventListener('click', function (e) { e.stopImmediatePropagation(); step(pair[1]); }, true);
+    });
+
+    if (track) {
+      track.addEventListener('scroll', syncStrip, { passive: true });
+      track.addEventListener('load', syncStrip, true);
+      window.addEventListener('resize', syncStrip);
+      new MutationObserver(syncStrip).observe(track, { childList: true });
+    }
+
     var opener = null;
     new MutationObserver(function () {
       var open = bg.classList.contains('open');
       bg.setAttribute('aria-hidden', open ? 'false' : 'true');
       if (open) {
+        if (track) track.scrollLeft = 0;
+        setTimeout(syncStrip, 60);
         opener = document.activeElement;
         setTimeout(function () { if (closeBtn) closeBtn.focus(); }, 50);
       } else if (opener && opener.focus) {

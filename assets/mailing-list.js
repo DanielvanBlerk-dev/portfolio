@@ -88,17 +88,17 @@
 </div>\
 <div class="ml-body">\
 <div class="ml-pre">\
-<h2 class="ml-title" id="ml-title">Build notes, by email</h2>\
-<p class="ml-sub" id="ml-sub">Short emails from a working Android and full stack developer, straight from real client builds.</p>\
+<h2 class="ml-title" id="ml-title">The odd email, when it’s worth it</h2>\
+<p class="ml-sub" id="ml-sub">Not often, and never spam. Just the things below, when I’ve got something worth sending.</p>\
 <ul class="ml-list">\
-<li>First look at new projects and behind-the-scenes case studies</li>\
-<li>Practical Android, web and Firebase tips you can use the same day</li>\
-<li>Early notice when I open up freelance slots</li>\
+<li>New projects when they go live</li>\
+<li>Tips from real builds you can actually use</li>\
+<li>A heads-up when I’ve got room for new work</li>\
 </ul>\
 <form class="ml-form" novalidate>\
 <input class="ml-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">\
 <input class="ml-input" type="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-label="Email address">\
-<button class="ml-btn" type="submit">Count me in</button>\
+<button class="ml-btn" type="submit">Sign me up</button>\
 </form>\
 <p class="ml-err" role="alert" aria-live="polite"></p>\
 <p class="ml-fine">No spam, ever. Unsubscribe any time. By joining you agree to receive emails from dkvb.dev and to the <a href="privacy.html">Privacy Policy</a>.</p>\
@@ -106,7 +106,7 @@
 </div>\
 <div class="ml-done" role="status" aria-live="polite">\
 <h2 class="ml-title">You&rsquo;re on the list</h2>\
-<p class="ml-sub">Welcome aboard. The first build notes will land in your inbox soon. Thanks for being early.</p>\
+<p class="ml-sub">Thanks. I’ll only email when there’s something worth your time.</p>\
 <button class="ml-btn" type="button" data-ml-close>Back to the site</button>\
 </div>\
 </div>\
@@ -191,7 +191,7 @@
       .catch(function () {
         err.textContent = 'Something went wrong — please try again, or email dkvb.dev@gmail.com.';
         btn.disabled = false;
-        btn.textContent = 'Count me in';
+        btn.textContent = 'Sign me up';
       });
   }
 

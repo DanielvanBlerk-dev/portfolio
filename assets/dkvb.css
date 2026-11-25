@@ -2,7 +2,6 @@
  * hero: Banner (/), Stage (service pages), Banner (legal) · nav: banner over a retracting bar · footer: statement · imagery: screenshots of the user's own projects (data-kind product), no photographs · signature: each service drawn as the system it builds, moving: the build path, the load waterfall, the realtime fan-out, the harvest booking board
  * axes: dark/roman-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V5 · weakest: S, a developer portfolio reads like any other; every diagram draws a system this developer actually builds (Firestore listeners, Play Store pipeline, a cane-season booking board) instead of generic tiles */
-/* Hallmark · waive 38iii · .verb appears once per page, inside the hero h1 only · Lumen names the one rose verb in the hero as its signature, and every dkvb.dev page keeps exactly one */
 /* Hallmark · dropped onclick="window.location='android-development.html'", onclick="window.location='web-development.html'", onclick="window.location='ui-ux-design.html'", onclick="window.location='backend-development.html'", onclick="window.location='sugar-industry.html'" · the five service cards are now real links to those pages, so keyboard, middle-click and screen readers work */
 /* Hallmark · waive 39b · button.project-card rows of 150 to 190px open the project dialog · each project row is one full-width button carrying its thumbnail, name, type, stack and year, so the whole row is the hit target */
 /* Hallmark · reworded "building apps & experiences." to "i build android apps and websites." · 19, "experiences" is filler that fits any studio; the new head names what is built and carries the one verb */
@@ -29,9 +28,9 @@
 }
 
 body { font-variant-numeric: tabular-nums; }
-h1, h2, h3 { font-weight: 400; }
-h2 { font-size: var(--text-display-s); line-height: 0.98; }
-h1 { line-height: 0.96; }
+h1, h2, h3 { font-weight: 700; }
+h2 { font-size: var(--text-display-s); line-height: 1.04; }
+h1 { line-height: 1; }
 
 /* ── skip link ─────────────────────────────────────────── */
 .skip-link, .skip { position: absolute; left: var(--space-md); top: calc(-1 * var(--space-3xl)); z-index: var(--z-toast); padding: var(--space-xs) var(--space-md); background: var(--color-ink); color: var(--color-paper); border-radius: var(--radius-card); text-decoration: none; }
@@ -74,9 +73,9 @@ h1 { line-height: 0.96; }
 .hero { padding-block: var(--space-3xl) var(--space-lg); }
 .hero .lead { margin-top: var(--space-lg); color: var(--color-ink-2); }
 .hero .actions { margin-top: var(--space-xl); }
-.hero--banner h1 { max-width: 14ch; font-size: clamp(3.25rem, 7vw + 0.5rem, 7rem); }
+.hero--banner h1 { max-width: 15ch; font-size: clamp(2.75rem, 4.4vw + 1rem, 5.25rem); }
 .hero--stage .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; min-height: calc(100svh - var(--header-h) - var(--announce-h) - var(--space-3xl) * 2); }
-.hero--stage h1 { font-size: clamp(3rem, 5vw + 0.5rem, 5.75rem); max-width: 11ch; }
+.hero--stage h1 { font-size: clamp(2.5rem, 3.4vw + 1rem, 4.25rem); max-width: 11ch; }
 .hero--person .container { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 280px); gap: var(--space-3xl); align-items: end; }
 .portrait { margin: 0; display: grid; gap: var(--space-sm); }
 .portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 12%; border-radius: var(--radius-card); outline: 1px solid color-mix(in oklab, var(--color-ink) 10%, transparent); outline-offset: -1px; }
@@ -193,7 +192,7 @@ h1 { line-height: 0.96; }
 .rates caption a { color: var(--color-ink); text-decoration-color: var(--color-accent); }
 .rates th, .rates td { padding: var(--space-lg) var(--space-md) var(--space-lg) 0; border-bottom: var(--rule-hair) solid var(--color-rule); text-align: left; vertical-align: top; }
 .rates thead th { padding-block: var(--space-sm); font-weight: 400; font-size: var(--text-sm); color: var(--color-muted); white-space: nowrap; }
-.rates tbody th { font-family: var(--font-display); font-weight: 400; font-size: var(--text-2xl); line-height: 1; }
+.rates tbody th { font-family: var(--font-display); font-weight: 700; font-size: var(--text-2xl); line-height: 1; }
 .rates .price { font-family: var(--font-display); font-size: var(--text-3xl); line-height: 1; white-space: nowrap; }
 .rates .price .readout { margin-left: var(--space-2xs); }
 .rates td ul { margin: 0; padding: 0; list-style: none; color: var(--color-ink-2); display: grid; gap: var(--space-2xs); }
@@ -319,7 +318,7 @@ html:not(.js) .loop-toggle { display: none; }
 .modal-desc { margin-top: var(--space-md); color: var(--color-ink-2); max-width: 65ch; }
 .modal-tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-top: var(--space-lg); }
 .modal-tags .tag, .modal-tag { padding: var(--space-2xs) var(--space-sm); border-radius: var(--radius-pill); box-shadow: inset 0 0 0 var(--rule-hair) var(--color-rule-2); font-size: var(--text-sm); color: var(--color-ink-2); }
-.modal-features { display: grid; gap: var(--space-xs); margin-top: var(--space-lg); }
+.modal-features { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); margin-top: var(--space-lg); max-width: 65ch; }
 .modal-feature-item { padding-top: var(--space-xs); border-top: var(--rule-hair) solid var(--color-rule); color: var(--color-ink-2); font-size: var(--text-sm); }
 .modal-link { display: inline-flex; align-items: center; min-height: 48px; margin-top: var(--space-xl); padding: 0 var(--space-lg); border-radius: var(--radius-pill); box-shadow: inset 0 0 0 var(--rule-hair) var(--color-rule-2); color: var(--color-ink); text-decoration: none; }
 .modal-link:hover { background: var(--color-paper-3); }
@@ -449,3 +448,90 @@ html:not(.js) .loop-toggle { display: none; }
   .modal { padding: var(--space-lg); }
   .modal-screenshot-track { grid-auto-columns: minmax(0, 88%); }
 }
+
+/* ── made-by-a-person pass ─────────────────────────────── */
+.wordmark, .project-name, .statement, .foot-statement, .tools dt, .audience dt, .modal-title, .rate-figure, .rates .price, .steps li::before { font-weight: 700; }
+.hero--person .portrait figcaption b, .person b { font-weight: 700; }
+
+/* section heads: stacked, the line (when there is one) under the head */
+.head { grid-template-columns: minmax(0, 1fr); gap: var(--space-md); align-items: start; margin-bottom: var(--space-xl); }
+.head .lead { max-width: 60ch; }
+.head h2 { max-width: 24ch; }
+
+/* home services as a price list */
+.menu { margin: 0; padding: 0; list-style: none; border-top: 2px solid var(--color-ink); }
+.menu li { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.menu a { display: grid; grid-template-columns: auto minmax(2rem, 1fr) auto; column-gap: var(--space-md); row-gap: var(--space-2xs); align-items: baseline; padding-block: var(--space-lg); color: var(--color-ink); text-decoration: none; transition: background-color var(--dur-short) var(--ease-out); }
+.menu a:hover { background: var(--color-paper-2); }
+.menu a:active { background: var(--color-paper-3); }
+.menu-name { font: 700 var(--text-2xl)/1.1 var(--font-display); }
+.menu-dots { align-self: end; margin-bottom: 0.45em; border-bottom: 2px dotted var(--color-rule-2); }
+.menu-price { font: 700 var(--text-2xl)/1.1 var(--font-display); white-space: nowrap; }
+.menu-price small { font: 400 var(--text-sm)/1 var(--font-body); color: var(--color-muted); margin-right: var(--space-2xs); }
+.menu-note { grid-column: 1 / -1; max-width: 62ch; color: var(--color-ink-2); }
+.menu a:hover .menu-name { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.18em; }
+.menu-foot { margin-top: var(--space-lg); }
+
+/* about */
+.about-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: start; }
+.about-body { display: grid; gap: var(--space-md); max-width: 62ch; }
+.about-body p { color: var(--color-ink-2); font-size: var(--text-lg); line-height: 1.6; }
+.about-body .about-first { color: var(--color-ink); font: 700 var(--text-2xl)/1.25 var(--font-display); }
+
+/* legal intro: a plain opening paragraph, no labelled box */
+.doc-body .doc-intro { margin-bottom: var(--space-2xl); font-size: var(--text-lg); line-height: 1.6; color: var(--color-ink); max-width: 60ch; }
+
+@media (max-width: 60rem) {
+  .about-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+}
+@media (max-width: 40rem) {
+  .menu a { grid-template-columns: minmax(0, 1fr) auto; }
+  .menu-dots { display: none; }
+  .menu-name, .menu-price { font-size: var(--text-xl); }
+}
+
+/* project facts read as one column: the label above its text */
+.facts > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-3xs); }
+.facts dd { max-width: 65ch; }
+
+/* tool lists: the name sits above its description, so long names never spill into the text */
+.tools > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+.tools dd { max-width: 52ch; }
+
+@media (max-width: 40rem) {
+  .waterfall li { grid-template-columns: 88px minmax(0, 1fr); gap: var(--space-xs); }
+  .axis { margin-left: 0; font-size: var(--text-xs); }
+  .rates .price { white-space: normal; font-size: var(--text-2xl); }
+}
+
+/* one filled button per view; the second action is a plain link, not a ghost pill */
+.btn--secondary { min-height: 48px; padding: 0 var(--space-2xs); background: transparent; box-shadow: none; color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-rule-2); text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
+.btn--secondary:hover { background: transparent; text-decoration-color: var(--color-accent); }
+.btn--secondary:active { color: var(--color-ink-2); }
+.actions { gap: var(--space-sm) var(--space-xl); }
+.about-sign { margin-top: var(--space-xs); font: 700 var(--text-xl)/1.2 var(--font-display); color: var(--color-ink); }
+.client-quote { margin: var(--space-2xl) 0 0; padding: var(--space-xl) 0 0; border-top: 2px solid var(--color-accent); max-width: 56ch; }
+.client-quote p { font: 700 var(--text-2xl)/1.3 var(--font-display); color: var(--color-ink); }
+.client-quote footer { margin-top: var(--space-md); color: var(--color-muted); }
+
+/* project dialog screenshots: each keeps its own width at one height, so the strip scrolls instead of squeezing */
+.modal-screenshot-track { grid-auto-columns: max-content; scroll-padding-inline: var(--space-xs); }
+.modal-screenshot img { width: auto; max-width: none; height: min(360px, 55dvh); object-fit: contain; }
+@media (max-width: 40rem) { .modal-screenshot img { height: min(300px, 50dvh); } }
+/* the strip's back and next controls sit under it, never on top of a screenshot */
+.modal-screenshot-viewport { padding-bottom: calc(44px + var(--space-sm)); }
+.modal-scroll-arrow { top: auto; bottom: 0; transform: none; }
+.modal-scroll-arrow:active { transform: translateY(1px); }
+.modal-scroll-arrow.left { left: 0; }
+.modal-scroll-arrow.right { left: calc(var(--space-sm) + 5.5rem); right: auto; }
+/* the strip snaps gently, so Back and Next always move it, even past a screenshot wider than the strip */
+.modal-screenshot-track { scroll-snap-type: x proximity; }
+.modal-scroll-arrow:disabled { opacity: 0.4; cursor: not-allowed; }
+.modal-scroll-arrow:disabled:active { transform: none; }
+.modal-screenshot-viewport:has(.modal-scroll-arrow[hidden]) { padding-bottom: 0; }
+/* rate cards: what's included reads as a dot-pointed list */
+.rates td ul { list-style: disc; padding-left: var(--space-lg); }
+.rates td ul li::marker { color: var(--color-accent); }
+/* a button and a text link side by side share one baseline, height and underline */
+.actions { align-items: center; }
+.actions .text-link { display: inline-flex; align-items: center; min-height: 48px; text-decoration-thickness: 2px; text-underline-offset: 0.3em; }

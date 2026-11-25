@@ -9,14 +9,14 @@
   --color-error: oklch(72% 0.15 27); --color-success: oklch(76% 0.13 150);
   --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: oklch(12.5% 0.027 290); --color-paper-2: oklch(16% 0.03 290); --color-paper-3: oklch(20% 0.032 290);
-  --color-ink: oklch(96% 0.01 300); --color-ink-2: oklch(85% 0.017 298); --color-muted: oklch(69% 0.026 295);
-  --color-rule: oklch(27% 0.034 290); --color-rule-2: oklch(36% 0.04 292); --rule-blueprint: oklch(96% 0.01 300 / 0.05);
-  --color-accent: oklch(80% 0.15 62); --color-accent-2: oklch(72% 0.15 12); --color-accent-ink: oklch(14% 0.028 290);
-  --color-live: oklch(80% 0.13 155); --color-focus: oklch(80% 0.15 62);
-  --font-display: "Instrument Serif", ui-serif, Georgia, serif; --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --color-paper: oklch(15.5% 0.02 155); --color-paper-2: oklch(19% 0.026 152); --color-paper-3: oklch(23.5% 0.03 150);
+  --color-ink: oklch(95% 0.018 92); --color-ink-2: oklch(85% 0.022 95); --color-muted: oklch(72% 0.025 115);
+  --color-rule: oklch(29% 0.025 150); --color-rule-2: oklch(40% 0.03 140); --rule-blueprint: oklch(95% 0.018 92 / 0.05);
+  --color-accent: oklch(83% 0.15 88); --color-accent-2: oklch(72% 0.13 45); --color-accent-ink: oklch(18% 0.03 150);
+  --color-live: oklch(80% 0.13 150); --color-focus: oklch(83% 0.15 88);
+  --font-display: "Zilla Slab", Rockwell, Georgia, serif; --font-body: "Atkinson Hyperlegible Next", ui-sans-serif, system-ui, sans-serif;
   --font-outlier: ui-monospace, "Cascadia Mono", Consolas, monospace;
-  --radius-card: 10px; --radius-pill: 999px; --rule-hair: 1px;
-  --shadow-card: 0 28px 64px -30px oklch(4% 0.02 290 / 0.8);
-  --tracking-display: -0.015em; --display-weight: 400;
+  --radius-card: 6px; --radius-pill: 4px; --rule-hair: 1px;
+  --shadow-card: 0 28px 64px -30px oklch(6% 0.02 150 / 0.8);
+  --tracking-display: -0.01em; --display-weight: 700;
 }
