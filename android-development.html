@@ -61,6 +61,7 @@
 }
 </script>
 <link rel="stylesheet" href="assets/dkvb.css">
+<link rel="stylesheet" href="assets/diagrams.css">
 <script src="assets/motion.js"></script>
 </head>
 <body>
@@ -172,6 +173,7 @@
     <div class="contact-info">
       <h2>Start your Android project</h2>
       <p>Tell me about your app idea: what it does, who uses it and when you need it.</p>
+      <div class="person"><img class="avatar" src="assets/portrait/daniel-van-blerk-avatar-96.jpg" srcset="assets/portrait/daniel-van-blerk-avatar-96.jpg 96w, assets/portrait/daniel-van-blerk-avatar.jpg 192w" sizes="64px" width="192" height="192" alt="" loading="lazy"><p><b>Daniel van Blerk</b><span>You’ll hear back from me, not a team.</span></p></div>
       <dl class="contact-lines">
         <div><dt>Email</dt><dd><a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a></dd></div>
         <div><dt>Based in</dt><dd>Herbert River Region, QLD. Remote-friendly.</dd></div>
@@ -180,15 +182,15 @@
     </div>
     <form id="contactForm">
       <div class="form-group">
-          <label for="fname">Your Name</label>
+          <label for="fname">Your name</label>
           <input type="text" id="fname" name="name" placeholder="Jane Smith" maxlength="80" autocomplete="name" required>
         </div>
       <div class="form-group">
-        <label for="email">Email Address</label>
+        <label for="email">Email address</label>
         <input type="email" id="email" name="email" placeholder="jane@company.com" maxlength="254" autocomplete="email" required>
       </div>
       <div class="form-group">
-        <label for="industry">Industry / Sector (optional)</label>
+        <label for="industry">Industry or sector (optional)</label>
         <select id="industry" name="industry">
           <option value="">Select if relevant</option>
           <option>Sugar Industry / Agriculture (Herbert River)</option>
@@ -199,7 +201,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="budget">Approximate Budget</label>
+        <label for="budget">Approximate budget</label>
         <select id="budget" name="budget">
           <option value="">Select a range</option>
           <option>Under $500</option>
@@ -210,7 +212,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="message">Tell Me About Your App</label>
+        <label for="message">Tell me about your app</label>
         <textarea id="message" name="message" placeholder="Describe your app idea, key features, and any specific requirements…" maxlength="2000" required></textarea>
       </div>
       <input type="hidden" name="service" value="Android App Development">
