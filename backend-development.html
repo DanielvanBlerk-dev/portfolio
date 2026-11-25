@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Back-End Development | dkvb.dev</title>
-<meta name="description" content="Back-end development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates, no agency markups. Also offering Android app development, front-end web development, and UI/UX design. Firebase, Node.js, REST APIs.">
+<meta name="description" content="Logins, databases and APIs that keep your app running, built on Firebase and Node.js by Daniel van Blerk in Ingham, Queensland.">
 <meta name="keywords" content="back-end developer Herbert River Region, API developer Queensland, Firebase developer Australia, Node.js developer Herbert River Region, cost-effective back-end development Herbert River Region, affordable API developer Queensland, transparent pricing back-end Australia, freelance rates no agency markup, Firestore developer Herbert River Region">
-<meta name="author" content="Dan Van Blerk">
+<meta name="author" content="Daniel van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0d1610">
 <link rel="canonical" href="https://dkvb.dev/backend-development.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/backend-development.html">
 <meta property="og:title" content="Back-End Development, dkvb.dev">
-<meta property="og:description" content="Scalable APIs, real-time databases, and cloud infrastructure. Based in the Herbert River region, QLD, also offering Android, front-end, and UI/UX development.">
+<meta property="og:description" content="Logins, databases and APIs for your app, built in Ingham, Queensland.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://dkvb.dev/backend-development.html">
 <meta name="twitter:title" content="Back-End Development, dkvb.dev">
-<meta name="twitter:description" content="Back-end development with Firebase, Node.js, and REST APIs. Based in the Herbert River region, QLD, Australia.">
+<meta name="twitter:description" content="Logins, databases and APIs for your app, built in Ingham, Queensland.">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
@@ -43,6 +43,7 @@
   img-src 'self' https://dkvb.dev data:;
   connect-src 'self' https://formspree.io;
   base-uri 'self';
+  object-src 'none';
   form-action 'self' https://formspree.io;
 ">
 <script type="application/ld+json">
@@ -52,10 +53,10 @@
   "name": "Back-End Development",
   "provider": {
     "@type": "Person",
-    "name": "Dan Van Blerk",
+    "name": "Daniel van Blerk",
     "url": "https://dkvb.dev"
   },
-  "description": "Back-end development using Firebase, Firestore, Node.js, and REST APIs. Scalable infrastructure for Android apps and websites.",
+  "description": "Logins, databases and APIs for Android apps and websites, built on Firebase and Node.js.",
   "areaServed": "AU",
   "serviceType": "Back-End Development"
 }
@@ -253,6 +254,7 @@
       </div>
       <button type="submit" class="btn btn--primary btn-submit">Send message</button>
       <div class="form-success" id="formSuccess" role="status" aria-live="polite">Message sent, thanks! I aim to reply within one business day.</div>
+      <p class="form-error" id="formError" role="alert" hidden>That didn’t send. Please try again, or email me at <a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a>.</p>
     </form>
   </div>
 </section>
@@ -294,9 +296,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const res = await fetch('https://formspree.io/f/mkoyqapk', {
       method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(this)
     });
-    if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
-    else { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
-  } catch { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
+    if (res.ok) { document.getElementById('formError').hidden = true; document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
+    else { document.getElementById('formError').hidden = false; }
+  } catch { document.getElementById('formError').hidden = false; }
   btn.textContent = 'Send message'; btn.disabled = false;
 });
 </script>

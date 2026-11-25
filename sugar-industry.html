@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sugar Industry Digital Services | dkvb.dev</title>
-<meta name="description" content="Websites, booking systems, and digital record-keeping tools for Herbert River sugar industry businesses, growers, harvesting and haulage contractors, and ag suppliers. Built locally in the Herbert River region, QLD by Dan Van Blerk. Cost-effective freelance rates, no agency markups.">
+<meta name="description" content="Websites, booking systems and record-keeping for growers, contractors and suppliers on the Herbert. Built locally in Ingham by Daniel van Blerk.">
 <meta name="keywords" content="web developer Ingham, website developer Herbert River, sugar industry software Queensland, cane industry digital services, Hinchinbrook web developer, agriculture web developer Queensland, harvesting contractor website, farm business website Queensland, ag tech Herbert River Region, sugar cane contractor booking system, Smartcane BMP record keeping app, freelance developer Herbert River">
-<meta name="author" content="Dan Van Blerk">
+<meta name="author" content="Daniel van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0d1610">
 <link rel="canonical" href="https://dkvb.dev/sugar-industry.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/sugar-industry.html">
 <meta property="og:title" content="Sugar Industry Digital Services, dkvb.dev">
-<meta property="og:description" content="Websites, booking systems, and digital record-keeping tools built for Herbert River sugar industry businesses, growers, contractors, and ag suppliers. Based in the Herbert River region, QLD.">
+<meta property="og:description" content="Websites, booking systems and record-keeping for small businesses on the Herbert.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
 <meta name="twitter:url" content="https://dkvb.dev/sugar-industry.html">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="twitter:title" content="Sugar Industry Digital Services, dkvb.dev">
-<meta name="twitter:description" content="Websites, booking systems, and record-keeping tools for Herbert River sugar industry businesses. Based in the Herbert River region, QLD, Australia.">
+<meta name="twitter:description" content="Websites, booking systems and record-keeping for small businesses on the Herbert.">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
 <meta name="ICBM" content="-19.2576, 146.8178">
@@ -43,6 +43,7 @@
   img-src 'self' https://dkvb.dev data:;
   connect-src 'self' https://formspree.io;
   base-uri 'self';
+  object-src 'none';
   form-action 'self' https://formspree.io;
 ">
 <script type="application/ld+json">
@@ -52,7 +53,7 @@
   "name": "Sugar Industry Digital Services",
   "provider": {
     "@type": "Person",
-    "name": "Dan Van Blerk",
+    "name": "Daniel van Blerk",
     "url": "https://dkvb.dev"
   },
   "description": "Websites, booking and scheduling systems, and digital record-keeping tools for Herbert River sugar industry businesses, growers, harvesting and haulage contractors, and ag suppliers.",
@@ -63,6 +64,7 @@
 <link rel="stylesheet" href="assets/dkvb.css">
 <link rel="stylesheet" href="assets/diagrams.css">
 <script src="assets/motion.js"></script>
+<script type="importmap">{"imports": {"three": "./assets/vendor/three/three.module.min.js"}}</script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -116,6 +118,7 @@
   </div>
 </section>
 
+
 <section class="section" id="services">
   <div class="container">
     <div class="head reveal"><h2>What I can do, and what it costs</h2><p class="lead">From one website to an offsider you can call on each month. I use AI tools to speed up the build, but I review, test and deliver everything myself.</p></div>
@@ -166,6 +169,14 @@
     <figure class="portrait portrait--local">
       <img src="assets/portrait/daniel-van-blerk-400.jpg" srcset="assets/portrait/daniel-van-blerk-400.jpg 400w, assets/portrait/daniel-van-blerk.jpg 595w" sizes="(min-width: 60rem) 280px, 150px" width="595" height="802" alt="Daniel van Blerk smiling, in a dark suit and striped tie" loading="lazy">
       <figcaption><b>Daniel van Blerk</b>Herbert River region</figcaption>
+    </figure>
+    <figure class="model3d model3d--terrain model3d--map" data-3d="terrain" data-src="assets/3d/herbert.glb" data-places="assets/3d/herbert-places.json" data-label="Map of the area I cover, from Cardwell down to Forrest Beach, with Ingham as my base. Use the left and right arrow keys to turn it.">
+      <div class="model3d-frame">
+        <img class="model3d-still" src="assets/3d/herbert.jpg" width="1200" height="900" loading="lazy" alt="Map of the Herbert River district I cover: the cane flats around Ingham, out to Halifax, Lucinda and Forrest Beach, and north to Cardwell and Hinchinbrook Island">
+        <div class="model3d-stage" aria-hidden="true"></div>
+        <div class="model3d-labels" aria-hidden="true"></div>
+      </div>
+      <figcaption><span><b>If you’re on this map, I’ll come out to you.</b> Farm, yard, shop or office, from Cardwell down to Forrest Beach, with Ingham as my base.</span><span class="model3d-credit">Terrain from NASA’s SRTM elevation data, heights exaggerated three times. <span class="model3d-hint">Drag to turn it.</span></span></figcaption>
     </figure>
   </div>
 </section>
@@ -238,6 +249,7 @@
       </div>
       <button type="submit" class="btn btn--primary btn-submit">Send message</button>
       <div class="form-success" id="formSuccess" role="status" aria-live="polite">Message sent, thanks! I aim to reply within one business day.</div>
+      <p class="form-error" id="formError" role="alert" hidden>That didn’t send. Please try again, or email me at <a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a>.</p>
     </form>
   </div>
 </section>
@@ -279,13 +291,14 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const res = await fetch('https://formspree.io/f/mkoyqapk', {
       method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(this)
     });
-    if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
-    else { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
-  } catch { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
+    if (res.ok) { document.getElementById('formError').hidden = true; document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
+    else { document.getElementById('formError').hidden = false; }
+  } catch { document.getElementById('formError').hidden = false; }
   btn.textContent = 'Send message'; btn.disabled = false;
 });
 </script>
 <script src="assets/site.js" defer></script>
 <script src="assets/mailing-list.js" defer></script>
+<script type="module" src="assets/scene3d.js"></script>
 </body>
 </html>

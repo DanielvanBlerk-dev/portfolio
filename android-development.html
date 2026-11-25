@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Android App Development | dkvb.dev</title>
-<meta name="description" content="Native Android app development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates, no agency markups. Also offering front-end web, UI/UX design, and back-end development. Kotlin, Firebase, Jetpack Compose.">
+<meta name="description" content="Native Android apps in Kotlin and Firebase, from the first idea through to the Play Store. Built by Daniel van Blerk in Ingham, Queensland.">
 <meta name="keywords" content="Android developer Herbert River Region, Android app development Queensland, Kotlin developer Australia, Firebase, Jetpack Compose, cost-effective Android development Herbert River Region, affordable app developer Queensland, freelance rates Android Australia, no agency markup app development, mobile app developer Herbert River Region">
-<meta name="author" content="Dan Van Blerk">
+<meta name="author" content="Daniel van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0d1610">
 <link rel="canonical" href="https://dkvb.dev/android-development.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/android-development.html">
 <meta property="og:title" content="Android App Development, dkvb.dev">
-<meta property="og:description" content="Native Android app development with Kotlin and Firebase. Based in the Herbert River region, QLD, also offering front-end, UI/UX, and back-end development.">
+<meta property="og:description" content="Native Android apps in Kotlin and Firebase, built in Ingham, Queensland.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
 <meta name="twitter:url" content="https://dkvb.dev/android-development.html">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="twitter:title" content="Android App Development, dkvb.dev">
-<meta name="twitter:description" content="Android app development with Kotlin and Firebase. Based in the Herbert River region, QLD, Australia.">
+<meta name="twitter:description" content="Native Android apps in Kotlin and Firebase, built in Ingham, Queensland.">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
 <meta name="ICBM" content="-19.2576, 146.8178">
@@ -43,6 +43,7 @@
   img-src 'self' https://dkvb.dev data:;
   connect-src 'self' https://formspree.io;
   base-uri 'self';
+  object-src 'none';
   form-action 'self' https://formspree.io;
 ">
 <script type="application/ld+json">
@@ -52,10 +53,10 @@
   "name": "Android App Development",
   "provider": {
     "@type": "Person",
-    "name": "Dan Van Blerk",
+    "name": "Daniel van Blerk",
     "url": "https://dkvb.dev"
   },
-  "description": "Native Android app development using Kotlin, Jetpack Compose, and Firebase.",
+  "description": "Native Android apps built in Kotlin with Firebase.",
   "areaServed": "AU",
   "serviceType": "Android App Development"
 }
@@ -63,6 +64,7 @@
 <link rel="stylesheet" href="assets/dkvb.css">
 <link rel="stylesheet" href="assets/diagrams.css">
 <script src="assets/motion.js"></script>
+<script type="importmap">{"imports": {"three": "./assets/vendor/three/three.module.min.js"}}</script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -116,7 +118,24 @@
 
 <section class="section" id="portfolio">
   <div class="container">
-    <div class="head reveal"><h2>Skills United, my own app</h2><p class="lead">A skill-swap app I built from start to finish. You list what you can teach, find what you want to learn, and chat one to one. The full code is on GitHub.</p></div>
+    <div class="head reveal"><h2>Skills United, my own app</h2><p class="lead">A skill-swap app I built from start to finish. You list what you can teach, find what you want to learn, and chat one to one. The full code is on GitHub. Here’s what’s inside it, which is the same groundwork your app would need.</p></div>
+    <div class="su-walk">
+      <ol class="su-steps">
+        <li class="su-step" data-screen="0"><h3>Accounts and sign-in</h3><p>People sign up with their email and get their own profile. Firebase Auth handles the passwords, so they’re never stored in the app or on a server I run.</p></li>
+        <li class="su-step" data-screen="1"><h3>Consent, built in</h3><p>The terms and privacy policy appear at sign-up and have to be agreed to before an account is made, not tucked away in a settings menu.</p></li>
+        <li class="su-step" data-screen="2"><h3>Search that keeps up</h3><p>Members show up as cards you can filter by several skills at once. Results change as you type, with no search button and no waiting.</p></li>
+        <li class="su-step" data-screen="3"><h3>Real-time chat</h3><p>Chat requests land in an inbox with incoming and outgoing tabs. Once someone accepts, messages arrive straight away through Firestore.</p></li>
+      </ol>
+      <div class="su-phone">
+        <figure class="model3d model3d--phone" data-3d="phone" data-steps=".su-step" data-src="assets/3d/phone.glb" data-screens="assets/skills-united/screenshot2.jpg|assets/skills-united/screenshot3.jpg|assets/skills-united/screenshot4.jpg|assets/skills-united/screenshot5.jpg" data-label="A phone running Skills United. It shows the screen for each part of the app as you scroll past it. Use the left and right arrow keys to turn it.">
+          <div class="model3d-frame">
+            <img class="model3d-still" src="assets/3d/phone.jpg" width="800" height="1000" loading="lazy" alt="A phone running Skills United, showing the Browse Skills screen with member cards">
+            <div class="model3d-stage" aria-hidden="true"></div>
+          </div>
+          <figcaption><span>Skills United on an Android phone</span><span class="model3d-hint">Drag to turn it</span></figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
   <ul class="rail" tabindex="0" aria-label="Skills United screens">
       <li><figure class="screen shot-top" data-slot="su-1" data-kind="product" data-alt="Login screen with email and password fields"><img src="assets/skills-united/screenshot1.jpg" width="1080" height="2126" alt="Login screen with email and password fields" loading="lazy" decoding="async"></figure><p class="caption">Login screen with email and password fields</p></li>
@@ -228,6 +247,7 @@
       </div>
       <button type="submit" class="btn btn--primary btn-submit">Send message</button>
       <div class="form-success" id="formSuccess" role="status" aria-live="polite">Message sent, thanks! I aim to reply within one business day.</div>
+      <p class="form-error" id="formError" role="alert" hidden>That didn’t send. Please try again, or email me at <a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a>.</p>
     </form>
   </div>
 </section>
@@ -326,13 +346,14 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const res = await fetch('https://formspree.io/f/mkoyqapk', {
       method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(this)
     });
-    if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
-    else { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
-  } catch { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
+    if (res.ok) { document.getElementById('formError').hidden = true; document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
+    else { document.getElementById('formError').hidden = false; }
+  } catch { document.getElementById('formError').hidden = false; }
   btn.textContent = 'Send message'; btn.disabled = false;
 });
 </script>
 <script src="assets/site.js" defer></script>
 <script src="assets/mailing-list.js" defer></script>
+<script type="module" src="assets/scene3d.js"></script>
 </body>
 </html>

@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Front-End Web Development | dkvb.dev</title>
-<meta name="description" content="Front-end web development by Dan Van Blerk, based in the Herbert River region, Queensland. Cost-effective freelance rates, no agency markups. Also offering Android app development, UI/UX design, and back-end development. React, Next.js, HTML/CSS.">
+<meta name="description" content="Fast websites and web apps that work on any phone, built with React and Next.js by Daniel van Blerk in Ingham, Queensland.">
 <meta name="keywords" content="front-end developer Herbert River Region, web developer Queensland, React developer Australia, Next.js developer Herbert River Region, cost-effective web development Herbert River Region, affordable website developer Queensland, transparent pricing web developer Australia, freelance rates no agency markup, website developer Herbert River Region">
-<meta name="author" content="Dan Van Blerk">
+<meta name="author" content="Daniel van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0d1610">
 <link rel="canonical" href="https://dkvb.dev/web-development.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/web-development.html">
 <meta property="og:title" content="Front-End Web Development, dkvb.dev">
-<meta property="og:description" content="Front-end web development with React and Next.js. Based in the Herbert River region, QLD, also offering Android, UI/UX, and back-end development.">
+<meta property="og:description" content="Fast websites that work on any phone, built in Ingham, Queensland.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,7 +23,7 @@
 <meta name="twitter:url" content="https://dkvb.dev/web-development.html">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 <meta name="twitter:title" content="Front-End Web Development, dkvb.dev">
-<meta name="twitter:description" content="Front-end web development with React, Next.js, and TypeScript. Based in the Herbert River region, QLD, Australia.">
+<meta name="twitter:description" content="Fast websites that work on any phone, built in Ingham, Queensland.">
 <meta name="geo.region" content="AU-QLD">
 <meta name="geo.position" content="-19.2576;146.8178">
 <meta name="ICBM" content="-19.2576, 146.8178">
@@ -43,6 +43,7 @@
   img-src 'self' https://dkvb.dev data:;
   connect-src 'self' https://formspree.io;
   base-uri 'self';
+  object-src 'none';
   form-action 'self' https://formspree.io;
 ">
 <script type="application/ld+json">
@@ -52,7 +53,7 @@
   "name": "Front-End Web Development",
   "provider": {
     "@type": "Person",
-    "name": "Dan Van Blerk",
+    "name": "Daniel van Blerk",
     "url": "https://dkvb.dev"
   },
   "description": "Front-end web development using React, Next.js, HTML/CSS, and TypeScript.",
@@ -109,7 +110,7 @@
   <div class="container">
     <div class="head reveal"><h2>What I build them with</h2></div>
     <dl class="tools">
-      <div><dt>React</dt><dd>Component-based UI for dynamic, interactive web experiences.</dd></div>
+      <div><dt>React</dt><dd>Pages built from reusable parts, so they update without a full reload.</dd></div>
       <div><dt>Next.js</dt><dd>React framework with routing, SSR and performance optimisations built in.</dd></div>
       <div><dt>TypeScript</dt><dd>Type-safe JavaScript for catching errors early.</dd></div>
       <div><dt>Semantic HTML &amp; CSS</dt><dd>Semantic markup and hand-written styles, no unnecessary abstractions.</dd></div>
@@ -230,6 +231,7 @@
       </div>
       <button type="submit" class="btn btn--primary btn-submit">Send message</button>
       <div class="form-success" id="formSuccess" role="status" aria-live="polite">Message sent, thanks! I aim to reply within one business day.</div>
+      <p class="form-error" id="formError" role="alert" hidden>That didn’t send. Please try again, or email me at <a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a>.</p>
     </form>
   </div>
 </section>
@@ -271,9 +273,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const res = await fetch('https://formspree.io/f/mkoyqapk', {
       method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(this)
     });
-    if (res.ok) { document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
-    else { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
-  } catch { alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com'); }
+    if (res.ok) { document.getElementById('formError').hidden = true; document.getElementById('formSuccess').classList.add('visible'); this.reset(); }
+    else { document.getElementById('formError').hidden = false; }
+  } catch { document.getElementById('formError').hidden = false; }
   btn.textContent = 'Send message'; btn.disabled = false;
 });
 </script>

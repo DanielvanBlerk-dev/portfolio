@@ -19,14 +19,15 @@
   img-src 'self' https://dkvb.dev data:;
   connect-src 'self' https://formspree.io;
   base-uri 'self';
+  object-src 'none';
   form-action 'self' https://formspree.io;
 ">
 
 <!-- ── PRIMARY SEO ── -->
 <title>dkvb.dev | Android App & Web Developer | Australia</title>
-<meta name="description" content="Dan Van Blerk is a freelance developer based in the Herbert River region, Queensland, Australia. Specialising in Android app development, front-end web development, UI/UX design, and back-end development. Cost-effective freelance rates, no agency markups. Available for local and remote projects. Also building websites, booking systems, and digital tools for Herbert River sugar industry businesses, growers, contractors, and ag suppliers from Ingham to Townsville.">
+<meta name="description" content="Daniel van Blerk builds Android apps, websites and back ends for small businesses, from Ingham in the Herbert River region of Queensland. Every job gets a written quote, and you deal with me directly.">
 <meta name="keywords" content="Android developer Herbert River Region, front-end developer Herbert River Region, UI UX designer Herbert River Region, back-end developer Herbert River Region, web developer Queensland, app developer Australia, cost-effective developer Herbert River Region, affordable app development Queensland, freelance rates no agency markup, transparent pricing developer Australia, Kotlin, Firebase, React, Next.js, Figma, Node.js, freelance developer Herbert River Region, web developer Ingham, website developer Herbert River, sugar industry software Queensland, cane industry digital services, Hinchinbrook web developer, agriculture web developer Queensland, harvesting contractor website">
-<meta name="author" content="Dan Van Blerk">
+<meta name="author" content="Daniel van Blerk">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0d1610">
 <link rel="canonical" href="https://dkvb.dev/">
@@ -35,7 +36,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dkvb.dev/">
 <meta property="og:title" content="dkvb.dev, Android App & Web Developer">
-<meta property="og:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in the Herbert River region, QLD, Australia. Polished apps and websites built with Kotlin, Firebase, React, and more. Also serving Herbert River sugar industry businesses.">
+<meta property="og:description" content="Android apps and websites for small businesses, built by Daniel van Blerk in Ingham, Queensland.">
 <meta property="og:image" content="https://dkvb.dev/og-preview.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -46,7 +47,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://dkvb.dev/">
 <meta name="twitter:title" content="dkvb.dev, Android App & Web Developer">
-<meta name="twitter:description" content="Freelance Android, front-end, UI/UX, and back-end developer based in the Herbert River region, QLD. Kotlin, Firebase, React, Figma, Node.js.">
+<meta name="twitter:description" content="Android apps and websites for small businesses, built by Daniel van Blerk in Ingham, Queensland.">
 <meta name="twitter:image" content="https://dkvb.dev/og-preview.png">
 
 <!-- ── GEO / LOCAL SEO ── -->
@@ -64,12 +65,12 @@
       "@type": "Person",
       "@id": "https://dkvb.dev/#dan",
       "image": "https://dkvb.dev/assets/portrait/daniel-van-blerk.jpg",
-      "name": "Dan Van Blerk",
+      "name": "Daniel van Blerk",
       "alternateName": "dkvb.dev",
       "url": "https://dkvb.dev",
       "email": "dkvb.dev@gmail.com",
       "jobTitle": "Freelance Android & Full Stack Developer",
-      "description": "Freelance developer based in the Herbert River region, QLD, specialising in Android apps (Kotlin, Firebase) and front-end web development (React, Next.js), with a strong focus on UI/UX design.",
+      "description": "Freelance developer in Ingham, Queensland, building Android apps, websites and back ends for small businesses.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Ingham",
@@ -77,12 +78,12 @@
         "addressCountry": "AU"
       },
       "knowsAbout": [
-        "Android Development", "Kotlin", "Jetpack Compose", "Firebase",
+        "Android Development", "Kotlin", "Firebase",
         "Web Development", "React", "Next.js", "Node.js", "TypeScript",
-        "UI/UX Design", "Figma", "REST APIs", "GraphQL"
+        "UI/UX Design", "Figma", "REST APIs"
       ],
       "sameAs": [
-        "https://github.com/dkvbdev",
+        "https://github.com/DanielvanBlerk-dev",
         "https://www.linkedin.com/in/daniel-van-blerk-b03007448/"
       ]
     },
@@ -92,7 +93,7 @@
       "name": "dkvb.dev",
       "url": "https://dkvb.dev",
       "email": "dkvb.dev@gmail.com",
-      "description": "Freelance Android app and web development services based in Australia.",
+      "description": "Android apps, websites, back ends and UI/UX design for small businesses, from Ingham, Queensland.",
       "founder": { "@id": "https://dkvb.dev/#dan" },
       "address": {
         "@type": "PostalAddress",
@@ -107,6 +108,7 @@
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Android App Development" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Front-End Web Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Back-End Development" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sugar Industry Digital Services" } }
         ]
@@ -126,7 +128,7 @@
       "@id": "https://dkvb.dev/#website",
       "url": "https://dkvb.dev",
       "name": "dkvb.dev",
-      "description": "Portfolio and contact site for Dan Van Blerk, freelance Android and web developer.",
+      "description": "Portfolio and contact site for Daniel van Blerk, freelance Android and web developer.",
       "publisher": { "@id": "https://dkvb.dev/#dan" }
     }
   ]
@@ -348,6 +350,7 @@
         <div class="form-success" id="formSuccess" role="status" aria-live="polite">
           Message sent, thanks! I aim to reply within one business day.
         </div>
+      <p class="form-error" id="formError" role="alert" hidden>That didn’t send. Please try again, or email me at <a href="mailto:dkvb.dev@gmail.com">dkvb.dev@gmail.com</a>.</p>
       </form>
   </div>
 </section>
@@ -532,13 +535,13 @@ document.getElementById('contactForm').addEventListener('submit', async function
       body: new FormData(this)
     });
     if (res.ok) {
-      document.getElementById('formSuccess').classList.add('visible');
+      document.getElementById('formError').hidden = true; document.getElementById('formSuccess').classList.add('visible');
       this.reset();
     } else {
-      alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com');
+      document.getElementById('formError').hidden = false;
     }
   } catch (err) {
-    alert('Something went wrong. Please email me directly at dkvb.dev@gmail.com');
+    document.getElementById('formError').hidden = false;
   }
   btn.textContent = 'Send message';
   btn.disabled = false;

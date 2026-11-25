@@ -189,7 +189,7 @@
         root.querySelector('.ml-done .ml-btn').focus();
       })
       .catch(function () {
-        err.textContent = 'Something went wrong — please try again, or email dkvb.dev@gmail.com.';
+        err.textContent = 'That didn’t go through. Please try again, or email dkvb.dev@gmail.com.';
         btn.disabled = false;
         btn.textContent = 'Sign me up';
       });

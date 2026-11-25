@@ -535,3 +535,60 @@ html:not(.js) .loop-toggle { display: none; }
 /* a button and a text link side by side share one baseline, height and underline */
 .actions { align-items: center; }
 .actions .text-link { display: inline-flex; align-items: center; min-height: 48px; text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
+
+/* ── 3D figures (scene3d.js): the Blender still shows until the 3D is ready, and stays if it can't run ── */
+.model3d { position: relative; margin: 0; border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-card); background: var(--color-paper-2); overflow: hidden; }
+.model3d-frame { position: relative; aspect-ratio: 4 / 3; }
+.model3d--terrain .model3d-frame { aspect-ratio: 16 / 10; }
+.model3d--phone .model3d-frame { aspect-ratio: 4 / 5; max-height: 600px; margin-inline: auto; }
+.model3d-still { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.model3d-stage { position: absolute; inset: 0; touch-action: pan-y; cursor: grab; }
+.model3d-stage:active { cursor: grabbing; }
+.model3d-stage canvas { display: block; width: 100%; height: 100%; }
+.model3d.is-live .model3d-still { visibility: hidden; }
+.model3d-labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.model3d:not(.is-live) .model3d-labels, .model3d:not(.is-live) .model3d-hint { display: none; }
+.model3d-place { position: absolute; left: 0; top: 0; display: inline-flex; align-items: center; gap: var(--space-2xs); margin: -0.75em 0 0 -5px; padding: var(--space-3xs) var(--space-xs) var(--space-3xs) var(--space-2xs); border-radius: var(--radius-pill); background: color-mix(in oklab, var(--color-paper) 78%, transparent); font-size: var(--text-sm); font-weight: 700; color: var(--color-ink); white-space: nowrap; transition: opacity var(--dur-short) var(--ease-out); }
+.model3d-place::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--color-ink); flex: none; }
+.model3d-place.is-home::before { background: var(--color-accent); }
+.model3d figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-sm) var(--space-lg); padding: var(--space-md) var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); }
+.model3d-hint { color: var(--color-ink-2); font-weight: 700; }
+.model3d:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.su-intro { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-2xl); align-items: center; margin-bottom: var(--space-xl); }
+.su-intro .head { margin-bottom: 0; }
+@media (max-width: 60rem) { .su-intro { grid-template-columns: minmax(0, 1fr); } .model3d--phone .model3d-frame { max-height: 480px; } }
+@media (max-width: 40rem) { .model3d figcaption { padding: var(--space-sm) var(--space-md); } .model3d-place { font-size: var(--text-xs); } }
+@media (max-width: 40rem) {
+  .model3d--terrain .model3d-frame { aspect-ratio: 1 / 1; }
+}
+.model3d-place.is-flip { flex-direction: row-reverse; padding: var(--space-3xs) var(--space-2xs) var(--space-3xs) var(--space-xs); }
+/* sugar page: the terrain is the service-area map inside "Someone you can actually call" */
+.local > .model3d--map { grid-column: 1 / -1; margin-top: calc(var(--space-xl) * -1); }
+.model3d--map figcaption { display: grid; gap: var(--space-2xs); justify-content: stretch; }
+.model3d--map figcaption b { color: var(--color-ink); }
+.model3d-credit { color: var(--color-ink-2); font-size: var(--text-sm); }
+.model3d-credit .model3d-hint { font-weight: 700; }
+
+/* Android page: Skills United walkthrough. The steps scroll past a pinned phone that shows each one. */
+.su-walk { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--space-3xl); align-items: start; margin-bottom: var(--space-2xl); }
+.su-steps { list-style: none; margin: 0; padding: 0; counter-reset: su; }
+.su-step { counter-increment: su; min-height: 62vh; display: flex; flex-direction: column; justify-content: center; padding-left: var(--space-xl); border-left: 2px solid var(--color-rule); transition: border-color var(--dur-short) var(--ease-out), opacity var(--dur-short) var(--ease-out); }
+.su-step:first-child { min-height: 46vh; justify-content: flex-start; padding-top: var(--space-xl); }
+.su-step h3 { font-size: var(--text-xl, 1.4rem); margin: 0 0 var(--space-sm); }
+.su-step h3::before { content: counter(su) ". "; color: var(--color-accent); }
+.su-step p { max-width: 46ch; color: var(--color-ink-2); margin: 0; }
+.su-walk.is-live .su-step { opacity: 0.5; }
+.su-walk.is-live .su-step.is-active { opacity: 1; border-left-color: var(--color-accent); }
+.su-phone { position: sticky; top: calc(var(--header-h) + var(--space-lg)); }
+.su-phone .model3d--phone .model3d-frame { max-height: min(600px, calc(100svh - var(--header-h) - 9rem)); }
+@media (max-width: 60rem) {
+  .su-walk { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .su-phone { order: -1; top: var(--header-h); z-index: var(--z-raised); background: var(--color-paper); padding-block: var(--space-sm); }
+  .su-phone .model3d--phone .model3d-frame { max-height: 42svh; }
+  .su-phone figcaption { display: none; }
+  .su-step, .su-step:first-child { min-height: 45svh; justify-content: flex-start; padding-top: var(--space-lg); }
+  .su-step:last-child { min-height: 0; padding-bottom: var(--space-xl); }
+}
+
+.form-error { padding: var(--space-md); border-radius: var(--radius-card); border: var(--rule-hair) solid var(--color-error); color: var(--color-ink); margin: 0; }
+.form-error[hidden] { display: none; }
